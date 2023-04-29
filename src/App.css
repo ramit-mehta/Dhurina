@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;1,300&family=Inter:wght@300;400;500;600;700&&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none !important;
+  text-decoration: none !important;
+  box-sizing: border-box;
+}
+/* root  */
+:root {
+  /* font sizes  */
+  --fs-xsm: 10px;
+  --fs-sm: 12px;
+  --fs-md: 13px;
+  --fs-lg: 17px;
+  --fs-xl: 18px;
+  --fs-xxl: 19px;
+  --fs-3xl: 20px;
+  --fs-4xl: 22px;
+  --fs-5xl: 23px;
+  --fs-6xl: 24px;
+  --fs-7xl: 27px;
+  --fs-8xl: 28px;
+  --fs-9xl: 36px;
+  --fs-10xl: 53px;
+}
+
+/* font family  */
+.ff_inter {
+  font-family: "Inter" !important;
+}
+
+/* font sizes  */
+.fs_lg {
+  font-size: var(--fs-lg) !important;
+}
+.fs_xl {
+  font-size: var(--fs-xl) !important;
+}
+.fs_3xl {
+  font-size: var(--fs-3xl) !important;
+}
+.fs_7xl {
+  font-size: var(--fs-7xl) !important;
+}
+.fs_10xl {
+  font-size: var(--fs-10xl) !important;
+}
+
+/* colors  */
+.bg_light_orange {
+  background-color: #fff7e8 !important;
+}
+.color_dark_blue {
+  color: #263238 !important;
+}
+.text_gradient {
+  background: linear-gradient(180deg, #fe8d23 0%, #fe5f01 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.border_gradient {
+  border: 1px solid transparent;
+  background: linear-gradient(to right, #fefdfc, #fefcf4) padding-box,
+    linear-gradient(to right, #fe831b, #fe5f01) border-box;
+  border-radius: 4px;
+}
+.border_gradient_2 {
+  background: linear-gradient(99.02deg, #febf11 -15.78%, #fe5e00 108.25%);
+  box-shadow: 3.30459px 4.13074px 10.7399px rgba(254, 119, 4, 0.25);
+  border-radius: 4.13074px;
+}
+
+/* ***********************START*************************** */
+/* header section */
+.border_oval {
+  border-radius: 62px !important;
+}
+.dropdown-toggle::after {
+  border-top: 0.3em solid #fe6902 !important;
+}
+.dropdown-item:hover {
+  background-color: #fe6902 !important;
+  color: white !important;
+}
+.whatsapp_logo {
+  height: 30px;
+  width: 25px;
+}
+/* ************************END************************** */
+
+/* ***********************START*************************** */
+/* hero section */
+.hero_ellipse_1 {
+  left: -70%;
+  top: -30%;
+  z-index: -1;
+}
+.hero_ellipse_2 {
+  left: 0%;
+  top: -30%;
+  z-index: -1;
+  max-width: 540px;
+}
+.hero_input {
+  background: #ffffff;
+  box-shadow: 0px 3.30459px 67.7441px rgba(0, 0, 0, 0.06);
+  border-radius: 40.8709px;
+}
+
+/* ************************END************************** */
+
+/* media queries  */
+
+@media (min-width: 992px) {
+  .custom_container {
+    max-width: 1020.86px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
