@@ -10,11 +10,9 @@ import Header from "./components/common/Header";
 function App() {
   return (
     <>
-      <div className="custom_container container">
-        <Header />
-        <Home />
-        {/* <Footer /> */}
-      </div>
+      <Header />
+      <Home />
+      <Footer />
     </>
   );
 }
