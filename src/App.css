@@ -32,6 +32,9 @@
 }
 
 /* font sizes  */
+.fs_md {
+  font-size: var(--fs-md) !important;
+}
 .fs_lg {
   font-size: var(--fs-lg) !important;
 }
@@ -55,6 +58,9 @@
 .color_dark_blue {
   color: #263238 !important;
 }
+.bg_dark_blue {
+  background-color: #263238 !important;
+}
 .text_gradient {
   background: linear-gradient(180deg, #fe8d23 0%, #fe5f01 100%);
   -webkit-background-clip: text;
@@ -72,6 +78,13 @@
   background: linear-gradient(99.02deg, #febf11 -15.78%, #fe5e00 108.25%);
   box-shadow: 3.30459px 4.13074px 10.7399px rgba(254, 119, 4, 0.25);
   border-radius: 4.13074px;
+  transition: all 0.4s ease-in-out;
+}
+input {
+  outline: none;
+}
+input::placeholder {
+  color: #d3d3d3;
 }
 
 /* ***********************START*************************** */
@@ -89,6 +102,11 @@
 .whatsapp_logo {
   height: 30px;
   width: 25px;
+  color: #fe831b;
+}
+.border_gradient_2:hover {
+  background: linear-gradient(99.02deg, #ffff -15.78%, #ffff 108.25%);
+  color: #fe8d23 !important;
 }
 /* ************************END************************** */
 
@@ -109,6 +127,9 @@
   background: #ffffff;
   box-shadow: 0px 3.30459px 67.7441px rgba(0, 0, 0, 0.06);
   border-radius: 40.8709px;
+}
+.hero_input {
+  max-width: 440px;
 }
 
 /* ************************END************************** */
