@@ -44,6 +44,15 @@
 .fs_3xl {
   font-size: var(--fs-3xl) !important;
 }
+.fs_4xl {
+  font-size: var(--fs-4xl) !important;
+}
+.fs_5xl {
+  font-size: var(--fs-5xl) !important;
+}
+.fs_6xl {
+  font-size: var(--fs-6xl) !important;
+}
 .fs_7xl {
   font-size: var(--fs-7xl) !important;
 }
@@ -80,6 +89,11 @@
   border-radius: 4.13074px;
   transition: all 0.4s ease-in-out;
 }
+.text_light_grey {
+  color: #fffcfc !important;
+}
+
+/* common classes  */
 input {
   outline: none;
 }
