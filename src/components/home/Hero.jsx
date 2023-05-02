@@ -40,7 +40,7 @@ const Hero = () => {
                 type="text"
                 placeholder="Find Exam Based Video, Mock Test & Notes"
               />
-              <button className="border_gradient_2 text-white border-0 rounded-pill px-4 py-2 fs_xl">
+              <button className="bg_gradient text-white border-0 rounded-pill px-4 py-2 fs_xl">
                 Search
               </button>
             </div>

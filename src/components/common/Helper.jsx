@@ -1,7 +1,35 @@
+import EMagazine from "../../assets/images/png/Res-magazine.png";
+import CurrentAffairs from "../../assets/images/png/Res-current-affairs.png";
+import Tests from "../../assets/images/png/Res-tests.png";
+import Quizes from "../../assets/images/png/Res-Quizes.png";
+import Skills from "../../assets/images/png/Res-skills.png";
+import Shorts from "../../assets/images/png/Res-shorts.png";
 // RESOURCES
-export const Resources = [
+
+export const ResourceData = [
   {
-    // image,
+    image: EMagazine,
+    title: "E- Magazine",
+  },
+  {
+    image: CurrentAffairs,
+    title: "Curent Affairs",
+  },
+  {
+    image: Tests,
+    title: "Test Challange",
+  },
+  {
+    image: Quizes,
+    title: "Prize Quizes",
+  },
+  {
+    image: Skills,
+    title: "Boost Your Skill",
+  },
+  {
+    image: Shorts,
+    title: "Dhurina Shorts",
   },
 ];
 
