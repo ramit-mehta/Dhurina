@@ -23,7 +23,7 @@ const Footer = () => {
               alt={FooterLogo}
             />
             <p className="ff_inter text_gradient fw-bold fs_xl">Company</p>
-            <ul className="ps-0">
+            <ul className="ps-0 list_style_none">
               {Company.map((item, index) => {
                 return (
                   <li key={index} className="mt-2">
@@ -44,7 +44,7 @@ const Footer = () => {
           <div className="col-sm-6 col-md-3">
             <p className="ff_inter text_gradient fw-bold fs_xl">Courses</p>
 
-            <ul className="ps-0">
+            <ul className="ps-0 list_style_none">
               {Courses.map((item, index) => {
                 return (
                   <li key={index} className="mt-2">
@@ -59,7 +59,7 @@ const Footer = () => {
           <div className="col-sm-6 col-md-3">
             <p className="ff_inter text_gradient fw-bold fs_xl">Products</p>
 
-            <ul className="ps-0">
+            <ul className="ps-0 list_style_none">
               {Products.map((item, index) => {
                 return (
                   <li key={index} className="mt-2">
@@ -70,7 +70,7 @@ const Footer = () => {
                 );
               })}
             </ul>
-            <ul className="ps-0 mt-4">
+            <ul className="ps-0 mt-4 list_style_none">
               <p className="ff_inter text_gradient fw-bold fs_xl">
                 Latest Mock Tests
               </p>
@@ -91,7 +91,7 @@ const Footer = () => {
               Latest Online Coaching
             </p>
 
-            <ul className="ps-0">
+            <ul className="ps-0 list_style_none">
               {Coaching.map((item, index) => {
                 return (
                   <li key={index} className="mt-2">

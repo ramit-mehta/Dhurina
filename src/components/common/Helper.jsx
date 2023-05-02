@@ -1,11 +1,54 @@
+// Explore by product section imports
+import P1 from "../../assets/images/png/product1.png";
+import P2 from "../../assets/images/png/product2.png";
+import P3 from "../../assets/images/png/product3.png";
+import P4 from "../../assets/images/png/product4.png";
+import P5 from "../../assets/images/png/product5.png";
+import P6 from "../../assets/images/png/product6.png";
+
+// Resource section imports
 import EMagazine from "../../assets/images/png/Res-magazine.png";
 import CurrentAffairs from "../../assets/images/png/Res-current-affairs.png";
 import Tests from "../../assets/images/png/Res-tests.png";
 import Quizes from "../../assets/images/png/Res-Quizes.png";
 import Skills from "../../assets/images/png/Res-skills.png";
 import Shorts from "../../assets/images/png/Res-shorts.png";
-// RESOURCES
 
+// PRODUCTS
+export const ExploreProducts = [
+  {
+    image: P1,
+    title: "Exam Based",
+    description: "Online Mock Tests",
+  },
+  {
+    image: P2,
+    title: "Intrective",
+    description: "Live Video Lectures",
+  },
+  {
+    image: P3,
+    title: "Exam Based",
+    description: "Free Study Material",
+  },
+  {
+    image: P4,
+    title: "Exam Based",
+    description: "Top Reated Books",
+  },
+  {
+    image: P5,
+    title: "Top Rated",
+    description: "Handwritten Notes",
+  },
+  {
+    image: P6,
+    title: "Upcoming Exam ",
+    description: "Video Lectures Courses",
+  },
+];
+
+// RESOURCES
 export const ResourceData = [
   {
     image: EMagazine,

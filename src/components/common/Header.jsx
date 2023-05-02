@@ -10,7 +10,7 @@ const Header = () => {
       <div className="custom_container container">
         <nav className="mt-3 d-flex flex-column flex-md-row justify-content-between align-items-md-end">
           <div className="d-flex align-items-end mb-3 mb-md-0">
-            <Link>
+            <Link to="/">
               <img src={Logo} alt={Logo} />
             </Link>
             <Dropdown className="ms-5 ps-3 ">

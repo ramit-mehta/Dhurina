@@ -3,7 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  list-style-type: none !important;
   text-decoration: none !important;
   box-sizing: border-box;
 }
@@ -138,11 +137,6 @@ input::placeholder {
 }
 
 /* Hamburger toggle  */
-.burger-menu {
-  height: 100%;
-  width: 4em;
-  background-color: #fe6902;
-}
 
 /* ************************HEADER END************************** */
 
@@ -168,12 +162,27 @@ input::placeholder {
 }
 /* ************************HERO END************************** */
 
+/* ************************EXPLORE PRODUCTS START************************** */
+.product_box {
+  border: 0.66px solid transparent;
+  background: linear-gradient(to right, #fcf5ed, #fcf5ed) padding-box,
+    linear-gradient(127.82deg, #fea90d -21.4%, rgba(254, 111, 3, 0) 71.85%)
+      border-box;
+  border-radius: 11.2338px;
+  height: 230px;
+}
+
+/* ************************EXPLORE PRODUCTS END************************** */
+
 /* ************************FOOTER START************************** */
 .footer_icon {
   transition: all 0.3s ease-in-out;
 }
 .footer_icon:hover {
   scale: 1.1;
+}
+.list_style_none {
+  list-style-type: none !important;
 }
 /* ************************FOOTER END************************** */
 

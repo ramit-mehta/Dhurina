@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Resources = () => {
   return (
-    <div className="bg_gradient">
+    <div className="bg_gradient my-5">
       <div className="custom_container container py-5">
         <h2 className="ff_inter fw-bold text-white text-center">
           Free Resources
