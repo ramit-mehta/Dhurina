@@ -1,3 +1,11 @@
+// RESOURCES
+export const Resources = [
+  {
+    // image,
+  },
+];
+
+// FOOTER
 export const Company = [
   { label: "About Us", url: "#" },
   { label: "Contact Us", url: "#" },
