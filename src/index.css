@@ -55,7 +55,7 @@ input::-webkit-inner-spin-button {
   ) !important;
   color: white !important;
 }
-.collapsed svg path .vh_70 {
+.vh_70 {
   height: 70vh;
 }
 .accordion_scroll_bar ::-webkit-scrollbar {

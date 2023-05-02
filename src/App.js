@@ -8,18 +8,16 @@ import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
 import { Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
-import Batches from "./components/home/Batches";
 function App() {
   return (
     <>
-      {/* <Header />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
       </Routes>
 
-      <Footer /> */}
-      <Batches />
+      <Footer />
     </>
   );
 }
