@@ -21,7 +21,7 @@ const Login = () => {
   }, [seconds]);
 
   return (
-    <div className="custom_container container">
+    <div className="custom_container container py-5">
       <div className=" row align-items-end flex-column-reverse flex-lg-row py-3">
         <div className="col-lg-6 text-center mt-4 mt-lg-0">
           <p className="color_dark_blue fs_10xl fw-normal ff_inter mb-0">

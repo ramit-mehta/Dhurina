@@ -1,35 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "../../assets/images/png/dhurina-logo.png";
 import Dropdown from "react-bootstrap/Dropdown";
 import WhatsappLogo from "../../assets/images/png/whatsapp-logo.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
-  const [menu_class, setMenuClass] = useState("menu hidden");
-  const [clicked, setClicked] = useState(false);
-
-  const updateMenu = () => {
-    if (!clicked) {
-      setBurgerClass("burger-bar clicked");
-      setMenuClass("menu visible");
-    } else {
-      setBurgerClass("burger-bar unclicked");
-      setMenuClass("menu hidden");
-    }
-  };
-
   return (
     <>
       <div className="custom_container container">
         <nav className="mt-3 d-flex flex-column flex-md-row justify-content-between align-items-md-end">
-          {/* Hamburger toggler  */}
-          <div className="burger-menu">
-            <div className={burger_class} onClick={updateMenu}></div>
-            <div className={burger_class} onClick={updateMenu}></div>
-            <div className={burger_class} onClick={updateMenu}></div>
-          </div>
-
           <div className="d-flex align-items-end mb-3 mb-md-0">
             <Link>
               <img src={Logo} alt={Logo} />
@@ -68,9 +47,11 @@ const Header = () => {
                 />
               </Link>
             </div>
-            <button className="ms-3 fs-md text-white ff_inter bg_gradient border-0 px-3 py-2">
-              Sign Up/Login
-            </button>
+            <Link to="/login">
+              <button className="ms-3 fs-md text-white ff_inter bg_gradient border-0 px-3 py-2">
+                Sign Up/Login
+              </button>
+            </Link>
           </div>
         </nav>
       </div>

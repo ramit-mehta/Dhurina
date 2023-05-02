@@ -6,12 +6,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home";
 import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
-
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import Login from "./components/Login";
 function App() {
   return (
     <>
       <Header />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+
       <Footer />
     </>
   );
