@@ -79,10 +79,11 @@ const Batches = () => {
                 <Accordion.Item
                   eventKey={item.eventKey}
                   key={index}
-                  className="py-2 border-0"
+                  className="my-3"
                 >
                   <Accordion.Header>
-                    <img src={item.icon} alt={item.icon} /> {item.name}
+                    <img className="me-2" src={item.icon} alt={item.icon} />{" "}
+                    {item.name}
                   </Accordion.Header>
                   <Accordion.Body>
                     <ul>
