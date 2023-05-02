@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;1,300&family=Inter:wght@300;400;500;600;700&&display=swap");
 /* login page  */
-::placeholder {
+::placeholder[type="number"] {
   font-family: "Inter";
   font-size: 20.42px;
   font-weight: 400;
