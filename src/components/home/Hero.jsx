@@ -25,10 +25,10 @@ const Hero = () => {
             <img className="w-100" src={HeroImg} alt={HeroImg} />
           </div>
           <div className="col-lg-7 mt-4">
-            <h2 className="ff_inter fw-normal color_dark_blue fs_10xl mb-0">
+            <h2 className="ff_inter fw-normal color_dark_blue fs_11xl mb-0">
               Get direction to
             </h2>
-            <p className="text_gradient ff_inter fs_10xl fw-bold mb-0 text-nowrap">
+            <p className="text_gradient ff_inter fs_11xl fw-bold mb-0 text-lg-nowrap">
               Prepare for your exam
             </p>
             <p className="ff_inter color_dark_blue fs_7xl">

@@ -23,7 +23,8 @@
   --fs-7xl: 27px;
   --fs-8xl: 28px;
   --fs-9xl: 36px;
-  --fs-10xl: 53px;
+  --fs-10xl: 40px;
+  --fs-11xl: 53px;
 }
 
 /* font family  */
@@ -32,6 +33,12 @@
 }
 
 /* font sizes  */
+.fs_xsm {
+  font-size: var(--fs-xsm) !important;
+}
+.fs_sm {
+  font-size: var(--fs-sm) !important;
+}
 .fs_md {
   font-size: var(--fs-md) !important;
 }
@@ -41,14 +48,35 @@
 .fs_xl {
   font-size: var(--fs-xl) !important;
 }
+.fs_xxl {
+  font-size: var(--fs-xxl) !important;
+}
 .fs_3xl {
   font-size: var(--fs-3xl) !important;
+}
+.fs_4xl {
+  font-size: var(--fs-4xl) !important;
+}
+.fs_5xl {
+  font-size: var(--fs-5xl) !important;
+}
+.fs_6xl {
+  font-size: var(--fs-6xl) !important;
 }
 .fs_7xl {
   font-size: var(--fs-7xl) !important;
 }
+.fs_8xl {
+  font-size: var(--fs-8xl) !important;
+}
+.fs_9xl {
+  font-size: var(--fs-9xl) !important;
+}
 .fs_10xl {
   font-size: var(--fs-10xl) !important;
+}
+.fs_11xl {
+  font-size: var(--fs-11xl) !important;
 }
 
 /* colors  */
@@ -80,6 +108,11 @@
   border-radius: 4.13074px;
   transition: all 0.4s ease-in-out;
 }
+.text_light_grey {
+  color: #fffcfc !important;
+}
+
+/* common classes  */
 input {
   outline: none;
 }
@@ -104,10 +137,7 @@ input::placeholder {
   width: 25px;
   color: #fe831b;
 }
-.border_gradient_2:hover {
-  background: linear-gradient(99.02deg, #ffff -15.78%, #ffff 108.25%);
-  color: #fe8d23 !important;
-}
+
 /* ************************END************************** */
 
 /* ***********************START*************************** */

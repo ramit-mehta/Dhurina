@@ -8,8 +8,8 @@ const Header = () => {
   return (
     <>
       <div className="custom_container container">
-        <nav className="mt-3 d-flex justify-content-between align-items-end">
-          <div className="d-flex align-items-end">
+        <nav className="mt-3 d-flex flex-column flex-md-row justify-content-between align-items-md-end">
+          <div className="d-flex align-items-end mb-3 mb-md-0">
             <Link>
               <img src={Logo} alt={Logo} />
             </Link>
@@ -34,9 +34,9 @@ const Header = () => {
               </Dropdown.Menu>
             </Dropdown>
           </div>
-          <div className="d-flex mb-0">
+          <div className="d-flex align-items-center justify-content-center mt-3 mt-md-0 justify-content-md-end">
             <div className="d-flex border_gradient px-3 py-1">
-              <button className="text_gradient ff_inter border-0 fw-semibold fs_lg">
+              <button className="text_gradient ff_inter border-0 fw-semibold fs-md">
                 Whatsapp
               </button>
               <Link>
@@ -47,7 +47,7 @@ const Header = () => {
                 />
               </Link>
             </div>
-            <button className="ms-3 fs_lg text-white ff_inter border_gradient_2 border-0 px-3 py-1">
+            <button className="ms-3 fs-md text-white ff_inter border_gradient_2 border-0 px-3 py-1">
               Sign Up/Login
             </button>
           </div>
