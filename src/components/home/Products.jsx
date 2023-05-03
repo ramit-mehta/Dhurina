@@ -11,12 +11,12 @@ const Products = () => {
         {ExploreProducts.map((item, index) => {
           return (
             <div key={index} className="col-lg-4 col-sm-6 mt-4">
-              <div className="product_box d-flex align-items-center px-3">
+              <div className="product_box h-100 d-flex align-items-center justify-content-between px-3 py-4">
                 <div>
                   <p className="color_dark_blue ff_inter fw-semibold fs_md mb-0">
                     {item.title}
                   </p>
-                  <p className="ff_inter fw-bold color_dark_blue fs_xxl mb-0">
+                  <p className="ff_inter fw-bold color_dark_blue fs_3xl mb-0">
                     {item.description}
                   </p>
                   <button className="ff_inter fw-semibold text-white fs_xsm bg_gradient border-0 mt-2 py-2 px-3">
