@@ -23,7 +23,7 @@
   --fs-8xl: 28px;
   --fs-9xl: 36px;
   --fs-10xl: 40px;
-  --fs-11xl: 53px;
+  --fs-11xl: 45px;
 }
 
 /* font family  */
@@ -135,8 +135,9 @@ input::placeholder {
   width: 25px;
   color: #fe831b;
 }
-
-/* Hamburger toggle  */
+.dhurina_logo {
+  height: 80px;
+}
 
 /* ************************HEADER END************************** */
 
@@ -162,6 +163,80 @@ input::placeholder {
 }
 /* ************************HERO END************************** */
 
+/* ************************BATCHES START************************** */
+.batches {
+  border: 1px solid transparent;
+  background: linear-gradient(to right, #ffffff, #ffffff) padding-box,
+    linear-gradient(to right, #fe8d23, #fe8d2300) border-box;
+  border-radius: 14.8707px;
+}
+.w-20 {
+  width: 20% !important;
+}
+.color_light_black {
+  color: #535353;
+}
+.accordion-item {
+  border-radius: 20px 6px 6px 6px !important;
+  border: 1px solid #fe9409 !important;
+}
+.accordion-button {
+  background-color: white !important;
+  border-radius: 20px 6px 6px 6px !important;
+  color: #fe8d23 !important;
+}
+.collapsed {
+  background: linear-gradient(
+    105.64deg,
+    #fe9409 -9.41%,
+    #fe5f01 111.41%
+  ) !important;
+  color: white !important;
+}
+.collapsed svg rect {
+  fill: red;
+}
+.vh_70 {
+  height: 70vh;
+}
+.accordion_scroll_bar ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.accordion_scroll_bar ::-webkit-scrollbar-track {
+  border: 4px solid white;
+  background-color: #fe8d2373;
+  border-radius: 3px;
+}
+
+/* Handle */
+.accordion_scroll_bar ::-webkit-scrollbar-thumb {
+  background: #fe8d23;
+  border-radius: 32px;
+}
+
+/* Handle on hover */
+.accordion_scroll_bar ::-webkit-scrollbar-thumb:hover {
+  background: #fe8d23;
+}
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+.accordion-button::after {
+  background-image: url("./assets/images/svg/accordion_down_arrow.svg") !important;
+  margin-top: 10px;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("./assets/images/svg/accordion_up_arrow.svg") !important;
+  transform: rotate(360deg) !important;
+}
+
+.batches_icon {
+  max-width: 50px;
+}
+/* ************************BATCHES END************************** */
+
 /* ************************EXPLORE PRODUCTS START************************** */
 .product_box {
   border: 0.66px solid transparent;
@@ -176,6 +251,7 @@ input::placeholder {
 /* ************************FOOTER START************************** */
 .footer_icon {
   transition: all 0.3s ease-in-out;
+  max-width: 30px;
 }
 .footer_icon:hover {
   scale: 1.1;
@@ -185,8 +261,35 @@ input::placeholder {
 }
 /* ************************FOOTER END************************** */
 
-/* media queries  */
+/* ************************LOGIN PAGE START************************** */
+::placeholder[type="number"] {
+  font-family: "Inter";
+  font-size: 10px;
+  font-weight: 400;
+  color: #9f9f9f;
+}
+.login_input {
+  border-width: 0px 0px 1px 0px;
+  padding-left: 30px;
+}
+.color_grey {
+  color: #9f9f9f;
+}
+.mobile_icon {
+  top: 10%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.login_btn {
+  background: linear-gradient(99.72deg, #feb201 15.13%, #fe8605 57.31%);
+  border-radius: 9.52098px;
+}
+/* ************************LOGIN PAGE END************************** */
 
+/* media queries  */
 @media (min-width: 992px) {
   .custom_container {
     max-width: 1020.86px !important;

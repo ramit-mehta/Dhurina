@@ -83,17 +83,19 @@ const Batches = () => {
                 >
                   <Accordion.Header>
                     <img className="me-2" src={item.icon} alt={item.icon} />{" "}
-                    {item.name}
+                    <p className="ff_inter fw-semibold fs_lg mb-0">
+                      {item.name}
+                    </p>
                   </Accordion.Header>
                   <Accordion.Body>
                     <ul>
-                      <li>JAIIB & CAIIB</li>
-                      <li>Banking</li>
-                      <li>SSC</li>
-                      <li>Railway</li>
-                      <li>Banking</li>
-                      <li>JAIIB & CAIIB</li>
-                      <li>SSC</li>
+                      <li className="ff_inter fw-semibold">JAIIB & CAIIB</li>
+                      <li className="ff_inter fw-semibold">Banking</li>
+                      <li className="ff_inter fw-semibold">SSC</li>
+                      <li className="ff_inter fw-semibold">Railway</li>
+                      <li className="ff_inter fw-semibold">Banking</li>
+                      <li className="ff_inter fw-semibold">JAIIB & CAIIB</li>
+                      <li className="ff_inter fw-semibold">SSC</li>
                     </ul>
                   </Accordion.Body>
                 </Accordion.Item>
@@ -102,11 +104,15 @@ const Batches = () => {
           </Accordion>
         </div>
         <div className="col-8">
-          <div className="row">
+          <div className="row mt-3">
             {Batch.map((item, index) => {
               return (
                 <div className="w-20 text-center" key={index}>
-                  <img src={item.icon} alt={item.icon} />
+                  <img
+                    className="batches_icon"
+                    src={item.icon}
+                    alt={item.icon}
+                  />
                   <p className="ff_inter fs_lg color_light_black fw-semibold lh-sm mt-1">
                     {item.name}
                   </p>

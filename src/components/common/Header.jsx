@@ -8,10 +8,10 @@ const Header = () => {
   return (
     <>
       <div className="custom_container container">
-        <nav className="mt-3 d-flex flex-column flex-md-row justify-content-between align-items-md-end">
+        <nav className="mt-2 d-flex flex-column flex-md-row justify-content-between align-items-md-end">
           <div className="d-flex align-items-end mb-3 mb-md-0">
             <Link to="/">
-              <img src={Logo} alt={Logo} />
+              <img className="dhurina_logo" src={Logo} alt={Logo} />
             </Link>
             <Dropdown className="ms-5 ps-3 ">
               <Dropdown.Toggle
@@ -36,7 +36,7 @@ const Header = () => {
           </div>
           <div className="d-flex align-items-center justify-content-center mt-3 mt-md-0 justify-content-md-end">
             <div className="d-flex border_gradient px-3 py-1">
-              <button className="text_gradient ff_inter border-0 fw-semibold fs-md">
+              <button className="text_gradient ff_inter border-0 fw-semibold fs-sm">
                 Whatsapp
               </button>
               <Link>
@@ -48,7 +48,7 @@ const Header = () => {
               </Link>
             </div>
             <Link to="/login">
-              <button className="ms-3 fs-md text-white ff_inter bg_gradient border-0 px-3 py-2">
+              <button className="ms-3 fs-sm text-white ff_inter bg_gradient border-0 px-3 py-2">
                 Sign Up/Login
               </button>
             </Link>

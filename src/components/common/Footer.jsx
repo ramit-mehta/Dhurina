@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-sm-6 col-md-3">
             <img
-              className="w-lg-75 w-50 mb-4 d-sm-block d-md-none"
+              className="w-50 mb-4 d-sm-block d-md-none"
               src={FooterLogo}
               alt={FooterLogo}
             />
@@ -35,7 +35,7 @@ const Footer = () => {
               })}
             </ul>
             <img
-              className="w-75 mt-4 d-none d-md-block"
+              className="w-50 mt-5 d-none d-md-block"
               src={FooterLogo}
               alt={FooterLogo}
             />
@@ -104,7 +104,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="mt-4">
+        <div className="mt-1">
           <p className="ff_inter fs_lg text-light fw-lighter">Follow On:</p>
           <Link>
             <img className="footer_icon" src={FbIcon} alt={FbIcon} />

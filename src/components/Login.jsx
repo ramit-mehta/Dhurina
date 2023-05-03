@@ -35,7 +35,7 @@ const Login = () => {
           </p>
           <div className="position-relative">
             <input
-              className="w-100 login_input pb-3 fs_4xl color_grey "
+              className="w-100 login_input pb-3 fs_3xl color_grey "
               type="number"
               name="number"
               id="number"
@@ -48,7 +48,7 @@ const Login = () => {
                   setOtp("Enter OTP");
                 }
               }}
-              className="position-absolute ff_inter top-0 end-0 border-0 bg-transparent text_gradient fw-semibold fs_4xl"
+              className="position-absolute ff_inter top-0 end-0 border-0 bg-transparent text_gradient fw-semibold fs_3xl"
             >
               {" "}
               {seconds < 10 && !isNaN(seconds)
@@ -63,8 +63,8 @@ const Login = () => {
               alt="MobileIcon"
             />
           </div>
-          <button className="mt-5 w-100 py-4 text-white fs_8xl ff_inter fw-normal border-0 login_btn">
-            Login
+          <button className="mt-5 w-100 py-3 text-white fs_5xl ff_inter fw-normal border-0 login_btn">
+            LOGIN
           </button>
         </div>
         <div className="col-lg-6 text-center">
