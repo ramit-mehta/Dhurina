@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Resources = () => {
   return (
-    <div className="bg_gradient my-5">
+    <div className="bg_gradient ">
       <div className="custom_container container py-5">
         <h2 className="ff_inter fw-bold text-white text-center">
           Free Resources
@@ -14,7 +14,7 @@ const Resources = () => {
             return (
               <div
                 key={index}
-                className=" col-6 col-md-4 col-lg-2 mt-4 mt-lg-0 text-center"
+                className=" col-6 col-sm-4 col-lg-2 mt-4 mt-lg-0 text-center"
               >
                 <Link>
                   <img className="w-50" src={item.image} alt={item.title} />

@@ -70,9 +70,9 @@ const Batches = () => {
     { icon: IndiaGateIcon, name: "K1-12", eventKey: "8" },
   ];
   return (
-    <div className="container custom_container py-5  my-5 batches">
+    <div className="container custom_container py-5 my-5 batches">
       <div className="row accordion_scroll_bar ">
-        <div className="col-4 vh_70 overflow-auto position-relative">
+        <div className="col-lg-4 vh_70 overflow-auto position-relative">
           <Accordion className="w-75 mx-auto">
             {Courses.map((item, index) => {
               return (
@@ -103,7 +103,7 @@ const Batches = () => {
             })}
           </Accordion>
         </div>
-        <div className="col-8">
+        <div className="col-lg-8">
           <div className="row mt-3">
             {Batch.map((item, index) => {
               return (
