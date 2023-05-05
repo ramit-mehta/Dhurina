@@ -3,8 +3,10 @@ import Logo from "../../assets/images/png/dhurina-logo.png";
 import Dropdown from "react-bootstrap/Dropdown";
 import WhatsappLogo from "../../assets/images/png/whatsapp-logo.png";
 import { Link } from "react-router-dom";
+import Login from "../Login";
 
 const Header = () => {
+  const [loginPopup, setLoginPopup] = useState(false);
   return (
     <>
       <div className="custom_container container">
@@ -47,14 +49,26 @@ const Header = () => {
                 />
               </Link>
             </div>
-            <Link to="/login">
-              <button className="ms-3 fs-sm text-white ff_inter bg_gradient border-0 px-3 py-2">
+            <Link>
+              <button
+                onClick={() => setLoginPopup(true)}
+                className="ms-3 fs-sm text-white ff_inter bg_gradient border-0 px-3 py-2"
+              >
                 Sign Up/Login
               </button>
             </Link>
           </div>
         </nav>
       </div>
+
+      {/* Login Popup */}
+      {loginPopup ? (
+        <div className="position-fixed top-50 start-50 translate-middle bg-white login_popup w-100 max-vh-100 p-4">
+          <Login setLoginPopup={setLoginPopup} />
+        </div>
+      ) : (
+        ""
+      )}
     </>
   );
 };

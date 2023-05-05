@@ -347,6 +347,12 @@ input::-webkit-inner-spin-button {
   background: linear-gradient(99.72deg, #feb201 15.13%, #fe8605 57.31%);
   border-radius: 9.52098px;
 }
+.login_popup {
+  z-index: 100 !important;
+  max-width: 80% !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
 /* ************************LOGIN PAGE END************************** */
 
 /* media queries  */
