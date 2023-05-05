@@ -15,14 +15,14 @@ const Hero = () => {
             <img
               className="position-absolute hero_ellipse_1"
               src={Ellipse1}
-              alt={Ellipse1}
+              alt="Ellipse1"
             />
             <img
               className="position-absolute hero_ellipse_2 "
               src={Ellipse2}
-              alt={Ellipse2}
+              alt="Ellipse2"
             />
-            <img className="w-100 hero_img" src={HeroImg} alt={HeroImg} />
+            <img className="w-100 hero_img" src={HeroImg} alt="HeroImg" />
           </div>
           <div className="col-md-7 mt-4 text-center text-md-start">
             <h2 className="ff_inter fw-normal color_dark_blue fs_11xl mb-0">
@@ -46,10 +46,10 @@ const Hero = () => {
             </div>
             <div className="mt-4 pt-2">
               <Link to="https://play.google.com/store">
-                <img src={PlayStore} alt={PlayStore} />
+                <img src={PlayStore} alt="PlayStore" />
               </Link>
               <Link to="https://www.apple.com/app-store/">
-                <img className="ms-2" src={AppStore} alt={AppStore} />
+                <img className="ms-2" src={AppStore} alt="AppStore" />
               </Link>
             </div>
           </div>

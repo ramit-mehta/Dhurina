@@ -6,6 +6,21 @@
   text-decoration: none !important;
   box-sizing: border-box;
 }
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+body {
+  background-color: #fefbf5;
+}
+
+/* font family  */
+.ff_inter {
+  font-family: "Inter" !important;
+}
+
 /* root  */
 :root {
   /* font sizes  */
@@ -24,19 +39,6 @@
   --fs-9xl: 36px;
   --fs-10xl: 40px;
   --fs-11xl: 45px;
-}
-html,
-body {
-  overflow-x: hidden !important;
-}
-
-body {
-  background-color: #fefbf5;
-}
-
-/* font family  */
-.ff_inter {
-  font-family: "Inter" !important;
 }
 
 /* font sizes  */
@@ -117,6 +119,12 @@ body {
 .text_light_grey {
   color: #fffcfc !important;
 }
+.text_grey {
+  color: #747474;
+}
+.text_dark_grey {
+  color: #545454;
+}
 
 /* common classes  */
 input {
@@ -124,6 +132,9 @@ input {
 }
 input::placeholder {
   color: #d3d3d3;
+}
+.cursor_pointer {
+  cursor: pointer;
 }
 
 /* ***********************HEADER START*************************** */
@@ -263,6 +274,37 @@ input::placeholder {
 
 /* ************************EXPLORE PRODUCTS END************************** */
 
+/* ************************STUDENT SAY START************************** */
+.bg_students {
+  background: linear-gradient(180deg, rgba(255, 250, 243, 0) 0%, #ffe7c8 100%);
+}
+.our_students_line::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 7px;
+  border-radius: 10px;
+  background-color: #fe9e02;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.arrows {
+  max-width: 45px;
+  height: 45px;
+  z-index: 1;
+}
+.prev {
+  bottom: 14%;
+  left: 34%;
+}
+.next {
+  bottom: 14%;
+  left: 39%;
+}
+
+/* ************************STUDENTS SAY END************************** */
+
 /* ************************FOOTER START************************** */
 .footer_logo {
   height: 80px;
@@ -317,7 +359,7 @@ input::-webkit-inner-spin-button {
     --fs-6xl: 21px;
     --fs-7xl: 23px;
     --fs-8xl: 28px;
-    --fs-9xl: 31px;
+    --fs-9xl: 28px;
     --fs-10xl: 39px;
     --fs-11xl: 36px;
   }
@@ -332,11 +374,13 @@ input::-webkit-inner-spin-button {
     left: -25%;
     top: -45%;
     max-width: 400px;
+    z-index: -1;
   }
   .hero_ellipse_2 {
     left: 5%;
     top: -50%;
     max-width: 350px;
+    z-index: -1;
   }
   .row.learn {
     margin-left: 0px !important;
@@ -358,17 +402,34 @@ input::-webkit-inner-spin-button {
     margin-left: auto !important;
     margin-right: auto !important;
   }
+  .orange_ellipse2 {
+    top: 15%;
+    left: 6%;
+    max-width: 80px !important;
+  }
+  .students_polygon {
+    bottom: 10%;
+    left: 17%;
+  }
+  .students_small_polygon {
+    right: 10%;
+  }
 }
 
 @media (min-width: 576px) {
   .hero_img {
-    max-width: 380px !important;
+    max-width: 350px !important;
   }
   .hero_ellipse_1 {
-    left: -35%;
+    top: -20%;
+    left: -30%;
+    z-index: -1;
   }
   .hero_ellipse_2 {
-    left: 5%;
+    top: -50%;
+    left: -5%;
+    max-width: 600px;
+    z-index: -1;
   }
   .row.learn {
     margin-left: 0px !important;
@@ -390,6 +451,18 @@ input::-webkit-inner-spin-button {
   .mt_footer_courses {
     margin-top: 106px !important;
   }
+  .orange_ellipse2 {
+    top: 14%;
+    left: 10%;
+    max-width: 80px !important;
+  }
+  .students_polygon {
+    bottom: 5%;
+    left: 17%;
+  }
+  .students_small_polygon {
+    right: 10%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -404,6 +477,9 @@ input::-webkit-inner-spin-button {
   }
   .mt_footer_courses {
     margin-top: 0px !important;
+  }
+  .orange_dots {
+    left: 8%;
   }
 }
 
@@ -430,5 +506,46 @@ input::-webkit-inner-spin-button {
       linear-gradient(to left, #fe8d23, #fe8d2300) border-box;
     border-radius: 0px 15px 60px 0px;
     margin-top: 70px !important;
+  }
+  .orange_ellipse2 {
+    top: 20%;
+    left: 4%;
+  }
+  .orange_ellipse {
+    bottom: 10%;
+    left: 23%;
+    max-width: 250px !important;
+  }
+  .students_small_polygon {
+    left: 47%;
+  }
+  .orange_dots {
+    left: 2%;
+  }
+  .slick-slide img[alt="quotes"] {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+@media (min-width: 1200px) {
+  .orange_ellipse {
+    bottom: 5%;
+    left: 28%;
+    max-width: 250px;
+  }
+  .orange_ellipse2 {
+    top: 19%;
+    left: 12%;
+    max-width: 100px !important;
+  }
+  .orange_dots {
+    left: 10%;
+  }
+  .students_polygon {
+    bottom: 15%;
+    left: 17%;
+  }
+  .students_small_polygon {
+    left: 46%;
   }
 }
