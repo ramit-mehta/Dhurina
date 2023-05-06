@@ -225,25 +225,29 @@ input::placeholder {
 .vh_70 {
   height: 70vh;
 }
-.accordion_scroll_bar ::-webkit-scrollbar {
+.accordion_scroll_bar ::-webkit-scrollbar,
+.select_scroll ::-webkit-scrollbar {
   width: 10px;
 }
 
 /* Track */
-.accordion_scroll_bar ::-webkit-scrollbar-track {
+.accordion_scroll_bar ::-webkit-scrollbar-track,
+.select_scroll ::-webkit-scrollbar-track {
   border: 4px solid white;
   background-color: #fe8d2373;
   border-radius: 3px;
 }
 
 /* Handle */
-.accordion_scroll_bar ::-webkit-scrollbar-thumb {
+.accordion_scroll_bar ::-webkit-scrollbar-thumb,
+.select_scroll ::-webkit-scrollbar-thumb {
   background: #fe8d23;
   border-radius: 32px;
 }
 
 /* Handle on hover */
-.accordion_scroll_bar ::-webkit-scrollbar-thumb:hover {
+.accordion_scroll_bar ::-webkit-scrollbar-thumb:hover,
+.select_scroll ::-webkit-scrollbar-thumb:hover {
   background: #fe8d23;
 }
 .accordion-button:focus {

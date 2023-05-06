@@ -7,15 +7,17 @@ import Home from "./components/Home";
 import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
 import { Route, Routes } from "react-router-dom";
+import Welcome from "./components/Welcome";
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
 
-      <Footer />
+      <Footer /> */}
+      <Welcome />
     </>
   );
 }
