@@ -19,7 +19,7 @@ const Header = () => {
         <nav className="mt-2 d-flex flex-column flex-md-row justify-content-between align-items-md-end">
           <div className="d-flex align-items-end mb-3 mb-md-0">
             <Link to="/">
-              <img className="dhurina_logo" src={Logo} alt={Logo} />
+              <img className="dhurina_logo" src={Logo} alt="Logo" />
             </Link>
             <Dropdown className="ms-5 ps-3 ">
               <Dropdown.Toggle
@@ -60,7 +60,7 @@ const Header = () => {
                 <img
                   className="ms-2 whatsapp_logo"
                   src={WhatsappLogo}
-                  alt={WhatsappLogo}
+                  alt="WhatsappLogo"
                 />
               </Link>
             </div>

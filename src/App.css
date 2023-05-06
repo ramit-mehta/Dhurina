@@ -295,7 +295,7 @@ input::placeholder {
   height: 45%;
   border: dashed #545454;
   border-width: 0px 4.13px 0px 0px;
-  bottom: 0%;
+  bottom: 3%;
   left: 13px;
   z-index: -1;
 }
