@@ -47,6 +47,7 @@ input::-webkit-inner-spin-button {
   border-radius: 20px 6px 6px 6px !important;
   color: #fe8d23 !important;
 }
+
 .collapsed {
   background: linear-gradient(
     105.64deg,
@@ -54,6 +55,12 @@ input::-webkit-inner-spin-button {
     #fe5f01 111.41%
   ) !important;
   color: white !important;
+}
+/* .accordion-button svg path {
+  fill: #fe8d23 !important;
+} */
+.collapsed svg path {
+  fill: #000000 !important;
 }
 .vh_70 {
   height: 70vh;
