@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-sm-6 col-md-3">
             <img
-              className="w-lg-75 w-50 mb-4 d-sm-block d-md-none"
+              className="footer_logo mb-4 d-sm-block d-md-none"
               src={FooterLogo}
               alt={FooterLogo}
             />
@@ -35,13 +35,13 @@ const Footer = () => {
               })}
             </ul>
             <img
-              className="w-75 mt-4 d-none d-md-block"
+              className="footer_logo mt-5 d-none d-md-block"
               src={FooterLogo}
               alt={FooterLogo}
             />
           </div>
 
-          <div className="col-sm-6 col-md-3">
+          <div className="col-sm-6 col-md-3 mt_footer_courses">
             <p className="ff_inter text_gradient fw-bold fs_xl">Courses</p>
 
             <ul className="ps-0 list_style_none">
@@ -57,7 +57,9 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-sm-6 col-md-3">
-            <p className="ff_inter text_gradient fw-bold fs_xl">Products</p>
+            <p className="ff_inter text_gradient fw-bold fs_xl mt-3 mt-md-0">
+              Products
+            </p>
 
             <ul className="ps-0 list_style_none">
               {Products.map((item, index) => {
@@ -71,7 +73,7 @@ const Footer = () => {
               })}
             </ul>
             <ul className="ps-0 mt-4 list_style_none">
-              <p className="ff_inter text_gradient fw-bold fs_xl">
+              <p className="ff_inter text_gradient fw-bold fs_xl mt-3 mt-md-0">
                 Latest Mock Tests
               </p>
 
@@ -87,7 +89,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-sm-6 col-md-3">
-            <p className="ff_inter text_gradient fw-bold fs_xl">
+            <p className="ff_inter text_gradient fw-bold fs_xl mt-3 mt-md-0">
               Latest Online Coaching
             </p>
 
@@ -104,7 +106,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="mt-4">
+        <div className="mt-1">
           <p className="ff_inter fs_lg text-light fw-lighter">Follow On:</p>
           <Link>
             <img className="footer_icon" src={FbIcon} alt={FbIcon} />

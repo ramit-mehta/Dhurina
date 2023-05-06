@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import MobileIcon from "../assets/images/svg/mobile-icon.svg";
 import LoginImg from "../assets/images/png/login-img.png";
-const Login = () => {
+import Close from "../../src/assets/images/svg/popup-close-icon.svg";
+
+const Login = ({ setLoginPopup }) => {
   const [otp, setOtp] = useState("Enter Mobile Number");
   const [seconds, setSeconds] = useState("SEND OTP");
   useEffect(() => {
@@ -21,7 +23,13 @@ const Login = () => {
   }, [seconds]);
 
   return (
-    <div className="custom_container container py-5">
+    <div className="text-end">
+      <img
+        className="cursor_pointer"
+        onClick={() => setLoginPopup(false)}
+        src={Close}
+        alt="popup_close"
+      />
       <div className=" row align-items-end flex-column-reverse flex-lg-row py-3">
         <div className="col-lg-6 text-center mt-4 mt-lg-0">
           <p className="color_dark_blue fs_10xl fw-normal ff_inter mb-0">
@@ -35,7 +43,7 @@ const Login = () => {
           </p>
           <div className="position-relative">
             <input
-              className="w-100 login_input pb-3 fs_4xl color_grey "
+              className="w-100 login_input pb-3 fs_3xl color_grey "
               type="number"
               name="number"
               id="number"
@@ -48,7 +56,7 @@ const Login = () => {
                   setOtp("Enter OTP");
                 }
               }}
-              className="position-absolute ff_inter top-0 end-0 border-0 bg-transparent text_gradient fw-semibold fs_4xl"
+              className="position-absolute ff_inter top-0 end-0 border-0 bg-transparent text_gradient fw-semibold fs_3xl"
             >
               {" "}
               {seconds < 10 && !isNaN(seconds)
@@ -63,8 +71,8 @@ const Login = () => {
               alt="MobileIcon"
             />
           </div>
-          <button className="mt-5 w-100 py-4 text-white fs_8xl ff_inter fw-normal border-0 login_btn">
-            Login
+          <button className="mt-5 w-100 py-3 text-white fs_5xl ff_inter fw-normal border-0 login_btn">
+            LOGIN
           </button>
         </div>
         <div className="col-lg-6 text-center">
