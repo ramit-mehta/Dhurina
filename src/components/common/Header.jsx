@@ -7,6 +7,12 @@ import Login from "../Login";
 
 const Header = () => {
   const [loginPopup, setLoginPopup] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("All Courses");
+
+  // Dropdown option select
+  const handleOptionSelect = (event) => {
+    setSelectedOption(event.target.innerHTML);
+  };
   return (
     <>
       <div className="custom_container container">
@@ -20,17 +26,26 @@ const Header = () => {
                 className="courses_dropdown border-0 color_dark_blue ff_inter fw-semibold border_oval bg_light_orange"
                 id="dropdown-basic"
               >
-                All Courses
+                {selectedOption}
               </Dropdown.Toggle>
 
               <Dropdown.Menu className="bg_light_orange color_dark_blue">
-                <Dropdown.Item className="ff_inter" href="#/action-1">
+                <Dropdown.Item
+                  className="ff_inter"
+                  onClick={handleOptionSelect}
+                >
                   Action
                 </Dropdown.Item>
-                <Dropdown.Item className="ff_inter" href="#/action-2">
+                <Dropdown.Item
+                  className="ff_inter"
+                  onClick={handleOptionSelect}
+                >
                   Another action
                 </Dropdown.Item>
-                <Dropdown.Item className="ff_inter" href="#/action-3">
+                <Dropdown.Item
+                  className="ff_inter"
+                  onClick={handleOptionSelect}
+                >
                   Something else
                 </Dropdown.Item>
               </Dropdown.Menu>

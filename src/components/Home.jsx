@@ -5,6 +5,7 @@ import Products from "./home/Products";
 import Batches from "./home/Batches";
 import LearnEnglish from "./home/LearnEnglish";
 import Students from "./home/Students";
+import Enroll from "./home/Enroll";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Batches />
       <Products />
       <Resources />
+      <Enroll />
       <Students />
     </>
   );
