@@ -14,6 +14,11 @@ import Quizes from "../../assets/images/png/Res-Quizes.png";
 import Skills from "../../assets/images/png/Res-skills.png";
 import Shorts from "../../assets/images/png/Res-shorts.png";
 
+// BPSC Page Classes
+import Icon from "../../assets/images/svg/bpsc-icon.svg";
+import EbooksIcon from "../../assets/images/svg/bpsc-ebook.svg";
+import Books from "../../assets/images/png/bpsc-books.png";
+
 // PRODUCTS
 export const ExploreProducts = [
   {
@@ -117,4 +122,54 @@ export const MockTests = [
   { label: "SSC CHSL", url: "#" },
   { label: "SSC GD", url: "#" },
   { label: "RRB NTPC", url: "#" },
+];
+
+// BPSC PAGE CLASSES
+export const BpscClass = [
+  {
+    img: Icon,
+    bpscTitle: "BPSC",
+    type: "SIDDHI Selection",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    price: 1299,
+    coupon: "BPSC",
+  },
+  {
+    img: Icon,
+    bpscTitle: "BPSC",
+    type: "SIDDHI Selection",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    price: 1299,
+    coupon: "BPSC",
+  },
+  {
+    img: Icon,
+    bpscTitle: "BPSC",
+    type: "SIDDHI Selection",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    price: 1299,
+    coupon: "BPSC",
+  },
+];
+
+// BPSC Ebooks
+export const Ebooks = [
+  {
+    img: EbooksIcon,
+    bpscTitle: "BPSC",
+    type: "Handwritten Notes",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Hand-Written Notes",
+    price: 899,
+    coupon: "BPSC10",
+  },
+];
+
+// BPSC Books
+export const BpscBooks = [
+  {
+    img: Books,
+    desc: "Bihar SSC CGL Mains SIDDHI Book Combo 3 Books",
+    price: 1299,
+    coupon: "BPSC10",
+  },
 ];

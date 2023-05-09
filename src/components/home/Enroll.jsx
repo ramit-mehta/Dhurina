@@ -111,7 +111,7 @@ const Enroll = () => {
         </div>
         <div className="col-lg-6 text-center text-lg-end position-relative">
           <img
-            className="position-absolute start-50  enroll_ellipse"
+            className="position-absolute start-50 enroll_ellipse"
             src={Ellipse}
             alt="ellipse"
           />

@@ -98,7 +98,6 @@ const Welcome = () => {
     { name: "Skill" },
   ];
   const [goal, setGoal] = useState();
-  console.log(goal);
   return (
     <div className="container">
       <div className="text-end">

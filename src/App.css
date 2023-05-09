@@ -13,7 +13,7 @@ body {
 }
 
 body {
-  background-color: #fefbf5;
+  background-color: #fefdfa !important;
 }
 
 /* font family  */
@@ -120,10 +120,10 @@ body {
   color: #fffcfc !important;
 }
 .text_grey {
-  color: #747474;
+  color: #747474 !important;
 }
 .text_dark_grey {
-  color: #545454;
+  color: #545454 !important;
 }
 .bg_light_orange2 {
   background-color: #fff2d4;
@@ -146,7 +146,6 @@ select:focus {
 }
 
 /* ********HEADER START********** */
-
 .border_oval {
   border-radius: 62px !important;
 }
@@ -154,9 +153,9 @@ select:focus {
   border-top: 0.3em solid #fe6902 !important;
 }
 .dropdown-item:hover {
-  background-color: #fe6902 !important;
-  color: white !important;
+  background-color: #ffe7c8 !important;
 }
+
 .whatsapp_logo {
   height: 30px;
   width: 25px;
@@ -166,7 +165,43 @@ select:focus {
   height: 80px;
 }
 
+/* hamburger toggle  */
+.hamburger-menu span {
+  background-color: #fe5e00;
+  width: 30px;
+  height: 4px;
+  z-index: 100;
+  transition: transform 0.2s ease-out;
+}
+.navShow {
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff4d4;
+  z-index: 98;
+  width: 377px;
+}
+/* .nav {
+  transition: all 0.5s ease-in-out;
+}
+
+.navShow {
+  right: 0;
+}
+
+.navHide {
+  right: -377px;
+} */
+
 /* *********HEADER END********* */
+
+/* ********1. HOME PAGE START********** */
 
 /* ********HERO START********** */
 
@@ -371,6 +406,14 @@ select:focus {
   transform: translateX(28px);
   background-color: #fff;
 }
+.apple_icon {
+  height: 40px;
+  width: 40px;
+}
+.android_icon {
+  height: 40px;
+  width: 40px;
+}
 
 /* *********HOW TO ENROLL END********* */
 
@@ -415,6 +458,84 @@ select:focus {
 }
 
 /* *********STUDENTS SAY END********* */
+
+/* ******** HOME PAGE END********** */
+
+/* ********2. BPSC PAGE START********** */
+.heading_text {
+  max-width: 520px;
+}
+.bg_classes {
+  border-bottom: 1px solid #ffd8a0;
+  background-color: #fff4d4;
+}
+.border_light_brown {
+  border: 1px solid #ffd8a0;
+  border-radius: 4px;
+}
+.coupon_bg {
+  background-color: #fff9ea;
+  border-radius: 100px;
+}
+.bg_ebooks {
+  background: linear-gradient(180deg, #fe8605 0%, #fea905 100%);
+  border: 0.2px solid #fe8605;
+  border-radius: 4px;
+}
+.notes {
+  max-width: 200px;
+  line-height: 28px !important;
+}
+.bg_books {
+  background-color: #fff3e6;
+}
+.combo_label {
+  top: 10px;
+  left: 10px;
+}
+.bg_register {
+  background: linear-gradient(180deg, #fff9ec 0%, rgba(255, 249, 236, 0) 100%);
+  border: 1px solid #ffdcb7;
+  border-radius: 9px;
+}
+input[type="radio"] {
+  background: linear-gradient(156.57deg, #fea70c 9.62%, #fe6b02 92.49%);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: relative;
+}
+input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  left: 2px;
+  top: 2px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+}
+.bg_crack_bpsc {
+  background: linear-gradient(135.96deg, #ffa800 22.12%, #fe8605 72.53%);
+  border: 1px dashed #ffff;
+  border-radius: 10px;
+}
+.crack_bpsc_para {
+  max-width: 180px;
+}
+.register_btn {
+  background: #ffffff;
+  border-radius: 15.3584px;
+  color: #fe831b;
+}
+.poster {
+  max-width: 240px;
+}
+/* ********2. BPSC PAGE END********** */
 
 /* *********FOOTER START********* */
 .footer_logo {
@@ -483,6 +604,7 @@ input::-webkit-inner-spin-button {
 
   .dhurina_logo {
     height: 70px;
+    z-index: 99;
   }
   .hero_img {
     max-width: 280px !important;

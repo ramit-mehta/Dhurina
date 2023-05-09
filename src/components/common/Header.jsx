@@ -8,22 +8,35 @@ import Login from "../Login";
 const Header = () => {
   const [loginPopup, setLoginPopup] = useState(false);
   const [selectedOption, setSelectedOption] = useState("All Courses");
+  const [showNav, setShowNav] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Dropdown option select
   const handleOptionSelect = (event) => {
     setSelectedOption(event.target.innerHTML);
   };
+  const handleClick = () => {
+    setShowNav(!showNav);
+    setMenuOpen(!menuOpen);
+  };
   return (
     <>
       <div className="custom_container container">
-        <nav className="mt-2 d-flex flex-column flex-md-row justify-content-between align-items-md-end">
-          <div className="d-flex align-items-end mb-3 mb-md-0">
+        <nav className="mt-2 d-flex justify-content-between align-items-end position-relative">
+          <Link className="d-md-none" to="/">
+            <img
+              className="dhurina_logo position-relative"
+              src={Logo}
+              alt="Logo"
+            />
+          </Link>
+          <div className="d-flex align-items-end mb-3 mb-md-0 d-none d-md-flex">
             <Link to="/">
               <img className="dhurina_logo" src={Logo} alt="Logo" />
             </Link>
-            <Dropdown className="ms-5 ps-3 ">
+            <Dropdown className="ms-5 ps-3">
               <Dropdown.Toggle
-                className="courses_dropdown border-0 color_dark_blue ff_inter fw-semibold border_oval bg_light_orange"
+                className="border-0 color_dark_blue ff_inter fw-semibold border_oval bg_light_orange"
                 id="dropdown-basic"
               >
                 {selectedOption}
@@ -34,7 +47,9 @@ const Header = () => {
                   className="ff_inter"
                   onClick={handleOptionSelect}
                 >
-                  Action
+                  <Link className="color_dark_blue" to="/bpsc">
+                    BPSC
+                  </Link>
                 </Dropdown.Item>
                 <Dropdown.Item
                   className="ff_inter"
@@ -51,7 +66,7 @@ const Header = () => {
               </Dropdown.Menu>
             </Dropdown>
           </div>
-          <div className="d-flex align-items-center justify-content-center mt-3 mt-md-0 justify-content-md-end">
+          <div className="d-flex align-items-center  justify-content-center mt-3 mt-md-0 justify-content-md-end d-none d-md-flex">
             <div className="d-flex border_gradient px-3 py-1">
               <button className="text_gradient ff_inter border-0 fw-semibold fs-sm">
                 Whatsapp
@@ -73,7 +88,63 @@ const Header = () => {
               </button>
             </Link>
           </div>
+
+          {/* Hamburger toggler  */}
+          <div
+            onClick={handleClick}
+            className={`hamburger-menu d-flex flex-column d-md-none ${
+              menuOpen ? "open" : ""
+            }`}
+          >
+            <span className="menu_1"></span>
+            <span className="menu_2 mt-1"></span>
+            <span className="menu_3 mt-1"></span>
+          </div>
         </nav>
+        <div className={showNav ? "navShow" : "d-none"}>
+          <Dropdown>
+            <Dropdown.Toggle
+              className="border-0 color_dark_blue ff_inter fw-semibold border_oval bg_light_orange"
+              id="dropdown-basic"
+            >
+              {selectedOption}
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu className="bg_light_orange color_dark_blue">
+              <Dropdown.Item className="ff_inter" onClick={handleOptionSelect}>
+                <Link className="color_dark_blue" to="/bpsc">
+                  BPSC
+                </Link>
+              </Dropdown.Item>
+              <Dropdown.Item className="ff_inter" onClick={handleOptionSelect}>
+                Another action
+              </Dropdown.Item>
+              <Dropdown.Item className="ff_inter" onClick={handleOptionSelect}>
+                Something else
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+          <div className="d-flex border_gradient px-3 py-1 mt-4">
+            <button className="text_gradient ff_inter border-0 fw-semibold fs-sm">
+              Whatsapp
+            </button>
+            <Link>
+              <img
+                className="ms-2 whatsapp_logo"
+                src={WhatsappLogo}
+                alt="WhatsappLogo"
+              />
+            </Link>
+          </div>
+          <Link>
+            <button
+              onClick={() => setLoginPopup(true)}
+              className=" fs-sm text-white ff_inter bg_gradient border-0 px-3 py-2 mt-4"
+            >
+              Sign Up/Login
+            </button>
+          </Link>
+        </div>
       </div>
 
       {/* Login Popup */}
