@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import UserIcon from "../assets/images/svg/user-icon.svg";
 import LocationIcon from "../assets/images/svg/location-icon.svg";
 import EmailIcon from "../assets/images/svg/email-icon.svg";
@@ -111,7 +111,7 @@ const Welcome = () => {
             <div className="position-relative">
               <input
                 className="w-100 login_input pb-3 fs_3xl color_grey "
-                type="number"
+                type="text"
                 name="number"
                 id="number"
                 placeholder="Enter Name"
@@ -169,17 +169,17 @@ const Welcome = () => {
             <p className="text_gradient fs_lg mb-1 fw-semibold ff_inter text-start mt-4">
               Select your goal
             </p>
-            <div className="d-flex">
+            <div className="d-flex flex-wrap">
               {Goals.map((item, index) => {
                 return (
                   <button
                     onClick={() => setGoal(item.name)}
                     key={index}
                     className={`${
-                      goal == item.name
+                      goal === item.name
                         ? "bg_gradient text-white"
                         : "bg_light_orange2 color_black2"
-                    } me-3 border-0  px-3 py-2 fw-normal rounded-1`}
+                    } me-3 border-0  px-3 py-2 fw-normal rounded-1 mt-3`}
                     value={item.name}
                   >
                     {item.name}
