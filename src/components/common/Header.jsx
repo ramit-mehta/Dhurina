@@ -10,11 +10,7 @@ const Header = () => {
   const [selectedOption, setSelectedOption] = useState("All Courses");
   const [showNav, setShowNav] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  if (loginPopup) {
-    document.body.parentElement.classList.add("overflow-hidden");
-  } else {
-    document.body.parentElement.classList.remove("overflow-hidden");
-  }
+
   // Dropdown option select
   const handleOptionSelect = (event) => {
     setSelectedOption(event.target.innerHTML);
@@ -89,7 +85,12 @@ const Header = () => {
             </div>
             <Link>
               <button
-                onClick={() => setLoginPopup(true)}
+                onClick={() => {
+                  setLoginPopup(true);
+                  document.body.parentElement.classList.toggle(
+                    "overflow-hidden"
+                  );
+                }}
                 className="ms-3 fs-sm text-white ff_inter bg_gradient border-0 px-3 py-2"
               >
                 Sign Up/Login
