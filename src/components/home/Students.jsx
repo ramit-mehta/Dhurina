@@ -76,7 +76,7 @@ const Students = () => {
         <Slider {...settings} ref={sliderRef}>
           <div className="row d-flex align-items-center my-5 py-4">
             <div className="col-lg-6">
-              <img className="w-75 " src={OurStudent} alt="OurStudent" />
+              <img className="our_student" src={OurStudent} alt="OurStudent" />
             </div>
             <div className="col-lg-6 text-center text-lg-start">
               <img className="text-start" src={Quotes} alt="quotes" />
@@ -95,7 +95,7 @@ const Students = () => {
           </div>
           <div className="row d-flex align-items-center my-5 py-4">
             <div className="col-lg-6 mx-auto mx-lg-0">
-              <img className="w-75 " src={OurStudent} alt="OurStudent" />
+              <img className="our_student" src={OurStudent} alt="OurStudent" />
             </div>
             <div className="col-lg-6 text-center text-lg-start">
               <img src={Quotes} alt="quotes" />

@@ -45,10 +45,10 @@ const Hero = () => {
               </button>
             </div>
             <div className="mt-4 pt-2">
-              <Link to="https://play.google.com/store">
+              <Link target="_blank" to="https://play.google.com/store">
                 <img src={PlayStore} alt="PlayStore" />
               </Link>
-              <Link to="https://www.apple.com/app-store/">
+              <Link target="_blank" to="https://www.apple.com/app-store/">
                 <img className="ms-2" src={AppStore} alt="AppStore" />
               </Link>
             </div>

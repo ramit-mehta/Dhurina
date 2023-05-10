@@ -124,7 +124,7 @@ const Header = () => {
                 <Link
                   className="color_dark_blue"
                   to="/bpsc"
-                  onClick={handleOptionSelect}
+                  onClick={(handleOptionSelect, handleClick)}
                 >
                   BPSC
                 </Link>
