@@ -26,7 +26,10 @@ const Login = ({ setLoginPopup }) => {
     <div className="text-end">
       <img
         className="cursor_pointer"
-        onClick={() => setLoginPopup(false)}
+        onClick={() => {
+          setLoginPopup(false);
+          document.body.parentElement.classList.toggle("overflow-hidden");
+        }}
         src={Close}
         alt="popup_close"
       />
