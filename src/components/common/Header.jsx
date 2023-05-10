@@ -10,7 +10,11 @@ const Header = () => {
   const [selectedOption, setSelectedOption] = useState("All Courses");
   const [showNav, setShowNav] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
+  if (loginPopup) {
+    document.body.parentElement.classList.add("overflow-hidden");
+  } else {
+    document.body.parentElement.classList.remove("overflow-hidden");
+  }
   // Dropdown option select
   const handleOptionSelect = (event) => {
     setSelectedOption(event.target.innerHTML);
@@ -19,6 +23,7 @@ const Header = () => {
     setShowNav(!showNav);
     setMenuOpen(!menuOpen);
     document.body.classList.toggle("humburger");
+    document.body.parentElement.classList.toggle("overflow-hidden");
   };
 
   return (
@@ -169,7 +174,7 @@ const Header = () => {
       {/* Login Popup */}
       <div className={loginPopup ? "blur" : ""}></div>
       {loginPopup ? (
-        <div className="position-fixed top-50 start-50 translate-middle bg-white login_popup w-100 max-vh-100 px-4 py-2">
+        <div className="position-fixed top-50 start-50 translate-middle bg-white login_popup w-100 vh_100 px-4 py-2 overflow-auto">
           <Login setLoginPopup={setLoginPopup} />
         </div>
       ) : (
