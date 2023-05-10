@@ -18,11 +18,13 @@ const Header = () => {
   const handleClick = () => {
     setShowNav(!showNav);
     setMenuOpen(!menuOpen);
+    document.body.classList.toggle("humburger");
   };
+
   return (
     <>
       <div className="custom_container container">
-        <nav className="mt-2 d-flex justify-content-between align-items-end position-relative">
+        <nav className="mt-2 d-flex justify-content-between align-items-center align-items-md-end position-relative">
           <Link className="d-md-none" to="/">
             <img
               className="dhurina_logo position-relative"
@@ -43,11 +45,12 @@ const Header = () => {
               </Dropdown.Toggle>
 
               <Dropdown.Menu className="bg_light_orange color_dark_blue">
-                <Dropdown.Item
-                  className="ff_inter"
-                  onClick={handleOptionSelect}
-                >
-                  <Link className="color_dark_blue" to="/bpsc">
+                <Dropdown.Item className="ff_inter">
+                  <Link
+                    className="color_dark_blue"
+                    to="/bpsc"
+                    onClick={handleOptionSelect}
+                  >
                     BPSC
                   </Link>
                 </Dropdown.Item>
@@ -97,22 +100,32 @@ const Header = () => {
             }`}
           >
             <span className="menu_1"></span>
-            <span className="menu_2 mt-1"></span>
-            <span className="menu_3 mt-1"></span>
+            <span className="menu_2"></span>
+            <span className="menu_3"></span>
           </div>
         </nav>
-        <div className={showNav ? "navShow" : "d-none"}>
+        <div
+          className={
+            showNav
+              ? "navShow w-100 d-md-none"
+              : "width_0 overflow-hidden top-0 end-0 position-absolute"
+          }
+        >
           <Dropdown>
             <Dropdown.Toggle
-              className="border-0 color_dark_blue ff_inter fw-semibold border_oval bg_light_orange"
+              className="border-0 color_dark_blue ff_inter fw-semibold border_oval bg-white"
               id="dropdown-basic"
             >
               {selectedOption}
             </Dropdown.Toggle>
 
             <Dropdown.Menu className="bg_light_orange color_dark_blue">
-              <Dropdown.Item className="ff_inter" onClick={handleOptionSelect}>
-                <Link className="color_dark_blue" to="/bpsc">
+              <Dropdown.Item className="ff_inter">
+                <Link
+                  className="color_dark_blue"
+                  to="/bpsc"
+                  onClick={handleOptionSelect}
+                >
                   BPSC
                 </Link>
               </Dropdown.Item>

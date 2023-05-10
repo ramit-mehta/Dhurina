@@ -163,6 +163,7 @@ select:focus {
 }
 .dhurina_logo {
   height: 80px;
+  z-index: 99;
 }
 
 /* hamburger toggle  */
@@ -171,7 +172,15 @@ select:focus {
   width: 30px;
   height: 4px;
   z-index: 100;
-  transition: transform 0.2s ease-out;
+  /* margin-top: 4px; */
+  border-radius: 4px;
+  transition: transform 0.3s ease-in-out;
+}
+.hamburger-menu {
+  height: 25px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .navShow {
   transition: all 0.3s ease-in-out;
@@ -181,23 +190,33 @@ select:focus {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0 !important;
+  right: 0px !important;
   background-color: #fff4d4;
   z-index: 98;
-  width: 377px;
+  width: 100%;
 }
-/* .nav {
-  transition: all 0.5s ease-in-out;
+.humburger .hamburger-menu .menu_1 {
+  transform: rotate(-45deg);
+  position: absolute;
+  right: 0px;
+  top: 50%;
 }
-
-.navShow {
-  right: 0;
+.humburger .hamburger-menu .menu_3 {
+  transform: rotate(45deg);
+  position: absolute;
+  right: 0px;
+  top: 50%;
 }
-
-.navHide {
-  right: -377px;
-} */
+.humburger .hamburger-menu .menu_2 {
+  display: none;
+}
+.width_0 {
+  width: 0px;
+}
+.overflow_hidden {
+  overflow-y: hidden !important;
+}
 
 /* *********HEADER END********* */
 
@@ -531,6 +550,7 @@ input[type="radio"]:checked::before {
   background: #ffffff;
   border-radius: 15.3584px;
   color: #fe831b;
+  z-index: 99;
 }
 .poster {
   max-width: 240px;

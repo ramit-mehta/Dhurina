@@ -105,7 +105,7 @@ const Register = () => {
         <p className="mb-0 text-white ff_inter fs_8xl crack_bpsc_para">
           krna Hua Bahut Aasan..
         </p>
-        <button className="fw-semibold ff_inter fs_sm mt-2 register_btn border-0 py-1 px-3">
+        <button className="fw-semibold ff_inter fs_sm mt-2 register_btn position-relative border-0 py-1 px-3">
           REGISTER
         </button>
         <img

@@ -8,7 +8,7 @@ const RecordedVideos = () => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 2.07,
+    slidesToShow: 2.04,
     slidesToScroll: 1,
     responsive: [
       {
