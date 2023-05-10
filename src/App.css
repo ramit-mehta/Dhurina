@@ -641,6 +641,7 @@ input::-webkit-inner-spin-button {
     max-width: 100% !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
+    height: 100%;
   }
   .dhurina_logo {
     height: 70px;

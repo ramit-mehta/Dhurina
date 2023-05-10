@@ -51,7 +51,7 @@ const Students = () => {
           alt="ellipse1 "
         />
         <img
-          className="position-absolute orange_ellipse2"
+          className="position-absolute orange_ellipse2 d-none d-lg-block"
           src={Ellipse2}
           alt="ellipse2"
         />
@@ -79,7 +79,11 @@ const Students = () => {
               <img className="our_student" src={OurStudent} alt="OurStudent" />
             </div>
             <div className="col-lg-6 text-center text-lg-start">
-              <img className="text-start" src={Quotes} alt="quotes" />
+              <img
+                className="text-start mt-4 mt-lg-0"
+                src={Quotes}
+                alt="quotes"
+              />
               <h3 className="ff_inter fw-bold text_dark_grey fs_9xl mt-2 mb-0">
                 Babita Choudhary
               </h3>
@@ -98,7 +102,7 @@ const Students = () => {
               <img className="our_student" src={OurStudent} alt="OurStudent" />
             </div>
             <div className="col-lg-6 text-center text-lg-start">
-              <img src={Quotes} alt="quotes" />
+              <img className="mt-4 mt-lg-0" src={Quotes} alt="quotes" />
               <h3 className="ff_inter fw-bold text_dark_grey fs_9xl mt-2 mb-0">
                 Babita Choudhary
               </h3>
