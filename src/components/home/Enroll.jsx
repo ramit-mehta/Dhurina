@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Android from "../../assets/images/svg/android-icon.svg";
+import AndroidOff from "../../assets/images/svg/android-icon-off.svg";
 import Apple from "../../assets/images/svg/apple-icon.svg";
+import Apple2 from "../../assets/images/svg/apple-icon-orange.svg";
 import Icon1 from "../../assets/images/svg/timeline-orange-icon.svg";
 import Icon2 from "../../assets/images/svg/timeline-grey-icon.svg";
 import Mobile from "../../assets/images/png/dhurina-android.png";
@@ -20,7 +22,11 @@ const Enroll = () => {
           How to Enroll in <span className="text_gradient"> Dhurina </span>
         </h2>
         <div className="mb-0 d-flex align-items-center justify-content-center mt-4 mt-lg-0">
-          <img src={Android} alt="android_icon" />
+          {isOn ? (
+            <img className="android_icon" src={AndroidOff} alt="android_icon" />
+          ) : (
+            <img className="android_icon" src={Android} alt="android_icon" />
+          )}
           <div className="toggle-switch mx-2">
             <input
               type="checkbox"
@@ -37,7 +43,11 @@ const Enroll = () => {
               <span className="toggle-switch-switch" />
             </label>
           </div>
-          <img src={Apple} alt="apple_icon" />
+          {isOn ? (
+            <img className="apple_icon" src={Apple2} alt="off" />
+          ) : (
+            <img className="apple_icon" src={Apple} alt="on" />
+          )}
         </div>
       </div>
       <div className="row flex-column-reverse flex-lg-row mt-5 py-4 justify-content-between align-items-center">
@@ -101,7 +111,7 @@ const Enroll = () => {
         </div>
         <div className="col-lg-6 text-center text-lg-end position-relative">
           <img
-            className="position-absolute start-50  enroll_ellipse"
+            className="position-absolute start-50 enroll_ellipse"
             src={Ellipse}
             alt="ellipse"
           />

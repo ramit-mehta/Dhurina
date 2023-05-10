@@ -20,7 +20,7 @@ const Footer = () => {
             <img
               className="footer_logo mb-4 d-sm-block d-md-none"
               src={FooterLogo}
-              alt={FooterLogo}
+              alt="FooterLogo"
             />
             <p className="ff_inter text_gradient fw-bold fs_xl">Company</p>
             <ul className="ps-0 list_style_none">
@@ -37,7 +37,7 @@ const Footer = () => {
             <img
               className="footer_logo mt-5 d-none d-md-block"
               src={FooterLogo}
-              alt={FooterLogo}
+              alt="FooterLogo"
             />
           </div>
 
@@ -109,16 +109,16 @@ const Footer = () => {
         <div className="mt-1">
           <p className="ff_inter fs_lg text-light fw-lighter">Follow On:</p>
           <Link>
-            <img className="footer_icon" src={FbIcon} alt={FbIcon} />
+            <img className="footer_icon" src={FbIcon} alt="FbIcon" />
           </Link>
           <Link className="ms-2">
-            <img className="footer_icon" src={TwitterIcon} alt={TwitterIcon} />
+            <img className="footer_icon" src={TwitterIcon} alt="TwitterIcon" />
           </Link>
           <Link className="ms-2">
-            <img className="footer_icon" src={InstaIcon} alt={InstaIcon} />
+            <img className="footer_icon" src={InstaIcon} alt="InstaIcon" />
           </Link>
           <Link className="ms-2">
-            <img className="footer_icon" src={TeleIcon} alt={TeleIcon} />
+            <img className="footer_icon" src={TeleIcon} alt="TeleIcon" />
           </Link>
         </div>
       </div>

@@ -20,11 +20,11 @@ const LearnEnglish = () => {
       <Slider {...settings}>
         <div className="row d-flex align-items-center learn py-4 py-lg-0">
           <div className="col-lg-4 position-relative">
-            <img src={BgEllipse} alt={BgEllipse} />
+            <img src={BgEllipse} alt="BgEllipse" />
             <img
               className="position-absolute janhavi_img start-50 translate-middle-x "
               src={JanhaviImg}
-              alt={JanhaviImg}
+              alt="JanhaviImg"
             />
           </div>
           <div className="col-lg-6">
@@ -48,11 +48,11 @@ const LearnEnglish = () => {
         </div>
         <div className="row d-flex align-items-center justify-content-center learn py-4 py-lg-0">
           <div className="col-lg-4 position-relative">
-            <img src={BgEllipse} alt={BgEllipse} />
+            <img src={BgEllipse} alt="BgEllipse" />
             <img
               className="position-absolute janhavi_img start-50 translate-middle-x "
               src={JanhaviImg}
-              alt={JanhaviImg}
+              alt="JanhaviImg"
             />
           </div>
           <div className="col-lg-6">
@@ -76,11 +76,11 @@ const LearnEnglish = () => {
         </div>
         <div className="row d-flex align-items-center learn py-4 py-lg-0">
           <div className="col-lg-4 position-relative">
-            <img src={BgEllipse} alt={BgEllipse} />
+            <img src={BgEllipse} alt="BgEllipse" />
             <img
               className="position-absolute janhavi_img start-50 translate-middle-x "
               src={JanhaviImg}
-              alt={JanhaviImg}
+              alt="JanhaviImg"
             />
           </div>
           <div className="col-lg-6">

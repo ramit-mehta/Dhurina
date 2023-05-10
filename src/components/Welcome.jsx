@@ -98,7 +98,6 @@ const Welcome = () => {
     { name: "Skill" },
   ];
   const [goal, setGoal] = useState();
-  console.log(goal);
   return (
     <div className="container">
       <div className="text-end">
@@ -144,7 +143,7 @@ const Welcome = () => {
                 name="state"
                 id="state"
               >
-                <option value="Select State" disabled>
+                <option value="Select State" selected disabled>
                   Select State
                 </option>
                 {states.map((item, index) => {
@@ -179,7 +178,7 @@ const Welcome = () => {
                       goal === item.name
                         ? "bg_gradient text-white"
                         : "bg_light_orange2 color_black2"
-                    } me-3 border-0  px-3 py-2 fw-normal rounded-1 mt-3`}
+                    } me-3 border-0  px-3 py-2 fw-normal rounded-1 mt-3 fw-semibold ff_inter`}
                     value={item.name}
                   >
                     {item.name}

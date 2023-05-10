@@ -34,13 +34,13 @@ const Hero = () => {
             <p className="ff_inter color_dark_blue fs_7xl">
               Watch anywhere, anytime.
             </p>
-            <div className="d-flex bg-white mx-auto mx-lg-0 px-3 px-lg-4 py-2 hero_input mt-2 align-items-center">
+            <div className="d-flex bg-white mx-auto mx-lg-0 px-3 py-2 hero_input mt-2 align-items-center">
               <input
                 className=" border-0 bg-transparent w-100 ff_inter fs_md"
                 type="text"
                 placeholder="Find Exam Based Video, Mock Test & Notes"
               />
-              <button className="bg_gradient text-white border-0 rounded-pill px-3 py-1 px-lg-4 py-lg-2 fs_xl">
+              <button className="bg_gradient text-white border-0 rounded-pill px-3 py-1 px-lg-4 fs_xl">
                 Search
               </button>
             </div>

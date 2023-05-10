@@ -13,7 +13,7 @@ body {
 }
 
 body {
-  background-color: #fefbf5;
+  background-color: #fefdfa !important;
 }
 
 /* font family  */
@@ -120,12 +120,17 @@ body {
   color: #fffcfc !important;
 }
 .text_grey {
-  color: #747474;
+  color: #747474 !important;
 }
 .text_dark_grey {
-  color: #545454;
+  color: #545454 !important;
 }
-
+.bg_light_orange2 {
+  background-color: #fff2d4;
+}
+.color_black2 {
+  color: #373737;
+}
 /* common classes  */
 input {
   outline: none;
@@ -136,9 +141,11 @@ input::placeholder {
 .cursor_pointer {
   cursor: pointer;
 }
+select:focus {
+  outline: none;
+}
 
-/* ***********************HEADER START*************************** */
-
+/* ********HEADER START********** */
 .border_oval {
   border-radius: 62px !important;
 }
@@ -146,9 +153,9 @@ input::placeholder {
   border-top: 0.3em solid #fe6902 !important;
 }
 .dropdown-item:hover {
-  background-color: #fe6902 !important;
-  color: white !important;
+  background-color: #ffe7c8 !important;
 }
+
 .whatsapp_logo {
   height: 30px;
   width: 25px;
@@ -156,11 +163,66 @@ input::placeholder {
 }
 .dhurina_logo {
   height: 80px;
+  z-index: 99;
 }
 
-/* ************************HEADER END************************** */
+/* hamburger toggle  */
+.hamburger-menu span {
+  background-color: #fe5e00;
+  width: 30px;
+  height: 4px;
+  z-index: 100;
+  /* margin-top: 4px; */
+  border-radius: 4px;
+  transition: transform 0.3s ease-in-out;
+}
+.hamburger-menu {
+  height: 25px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.navShow {
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0 !important;
+  right: 0px !important;
+  background-color: #fff4d4;
+  z-index: 98;
+  width: 100%;
+}
+.humburger .hamburger-menu .menu_1 {
+  transform: rotate(-45deg);
+  position: absolute;
+  right: 0px;
+  top: 50%;
+}
+.humburger .hamburger-menu .menu_3 {
+  transform: rotate(45deg);
+  position: absolute;
+  right: 0px;
+  top: 50%;
+}
+.humburger .hamburger-menu .menu_2 {
+  display: none;
+}
+.width_0 {
+  width: 0px;
+}
+.overflow_hidden {
+  overflow-y: hidden !important;
+}
 
-/* ***********************HERO START*************************** */
+/* *********HEADER END********* */
+
+/* ********1. HOME PAGE START********** */
+
+/* ********HERO START********** */
 
 .hero_input {
   background: #ffffff;
@@ -170,9 +232,9 @@ input::placeholder {
 .hero_input {
   max-width: 440px;
 }
-/* ************************HERO END************************** */
+/* *********HERO END********* */
 
-/* ************************LEARN ENGLISH START************************** */
+/* *********LEARN ENGLISH START********* */
 .janhavi_img {
   max-width: 200px;
   top: -46%;
@@ -187,9 +249,9 @@ input::placeholder {
 .slick-dots li.slick-active button:before {
   color: #fe6902 !important;
 }
-/* ************************LEARN ENGLISH END************************** */
+/* *********LEARN ENGLISH END********* */
 
-/* ************************BATCHES START************************** */
+/* *********BATCHES START********* */
 .batches {
   border: 1px solid transparent;
   background: linear-gradient(to right, #ffffff, #ffffff) padding-box,
@@ -265,9 +327,9 @@ input::placeholder {
 .batches_icon {
   max-width: 50px;
 }
-/* ************************BATCHES END************************** */
+/* *********BATCHES END********* */
 
-/* ************************EXPLORE PRODUCTS START************************** */
+/* *********EXPLORE PRODUCTS START********* */
 .product_box {
   border: 0.66px solid transparent;
   background: linear-gradient(to right, #fcf5ed, #fcf5ed) padding-box,
@@ -276,9 +338,9 @@ input::placeholder {
   border-radius: 11.2338px;
 }
 
-/* ************************EXPLORE PRODUCTS END************************** */
+/* *********EXPLORE PRODUCTS END********* */
 
-/* ************************HOW TO ENROLL START************************** */
+/* *********HOW TO ENROLL START********* */
 .timeline {
   position: relative;
   margin: 0 auto;
@@ -299,7 +361,7 @@ input::placeholder {
   height: 45%;
   border: dashed #545454;
   border-width: 0px 4.13px 0px 0px;
-  bottom: 0%;
+  bottom: 3%;
   left: 13px;
   z-index: -1;
 }
@@ -363,10 +425,18 @@ input::placeholder {
   transform: translateX(28px);
   background-color: #fff;
 }
+.apple_icon {
+  height: 40px;
+  width: 40px;
+}
+.android_icon {
+  height: 40px;
+  width: 40px;
+}
 
-/* ************************HOW TO ENROLL END************************** */
+/* *********HOW TO ENROLL END********* */
 
-/* ************************STUDENT SAY START************************** */
+/* *********STUDENT SAY START********* */
 
 .bg_students {
   background: linear-gradient(180deg, rgba(255, 250, 243, 0) 0%, #ffe7c8 100%);
@@ -406,9 +476,88 @@ input::placeholder {
   left: 39%;
 }
 
-/* ************************STUDENTS SAY END************************** */
+/* *********STUDENTS SAY END********* */
 
-/* ************************FOOTER START************************** */
+/* ******** HOME PAGE END********** */
+
+/* ********2. BPSC PAGE START********** */
+.heading_text {
+  max-width: 520px;
+}
+.bg_classes {
+  border-bottom: 1px solid #ffd8a0;
+  background-color: #fff4d4;
+}
+.border_light_brown {
+  border: 1px solid #ffd8a0;
+  border-radius: 4px;
+}
+.coupon_bg {
+  background-color: #fff9ea;
+  border-radius: 100px;
+}
+.bg_ebooks {
+  background: linear-gradient(180deg, #fe8605 0%, #fea905 100%);
+  border: 0.2px solid #fe8605;
+  border-radius: 4px;
+}
+.notes {
+  max-width: 200px;
+  line-height: 28px !important;
+}
+.bg_books {
+  background-color: #fff3e6;
+}
+.combo_label {
+  top: 10px;
+  left: 10px;
+}
+.bg_register {
+  background: linear-gradient(180deg, #fff9ec 0%, rgba(255, 249, 236, 0) 100%);
+  border: 1px solid #ffdcb7;
+  border-radius: 9px;
+}
+input[type="radio"] {
+  background: linear-gradient(156.57deg, #fea70c 9.62%, #fe6b02 92.49%);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: relative;
+}
+input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  left: 2px;
+  top: 2px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+}
+.bg_crack_bpsc {
+  background: linear-gradient(135.96deg, #ffa800 22.12%, #fe8605 72.53%);
+  border: 1px dashed #ffff;
+  border-radius: 10px;
+}
+.crack_bpsc_para {
+  max-width: 180px;
+}
+.register_btn {
+  background: #ffffff;
+  border-radius: 15.3584px;
+  color: #fe831b;
+  z-index: 99;
+}
+.poster {
+  max-width: 240px;
+}
+/* ********2. BPSC PAGE END********** */
+
+/* *********FOOTER START********* */
 .footer_logo {
   height: 80px;
 }
@@ -422,9 +571,9 @@ input::placeholder {
 .list_style_none {
   list-style-type: none !important;
 }
-/* ************************FOOTER END************************** */
+/* *********FOOTER END********* */
 
-/* ************************LOGIN PAGE START************************** */
+/* *********LOGIN PAGE START********* */
 ::placeholder[type="number"] {
   font-family: "Inter";
   font-size: 10px;
@@ -456,7 +605,7 @@ input::-webkit-inner-spin-button {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
 }
-/* ************************LOGIN PAGE END************************** */
+/* *********LOGIN PAGE END********* */
 
 /* media queries  */
 @media (max-width: 576px) {
@@ -475,6 +624,7 @@ input::-webkit-inner-spin-button {
 
   .dhurina_logo {
     height: 70px;
+    z-index: 99;
   }
   .hero_img {
     max-width: 280px !important;
