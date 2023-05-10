@@ -8,11 +8,11 @@ import Register from "./Register";
 
 const HeroBpsc = () => {
   const Study = [
-    { name: "Live Class" },
-    { name: "Videos" },
-    { name: "Tests" },
-    { name: "Ebooks" },
-    { name: "Books" },
+    { name: "Live Class", path: "#liveclass" },
+    { name: "Videos", path: "#videos" },
+    { name: "Tests", path: "#tests" },
+    { name: "Ebooks", path: "#ebooks" },
+    { name: "Books", path: "#books" },
   ];
 
   const [goal, setGoal] = useState();
@@ -32,18 +32,20 @@ const HeroBpsc = () => {
           <div className="d-flex flex-wrap mt-3">
             {Study.map((item, index) => {
               return (
-                <button
-                  onClick={() => setGoal(item.name)}
-                  key={index}
-                  className={`${
-                    goal === item.name
-                      ? "bg_gradient text-white"
-                      : "bg_light_orange2 color_black2"
-                  } me-3 border-0  px-3 py-2 fw-normal rounded-1 mt-3 fw-semibold ff_inter`}
-                  value={item.name}
-                >
-                  {item.name}
-                </button>
+                <a href={item.path}>
+                  <button
+                    onClick={() => setGoal(item.name)}
+                    key={index}
+                    className={`${
+                      goal === item.name
+                        ? "bg_gradient text-white"
+                        : "bg_light_orange2 color_black2"
+                    } me-3 border-0  px-3 py-2 fw-normal rounded-1 mt-3 fw-semibold ff_inter`}
+                    value={item.name}
+                  >
+                    {item.name}
+                  </button>
+                </a>
               );
             })}
           </div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const RecordedVideos = () => {
   return (
-    <div className="custom_container container py-5">
+    <div id="books" className="custom_container container py-5">
       <h2 className="text_gradient ff_inter fw-bold fs_4xl">Books</h2>
       <div className="row ">
         {BpscBooks.map((item, index) => {
