@@ -3,68 +3,51 @@ import { Link } from "react-router-dom";
 import Poster from "../../assets/images/png/bpsc-crack-img.png";
 
 const Register = () => {
+  const filter = [
+    {
+      type: "Online Live Classes",
+      path: "#liveclass",
+    },
+    {
+      type: "Recorded Videos",
+      path: "#videos",
+    },
+    {
+      type: "Mock Tests/Test Series",
+      path: "#tests",
+    },
+    {
+      type: "Books",
+      path: "#books",
+    },
+    {
+      type: "Ebooks",
+      path: "#ebooks",
+    },
+  ];
   return (
     <div className="bg_register p-4">
       <h2 className="text_gradient ff_inter fw-semibold fs_6xl mb-3">
         Filter Search
       </h2>
-      <input
-        type="radio"
-        id="live-classes"
-        name="learning-option"
-        value="live-classes"
-      />
-      <label
-        className="ff_inter fw-semibold fs_md text_dark_grey ms-2"
-        for="live-classes"
-      >
-        Online Live Classes
-      </label>
-      <br />
-      <input
-        type="radio"
-        id="recorded-videos"
-        name="learning-option"
-        value="recorded-videos"
-      />
-      <label
-        className="ff_inter fw-semibold fs_md text_dark_grey ms-2"
-        for="recorded-videos"
-      >
-        Recorded Videos
-      </label>
-      <br />
-
-      <input
-        type="radio"
-        id="mock-tests"
-        name="learning-option"
-        value="mock-tests"
-      />
-      <label
-        className="ff_inter fw-semibold fs_md text_dark_grey ms-2"
-        for="mock-tests"
-      >
-        Mock Tests/Test Series:
-      </label>
-      <br />
-      <input type="radio" id="books" name="learning-option" value="books" />
-      <label
-        className="ff_inter fw-semibold fs_md text_dark_grey ms-2"
-        for="books"
-      >
-        Books:
-      </label>
-      <br />
-
-      <input type="radio" id="ebooks" name="learning-option" value="ebooks" />
-      <label
-        className="ff_inter fw-semibold fs_md text_dark_grey ms-2"
-        for="ebooks"
-      >
-        Ebooks:
-      </label>
-      <br />
+      {filter.map((item, index) => {
+        return (
+          <div key={index}>
+            <input
+              type="radio"
+              name="filter"
+              id={item.type}
+              value={item.type}
+            />
+            <label
+              className="ff_inter fw-semibold fs_md text_dark_grey ms-2"
+              for="filter"
+            >
+              {item.type}
+            </label>
+          </div>
+        );
+      })}
 
       <h2 className="text_gradient ff_inter fw-semibold fs_6xl mb-3 mt-5">
         Quick Links

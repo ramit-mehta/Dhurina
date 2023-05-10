@@ -10,7 +10,11 @@ const Header = () => {
   const [selectedOption, setSelectedOption] = useState("All Courses");
   const [showNav, setShowNav] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
+  if (loginPopup) {
+    document.body.parentElement.classList.add("overflow-hidden");
+  } else {
+    document.body.parentElement.classList.remove("overflow-hidden");
+  }
   // Dropdown option select
   const handleOptionSelect = (event) => {
     setSelectedOption(event.target.innerHTML);
@@ -19,6 +23,7 @@ const Header = () => {
     setShowNav(!showNav);
     setMenuOpen(!menuOpen);
     document.body.classList.toggle("humburger");
+    document.body.parentElement.classList.toggle("overflow-hidden");
   };
 
   return (
@@ -47,22 +52,22 @@ const Header = () => {
               <Dropdown.Menu className="bg_light_orange color_dark_blue">
                 <Dropdown.Item className="ff_inter">
                   <Link
-                    className="color_dark_blue"
+                    className="color_dark_blue d-block"
                     to="/bpsc"
-                    onClick={handleOptionSelect}
+                    onClick={(handleOptionSelect, handleClick)}
                   >
                     BPSC
                   </Link>
                 </Dropdown.Item>
                 <Dropdown.Item
                   className="ff_inter"
-                  onClick={handleOptionSelect}
+                  onClick={(handleOptionSelect, handleClick)}
                 >
                   Another action
                 </Dropdown.Item>
                 <Dropdown.Item
                   className="ff_inter"
-                  onClick={handleOptionSelect}
+                  onClick={(handleOptionSelect, handleClick)}
                 >
                   Something else
                 </Dropdown.Item>
@@ -122,17 +127,23 @@ const Header = () => {
             <Dropdown.Menu className="bg_light_orange color_dark_blue">
               <Dropdown.Item className="ff_inter">
                 <Link
-                  className="color_dark_blue"
+                  className="color_dark_blue d-block"
                   to="/bpsc"
-                  onClick={handleOptionSelect}
+                  onClick={(handleOptionSelect, handleClick)}
                 >
                   BPSC
                 </Link>
               </Dropdown.Item>
-              <Dropdown.Item className="ff_inter" onClick={handleOptionSelect}>
+              <Dropdown.Item
+                className="ff_inter"
+                onClick={(handleOptionSelect, handleClick)}
+              >
                 Another action
               </Dropdown.Item>
-              <Dropdown.Item className="ff_inter" onClick={handleOptionSelect}>
+              <Dropdown.Item
+                className="ff_inter"
+                onClick={(handleOptionSelect, handleClick)}
+              >
                 Something else
               </Dropdown.Item>
             </Dropdown.Menu>
@@ -161,8 +172,9 @@ const Header = () => {
       </div>
 
       {/* Login Popup */}
+      <div className={loginPopup ? "blur" : ""}></div>
       {loginPopup ? (
-        <div className="position-fixed top-50 start-50 translate-middle bg-white login_popup w-100 max-vh-100 p-4">
+        <div className="position-fixed top-50 start-50 translate-middle bg-white login_popup w-100 vh_100 px-4 py-2 overflow-auto">
           <Login setLoginPopup={setLoginPopup} />
         </div>
       ) : (

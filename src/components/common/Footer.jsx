@@ -108,16 +108,16 @@ const Footer = () => {
         </div>
         <div className="mt-1">
           <p className="ff_inter fs_lg text-light fw-lighter">Follow On:</p>
-          <Link>
+          <Link target="_blank">
             <img className="footer_icon" src={FbIcon} alt="FbIcon" />
           </Link>
-          <Link className="ms-2">
+          <Link target="_blank" className="ms-2">
             <img className="footer_icon" src={TwitterIcon} alt="TwitterIcon" />
           </Link>
-          <Link className="ms-2">
+          <Link target="_blank" className="ms-2">
             <img className="footer_icon" src={InstaIcon} alt="InstaIcon" />
           </Link>
-          <Link className="ms-2">
+          <Link target="_blank" className="ms-2">
             <img className="footer_icon" src={TeleIcon} alt="TeleIcon" />
           </Link>
         </div>

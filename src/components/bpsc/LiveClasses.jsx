@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const LiveClasses = () => {
   return (
-    <div className="custom_container container py-5">
+    <div id="liveclass" className="custom_container container py-5">
       <h2 className="text_gradient ff_inter fw-bold fs_4xl">Live Class</h2>
       <div className="row">
         {BpscClass.map((item, index) => {

@@ -441,6 +441,10 @@ select:focus {
 .bg_students {
   background: linear-gradient(180deg, rgba(255, 250, 243, 0) 0%, #ffe7c8 100%);
 }
+.our_student {
+  border-radius: 16px;
+  max-width: 320px !important;
+}
 .our_students_line::before {
   content: "";
   position: absolute;
@@ -601,10 +605,21 @@ input::-webkit-inner-spin-button {
 }
 .login_popup {
   z-index: 100 !important;
-  max-width: 80% !important;
+  max-width: 60% !important;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
 }
+.blur {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 80;
+  position: absolute !important;
+  top: 0;
+  right: 0;
+}
+
 /* *********LOGIN PAGE END********* */
 
 /* media queries  */
@@ -621,7 +636,12 @@ input::-webkit-inner-spin-button {
     --fs-10xl: 39px;
     --fs-11xl: 36px;
   }
-
+  .login_popup {
+    z-index: 100 !important;
+    max-width: 100% !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+  }
   .dhurina_logo {
     height: 70px;
     z-index: 99;

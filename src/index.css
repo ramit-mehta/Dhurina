@@ -4,3 +4,6 @@
 .color_black2 {
   color: #373737;
 }
+.vh_100 {
+  max-height: 100vh;
+}

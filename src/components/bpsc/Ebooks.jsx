@@ -21,7 +21,7 @@ const RecordedVideos = () => {
     ],
   };
   return (
-    <div className="custom_container container py-5">
+    <div id="ebooks" className="custom_container container py-5">
       <h2 className="text_gradient ff_inter fw-bold fs_4xl">EBooks</h2>
       <div className="row ">
         <Slider className="ms-lg-4" {...settings}>
