@@ -642,17 +642,10 @@ input::-webkit-inner-spin-button {
   :root {
     --fs-md: 6px;
     --fs-lg: 15px;
-<<<<<<< HEAD
-    --fs-xl: 8px;
-    --fs-xxl: 19px;
-    --fs-6xl: 11px;
-    --fs-7xl: 10px;
-=======
     --fs-xl: 16px;
     --fs-xxl: 17px;
     --fs-6xl: 21px;
     --fs-7xl: 11px;
->>>>>>> a31fe1a4bf2eb60ad698e62c8314310ef92553c1
     --fs-8xl: 28px;
     --fs-9xl: 14px;
     --fs-10xl: 39px;
