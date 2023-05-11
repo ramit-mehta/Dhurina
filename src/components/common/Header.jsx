@@ -70,9 +70,9 @@ const Header = () => {
               </Dropdown.Menu>
             </Dropdown>
           </div>
-          <div className="d-flex align-items-center  justify-content-center mt-3 mt-md-0 justify-content-md-end d-none d-md-flex">
-            <div className="d-flex border_gradient px-3 py-1">
-              <button className="text_gradient ff_inter border-0 fw-semibold fs-sm">
+          <div className="d-flex align-items-center  justify-content-center mt-3 mt-md-0 justify-content-md-end">
+            <div className="d-flex border_gradient px-3 py-1 d-none d-lg-flex">
+              <button className="text_gradient ff_inter border-0 fw-semibold fs-sm ">
                 Whatsapp
               </button>
               <Link>
@@ -87,27 +87,23 @@ const Header = () => {
               <button
                 onClick={() => {
                   setLoginPopup(true);
-                  document.body.parentElement.classList.toggle(
-                    "overflow-hidden"
-                  );
                 }}
-                className="ms-3 fs-sm text-white ff_inter bg_gradient border-0 px-3 py-2"
+                className="ms-0 ms-lg-3 fs_sm text-white ff_inter bg_gradient border-0 p-2 px-lg-3 py-lg-2"
               >
                 Sign Up/Login
               </button>
             </Link>
-          </div>
-
-          {/* Hamburger toggler  */}
-          <div
-            onClick={handleClick}
-            className={`hamburger-menu d-flex flex-column d-md-none ${
-              menuOpen ? "open" : ""
-            }`}
-          >
-            <span className="menu_1"></span>
-            <span className="menu_2"></span>
-            <span className="menu_3"></span>
+            {/* Hamburger toggler  */}
+            <div
+              onClick={handleClick}
+              className={`hamburger-menu d-flex flex-column d-md-none ms-4 ${
+                menuOpen ? "open" : ""
+              }`}
+            >
+              <span className="menu_1"></span>
+              <span className="menu_2"></span>
+              <span className="menu_3"></span>
+            </div>
           </div>
         </nav>
         <div
@@ -161,14 +157,6 @@ const Header = () => {
               />
             </Link>
           </div>
-          <Link>
-            <button
-              onClick={() => setLoginPopup(true)}
-              className=" fs-sm text-white ff_inter bg_gradient border-0 px-3 py-2 mt-4"
-            >
-              Sign Up/Login
-            </button>
-          </Link>
         </div>
       </div>
 
