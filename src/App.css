@@ -235,9 +235,16 @@ select:focus {
 /* *********HERO END********* */
 
 /* *********LEARN ENGLISH START********* */
+.learn {
+  border: 0.83px solid transparent;
+  background: linear-gradient(to left, #ffffff, #ffffff) padding-box,
+    linear-gradient(to left, #fe8d23, #fe8d2300) border-box;
+  border-radius: 0px 15px 60px 0px;
+  margin-top: 40px !important;
+}
 .janhavi_img {
-  max-width: 200px;
-  top: -46%;
+  height: 130%;
+  bottom: 0px;
 }
 
 /* slick slider  */
@@ -625,16 +632,19 @@ input::-webkit-inner-spin-button {
 /* media queries  */
 @media (max-width: 576px) {
   :root {
-    --fs-md: 10px;
+    --fs-md: 6px;
     --fs-lg: 15px;
-    --fs-xl: 16px;
+    --fs-xl: 8px;
     --fs-xxl: 19px;
-    --fs-6xl: 21px;
-    --fs-7xl: 11px;
+    --fs-6xl: 11px;
+    --fs-7xl: 10px;
     --fs-8xl: 28px;
-    --fs-9xl: 28px;
+    --fs-9xl: 14px;
     --fs-10xl: 39px;
     --fs-11xl: 22px;
+  }
+  .learn {
+    border-radius: 0px 8px 30px 0px;
   }
   .store_icon {
     width: 80px;
@@ -665,26 +675,11 @@ input::-webkit-inner-spin-button {
     max-width: 350px;
     z-index: -1;
   }
-  .row.learn {
-    margin-left: 0px !important;
-  }
-  .learn {
-    background: linear-gradient(to left, #ffffff, #ffffff) padding-box,
-      linear-gradient(to left, #fe8d23, #fe8d2300) content-box;
-    border-radius: 15px;
-    border: 1px solid #fe8d23;
-  }
-  .janhavi_img {
-    max-width: 157px;
-    top: -15%;
-  }
+
   .w-20 {
     width: 33.33% !important;
   }
-  .slick-slide img {
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
+
   .orange_ellipse2 {
     top: 15%;
     left: 6%;
@@ -720,23 +715,7 @@ input::-webkit-inner-spin-button {
     max-width: 600px;
     z-index: -1;
   }
-  .row.learn {
-    margin-left: 0px !important;
-  }
-  .learn {
-    background: linear-gradient(to left, #ffffff, #ffffff) padding-box,
-      linear-gradient(to left, #fe8d23, #fe8d2300) content-box;
-    border-radius: 15px;
-    border: 1px solid #fe8d23;
-  }
-  .janhavi_img {
-    max-width: 160px;
-    top: -17%;
-  }
-  .slick-slide img {
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
+
   .mt_footer_courses {
     margin-top: 106px !important;
   }
@@ -789,13 +768,7 @@ input::-webkit-inner-spin-button {
     z-index: -1;
     max-width: 520px;
   }
-  .learn {
-    border: 0.83px solid transparent;
-    background: linear-gradient(to left, #ffffff, #ffffff) padding-box,
-      linear-gradient(to left, #fe8d23, #fe8d2300) border-box;
-    border-radius: 0px 15px 60px 0px;
-    margin-top: 70px !important;
-  }
+
   .orange_ellipse2 {
     top: 20%;
     left: 4%;
