@@ -14,8 +14,8 @@ import TeleIcon from "../../assets/images/svg/telegram-icon.svg";
 const Footer = () => {
   return (
     <div className="bg_dark_blue">
-      <div className="custom_container container py-5 mx-auto">
-        <div className="row">
+      <div className="custom_container container py-5">
+        <div className="row pt-5">
           <div className="col-6 col-md-3">
             <p className="ff_inter text_gradient fw-bold fs_xl mb-0">Company</p>
             <ul className="ps-0 list_style_none">
@@ -96,9 +96,9 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="mt-4 d-flex align-items-end justify-content-between">
+        <div className="mt-4 mt-lg-0 d-flex flex-row flex-lg-column  align-items-end align-items-lg-start justify-content-between">
           <img className="footer_logo" src={FooterLogo} alt="FooterLogo" />
-          <div>
+          <div className="mt-0 mt-lg-4">
             <p className="ff_inter fs_lg text-light fw-lighter mb-2">
               Follow On:
             </p>

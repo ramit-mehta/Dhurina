@@ -168,13 +168,20 @@ select:focus {
 
 /* hamburger toggle  */
 .hamburger-menu span {
-  background-color: #fe5e00;
+  background-color: #fe9108;
   width: 30px;
   height: 4px;
   z-index: 100;
-  /* margin-top: 4px; */
   border-radius: 4px;
   transition: transform 0.3s ease-in-out;
+}
+.menu_2 {
+  width: 40px !important;
+  transform: translateX(-25%);
+}
+.menu_3 {
+  width: 25px !important;
+  transform: translateX(18%);
 }
 .hamburger-menu {
   height: 25px !important;
@@ -207,6 +214,7 @@ select:focus {
   position: absolute;
   right: 0px;
   top: 50%;
+  width: 30px !important;
 }
 .humburger .hamburger-menu .menu_2 {
   display: none;
@@ -647,7 +655,7 @@ input::-webkit-inner-spin-button {
     height: 100%;
   }
   .dhurina_logo {
-    height: 70px;
+    height: 60px;
     z-index: 99;
   }
   .hero_img {
