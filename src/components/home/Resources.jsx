@@ -14,7 +14,7 @@ const Resources = () => {
             return (
               <div
                 key={index}
-                className=" col-6 col-sm-4 col-lg-2 mt-4 mt-lg-0 text-center"
+                className="col-4 col-lg-2 mt-4 mt-lg-0 text-center"
               >
                 <Link>
                   <img className="w-50" src={item.image} alt={item.title} />
