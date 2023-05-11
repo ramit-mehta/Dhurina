@@ -25,7 +25,7 @@ const Hero = () => {
             <img className="w-100 hero_img" src={HeroImg} alt="HeroImg" />
           </div>
           <div className="col-md-7 mt-4 text-center text-md-start">
-            <h2 className="ff_inter fw-normal color_dark_blue fs_11xl mb-0">
+            <h2 className="ff_inter fw-semibold color_dark_blue fs_11xl mb-0">
               Get direction to
             </h2>
             <p className="text_gradient ff_inter fs_11xl fw-bold mb-0 text-lg-nowrap">
@@ -44,12 +44,16 @@ const Hero = () => {
                 Search
               </button>
             </div>
-            <div className="mt-4 pt-2">
+            <div className="mt-4 pt-sm-2">
               <Link target="_blank" to="https://play.google.com/store">
-                <img src={PlayStore} alt="PlayStore" />
+                <img className="store_icon" src={PlayStore} alt="PlayStore" />
               </Link>
               <Link target="_blank" to="https://www.apple.com/app-store/">
-                <img className="ms-2" src={AppStore} alt="AppStore" />
+                <img
+                  className="ms-2 store_icon"
+                  src={AppStore}
+                  alt="AppStore"
+                />
               </Link>
             </div>
           </div>
