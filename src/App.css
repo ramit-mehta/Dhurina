@@ -730,12 +730,12 @@ input::-webkit-inner-spin-button {
     max-width: 30px;
   }
   .prev {
-    top: 50%;
+    top: 52%;
     left: 52%;
     max-width: 30px;
   }
   .next {
-    top: 50%;
+    top: 52%;
     left: 63%;
     max-width: 30px;
   }
