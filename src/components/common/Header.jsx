@@ -161,7 +161,7 @@ const Header = () => {
             </Link>
           </ul>
           <Link>
-            <div className="d-flex col-6 mx-auto bg_gradient align-items-center justify-content-center p-2">
+            <div className="d-flex col-6 mx-auto bg_gradient align-items-center justify-content-center p-2 mb-3">
               <p className="text-white ff_inter border-0 fs-sm mb-0">
                 {" "}
                 Whatsapp{" "}

@@ -3,17 +3,17 @@ import HomeIcon from "../../assets/images/svg/home-icon.svg";
 import Accordion from "react-bootstrap/Accordion";
 import IndiaIcon from "../../assets/images/svg/india-icon.svg";
 import IndiaGateIcon from "../../assets/images/svg/indiagate-icon2.svg";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 const Batches = () => {
-  const settings = {
-    arrows: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  // const settings = {
+  //   arrows: false,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  // };
 
   const Batch = [
     {
