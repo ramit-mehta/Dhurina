@@ -373,10 +373,10 @@ select:focus {
 .timeline::before {
   content: "";
   position: absolute;
-  height: 45%;
+  height: 39%;
   border: dashed #545454;
   border-width: 0px 4.13px 0px 0px;
-  bottom: 3%;
+  bottom: 6%;
   left: 13px;
   z-index: -1;
 }
