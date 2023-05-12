@@ -456,10 +456,6 @@ select:focus {
 .bg_students {
   background: linear-gradient(180deg, rgba(255, 250, 243, 0) 0%, #ffe7c8 100%);
 }
-.our_student {
-  border-radius: 16px;
-  max-width: 320px !important;
-}
 .our_students_line::before {
   content: "";
   position: absolute;
@@ -699,17 +695,23 @@ input::-webkit-inner-spin-button {
     border-radius: 11.8623px;
     backdrop-filter: blur(4.6131px);
   }
+  .orange_ellipse {
+    bottom: 40%;
+    right: 15%;
+    max-width: 180px !important;
+  }
   .orange_ellipse2 {
     top: 15%;
     left: 6%;
     max-width: 80px !important;
   }
   .students_polygon {
-    bottom: 10%;
-    left: 17%;
+    top: 52%;
+    left: 20%;
+    max-width: 20px;
   }
   .students_small_polygon {
-    right: 10%;
+    right: 0%;
   }
   .enroll_ellipse {
     transform: translateX(-50%) !important;
@@ -719,6 +721,30 @@ input::-webkit-inner-spin-button {
   }
   .accordion-button {
     padding: 5px 10px !important;
+  }
+  .our_student {
+    width: 75% !important;
+  }
+  .orange_dots {
+    top: 30% !important;
+    max-width: 30px;
+  }
+  .prev {
+    top: 50%;
+    left: 52%;
+    max-width: 30px;
+  }
+  .next {
+    top: 50%;
+    left: 63%;
+    max-width: 30px;
+  }
+  .our_students_line::before {
+    width: 24px;
+  }
+  .our_students_line::after {
+    width: 58px;
+    left: 45%;
   }
 }
 
@@ -820,19 +846,24 @@ input::-webkit-inner-spin-button {
     left: 28%;
     max-width: 250px;
   }
+  .our_student {
+    width: 75%;
+  }
   .orange_ellipse2 {
-    top: 19%;
+    top: 17%;
     left: 12%;
     max-width: 100px !important;
   }
   .orange_dots {
-    left: 10%;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .students_polygon {
     bottom: 15%;
     left: 17%;
   }
   .students_small_polygon {
-    left: 46%;
+    left: 48%;
   }
 }
