@@ -122,7 +122,7 @@ const Header = () => {
               : "width_0 overflow-hidden top-0 end-0 position-absolute"
           }
         >
-          <ul className="list_style_none d-flex flex-column justify-content-center mt-4 vh_70">
+          <ul className="list_style_none d-flex flex-column mt-5 vh_70">
             <Link to="/">
               <li className="d-flex align-items-center mt-3">
                 <img src={HomeUl} alt="home_icon" />
