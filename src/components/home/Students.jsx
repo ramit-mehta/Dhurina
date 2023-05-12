@@ -70,13 +70,17 @@ const Students = () => {
           src={Polygon2}
           alt="small_polygon"
         />
-        <h2 className="ff_inter color_dark_blue fs_9xl text-center fw-bold mb-0 position-relative our_students_line">
+        <h2 className="ff_inter color_dark_blue  text-center fw-bold mb-0 position-relative our_students_line">
           What Our Students <span className="text_gradient">Say?</span>
         </h2>
         <Slider {...settings} ref={sliderRef}>
           <div className="row d-flex align-items-center my-5 py-4">
             <div className="col-lg-6">
-              <img className="our_student" src={OurStudent} alt="OurStudent" />
+              <img
+                className="our_student ms-lg-5 ps-lg-2"
+                src={OurStudent}
+                alt="OurStudent"
+              />
             </div>
             <div className="col-lg-6 text-center text-lg-start">
               <img
@@ -84,7 +88,7 @@ const Students = () => {
                 src={Quotes}
                 alt="quotes"
               />
-              <h3 className="ff_inter fw-bold text_dark_grey fs_9xl mt-2 mb-0">
+              <h3 className="ff_inter fw-bold text_dark_grey mt-2 mb-0">
                 Babita Choudhary
               </h3>
               <p className="ff_inter fw-lighter fs_lg mt-2 text_grey mb-0">
@@ -103,7 +107,7 @@ const Students = () => {
             </div>
             <div className="col-lg-6 text-center text-lg-start">
               <img className="mt-4 mt-lg-0" src={Quotes} alt="quotes" />
-              <h3 className="ff_inter fw-bold text_dark_grey fs_9xl mt-2 mb-0">
+              <h3 className="ff_inter fw-bold text_dark_grey mt-2 mb-0">
                 Babita Choudhary
               </h3>
               <p className="ff_inter fw-lighter fs_lg mt-2 text_grey mb-0">

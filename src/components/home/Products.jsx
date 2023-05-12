@@ -4,7 +4,7 @@ import { ExploreProducts } from "../common/Helper";
 const Products = () => {
   return (
     <div className="custom_container container py-5">
-      <h2 className="ff_inter fw-bold fs_9xl color_dark_blue">
+      <h2 className="ff_inter fw-bold color_dark_blue">
         Explore By <span className="text_gradient"> Product </span>
       </h2>
       <div className="row mt-3">
