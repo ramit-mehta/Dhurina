@@ -7,7 +7,7 @@ import IndiaGateIcon from "../../assets/images/svg/indiagate-icon2.svg";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 const Batches = () => {
-  // const settings = {
+  // const settings =
   //   arrows: false,
   //   infinite: true,
   //   speed: 500,
