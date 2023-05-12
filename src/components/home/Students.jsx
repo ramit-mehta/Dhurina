@@ -16,7 +16,7 @@ const Students = () => {
   const sliderRef = useRef(null);
 
   const settings = {
-    arrows: true,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
