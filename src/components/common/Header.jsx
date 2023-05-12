@@ -118,11 +118,11 @@ const Header = () => {
         <div
           className={
             showNav
-              ? "navShow w-100 d-md-none d-flex flex-column justify-content-between"
+              ? "navShow w-100 d-md-none"
               : "width_0 overflow-hidden top-0 end-0 position-absolute"
           }
         >
-          <ul className="list_style_none d-flex flex-column justify-content-center mt-4">
+          <ul className="list_style_none d-flex flex-column justify-content-center mt-4 vh_70">
             <Link to="/">
               <li className="d-flex align-items-center mt-3">
                 <img src={HomeUl} alt="home_icon" />
@@ -161,7 +161,7 @@ const Header = () => {
             </Link>
           </ul>
           <Link>
-            <div className="d-flex col-6 mx-auto bg_gradient align-items-center justify-content-center p-2 mb-3">
+            <div className="d-flex col-6 mx-auto bg_gradient align-items-center justify-content-center p-2">
               <p className="text-white ff_inter border-0 fs-sm mb-0">
                 {" "}
                 Whatsapp{" "}
