@@ -96,6 +96,9 @@ const Header = () => {
               <button
                 onClick={() => {
                   setLoginPopup(true);
+                  document.body.parentElement.classList.toggle(
+                    "overflow-hidden"
+                  );
                 }}
                 className="ms-0 ms-lg-3 btn_login text-white ff_inter bg_gradient border-0 p-2 px-lg-3 py-lg-2"
               >
