@@ -24,7 +24,7 @@ const Hero = () => {
             />
             <img className="w-100 hero_img" src={HeroImg} alt="HeroImg" />
           </div>
-          <div className="col-md-7 mt-4 text-center text-md-start">
+          <div className="col-md-7 col-9 mt-4 text-center text-md-start">
             <h2 className="ff_inter fw-semibold color_dark_blue fs_11xl mb-0">
               Get direction to
             </h2>

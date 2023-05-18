@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import Logo from "../../assets/images/png/dhurina-logo.png";
 import Dropdown from "react-bootstrap/Dropdown";
 import WhatsappLogo from "../../assets/images/png/whatsapp-logo.png";
+import Whatsapp from "../../assets/images/svg/whatsapp-white.svg";
+import HomeUl from "../../assets/images/svg/ul-home.svg";
+import ExamUl from "../../assets/images/svg/ul-exam.svg";
+import TestUl from "../../assets/images/svg/ul-test.svg";
 import { Link } from "react-router-dom";
 import Login from "../Login";
 
@@ -10,6 +14,7 @@ const Header = () => {
   const [selectedOption, setSelectedOption] = useState("All Courses");
   const [showNav, setShowNav] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showList, setShowList] = useState(false);
 
   // Dropdown option select
   const handleOptionSelect = (event) => {
@@ -20,6 +25,10 @@ const Header = () => {
     setMenuOpen(!menuOpen);
     document.body.classList.toggle("humburger");
     document.body.parentElement.classList.toggle("overflow-hidden");
+  };
+
+  const show = () => {
+    setShowList(!showList);
   };
 
   return (
@@ -50,20 +59,23 @@ const Header = () => {
                   <Link
                     className="color_dark_blue d-block"
                     to="/bpsc"
-                    onClick={(handleOptionSelect, handleClick)}
+                    onClick={handleOptionSelect}
                   >
                     BPSC
                   </Link>
                 </Dropdown.Item>
-                <Dropdown.Item
-                  className="ff_inter"
-                  onClick={(handleOptionSelect, handleClick)}
-                >
-                  Another action
+                <Dropdown.Item className="ff_inter">
+                  <Link
+                    className="color_dark_blue d-block"
+                    to="/bihar"
+                    onClick={handleOptionSelect}
+                  >
+                    Bihar
+                  </Link>
                 </Dropdown.Item>
                 <Dropdown.Item
                   className="ff_inter"
-                  onClick={(handleOptionSelect, handleClick)}
+                  onClick={handleOptionSelect}
                 >
                   Something else
                 </Dropdown.Item>
@@ -87,8 +99,11 @@ const Header = () => {
               <button
                 onClick={() => {
                   setLoginPopup(true);
+                  document.body.parentElement.classList.toggle(
+                    "overflow-hidden"
+                  );
                 }}
-                className="ms-0 ms-lg-3 fs_sm text-white ff_inter bg_gradient border-0 p-2 px-lg-3 py-lg-2"
+                className="ms-0 ms-lg-3 btn_login text-white ff_inter bg_gradient border-0 p-2 px-lg-3 py-lg-2"
               >
                 Sign Up/Login
               </button>
@@ -113,50 +128,57 @@ const Header = () => {
               : "width_0 overflow-hidden top-0 end-0 position-absolute"
           }
         >
-          <Dropdown>
-            <Dropdown.Toggle
-              className="border-0 color_dark_blue ff_inter fw-semibold border_oval bg-white"
-              id="dropdown-basic"
-            >
-              {selectedOption}
-            </Dropdown.Toggle>
-
-            <Dropdown.Menu className="bg_light_orange color_dark_blue">
-              <Dropdown.Item className="ff_inter">
-                <Link
-                  className="color_dark_blue d-block"
-                  to="/bpsc"
-                  onClick={(handleOptionSelect, handleClick)}
-                >
-                  BPSC
-                </Link>
-              </Dropdown.Item>
-              <Dropdown.Item
-                className="ff_inter"
-                onClick={(handleOptionSelect, handleClick)}
-              >
-                Another action
-              </Dropdown.Item>
-              <Dropdown.Item
-                className="ff_inter"
-                onClick={(handleOptionSelect, handleClick)}
-              >
-                Something else
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-          <div className="d-flex border_gradient px-3 py-1 mt-4">
-            <button className="text_gradient ff_inter border-0 fw-semibold fs-sm">
-              Whatsapp
-            </button>
+          <ul className="list_style_none d-flex flex-column mt-5 vh_70">
+            <Link to="/">
+              <li className="d-flex align-items-center mt-3">
+                <img src={HomeUl} alt="home_icon" />
+                <p className="ff_inter fw-semibold color_dark_blue mb-0 ms-2 fs-5">
+                  Home
+                </p>
+              </li>
+            </Link>
             <Link>
+              <li className="d-flex align-items-center mt-3" onClick={show}>
+                <img src={ExamUl} alt="exam_icon" />
+                <p className="ff_inter fw-semibold color_dark_blue mb-0 ms-2 fs-5">
+                  Select Exam
+                </p>
+              </li>
+              {showList && (
+                <ul className="ps-5 ms-5" style={{ listStyleType: "disc" }}>
+                  <li className="ff_inter fw-semibold color_dark_blue">SSC</li>
+                  <li className="ff_inter fw-semibold color_dark_blue">BPSC</li>
+                  <li className="ff_inter fw-semibold color_dark_blue">
+                    BANKING
+                  </li>
+                  <li className="ff_inter fw-semibold color_dark_blue">
+                    RAILWAY
+                  </li>
+                </ul>
+              )}
+            </Link>
+            <Link to="/test-series">
+              <li className="d-flex align-items-center mt-3">
+                <img src={TestUl} alt="test_icon" />
+                <p className="ff_inter fw-semibold color_dark_blue mb-0 ms-2 fs-5">
+                  Test Series
+                </p>
+              </li>
+            </Link>
+          </ul>
+          <Link>
+            <div className="d-flex col-6 mx-auto bg_gradient align-items-center justify-content-center p-2">
+              <p className="text-white ff_inter border-0 fs-sm mb-0">
+                {" "}
+                Whatsapp{" "}
+              </p>
               <img
                 className="ms-2 whatsapp_logo"
-                src={WhatsappLogo}
+                src={Whatsapp}
                 alt="WhatsappLogo"
               />
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
       </div>
 

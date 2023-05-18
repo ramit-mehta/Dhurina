@@ -30,7 +30,7 @@ const RecordedVideos = () => {
               <div key={index} className="col-md-6 mt-4">
                 <div className="border_light_brown mx-2">
                   <div className="bg_ebooks py-4 px-2 text-center">
-                    <img src={item.img} alt="bpsc_logo" />
+                    <img className="mx-auto" src={item.img} alt="bpsc_logo" />
 
                     <div className="mb-0">
                       <h2 className="ff_inter fw-bolder fs_8xl text-white mb-0 mt-2">
@@ -68,10 +68,10 @@ const RecordedVideos = () => {
           })}
           {Ebooks.map((item, index) => {
             return (
-              <div key={index} className="col-lg-6 mt-4">
+              <div key={index} className="col-md-6 mt-4">
                 <div className="border_light_brown mx-2">
                   <div className="bg_ebooks py-4 px-2 text-center">
-                    <img src={item.img} alt="bpsc_logo" />
+                    <img className="mx-auto" src={item.img} alt="bpsc_logo" />
 
                     <div className="mb-0">
                       <h2 className="ff_inter fw-bolder fs_8xl text-white mb-0 mt-2">
@@ -109,10 +109,10 @@ const RecordedVideos = () => {
           })}
           {Ebooks.map((item, index) => {
             return (
-              <div key={index} className="col-lg-6 mt-4">
+              <div key={index} className="col-md-6 mt-4">
                 <div className="border_light_brown mx-2">
                   <div className="bg_ebooks py-4 px-2 text-center">
-                    <img src={item.img} alt="bpsc_logo" />
+                    <img className="mx-auto" src={item.img} alt="bpsc_logo" />
 
                     <div className="mb-0">
                       <h2 className="ff_inter fw-bolder fs_8xl text-white mb-0 mt-2">

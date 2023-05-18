@@ -21,45 +21,33 @@ const Students = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          dots: true,
-        },
-      },
-    ],
   };
   return (
     <div className="bg_students position-relative">
       <div className="custom_container container py-5">
         <img
-          className="cursor_pointer arrows position-absolute prev d-none d-lg-block"
+          className="cursor_pointer arrows position-absolute prev"
           onClick={() => sliderRef.current.slickPrev()}
           src={Prev}
           alt="prev"
         />
         <img
-          className="cursor_pointer arrows position-absolute next d-none d-lg-block"
+          className="cursor_pointer arrows position-absolute next"
           onClick={() => sliderRef.current.slickNext()}
           src={Next}
           alt="Next"
         />
         <img
-          className="position-absolute orange_ellipse d-none d-lg-block"
+          className="position-absolute orange_ellipse"
           src={Ellipse1}
           alt="ellipse1 "
         />
         <img
-          className="position-absolute orange_ellipse2 d-none d-lg-block"
+          className="position-absolute orange_ellipse2"
           src={Ellipse2}
           alt="ellipse2"
         />
-        <img
-          className="position-absolute orange_dots top-50 translate-middle-y d-none d-md-block"
-          src={Dots}
-          alt="dots"
-        />
+        <img className="position-absolute orange_dots" src={Dots} alt="dots" />
         <img
           className="position-absolute students_polygon"
           src={Polygon}
@@ -70,21 +58,25 @@ const Students = () => {
           src={Polygon2}
           alt="small_polygon"
         />
-        <h2 className="ff_inter color_dark_blue fs_9xl text-center fw-bold mb-0 position-relative our_students_line">
+        <h2 className="ff_inter color_dark_blue  text-center fw-bold mb-0 position-relative our_students_line">
           What Our Students <span className="text_gradient">Say?</span>
         </h2>
         <Slider {...settings} ref={sliderRef}>
-          <div className="row d-flex align-items-center my-5 py-4">
+          <div className="row d-flex align-items-center justify-content-center my-5 py-4">
             <div className="col-lg-6">
-              <img className="our_student" src={OurStudent} alt="OurStudent" />
+              <img
+                className="our_student mx-auto"
+                src={OurStudent}
+                alt="OurStudent"
+              />
             </div>
-            <div className="col-lg-6 text-center text-lg-start">
+            <div className="col-lg-6">
               <img
                 className="text-start mt-4 mt-lg-0"
                 src={Quotes}
                 alt="quotes"
               />
-              <h3 className="ff_inter fw-bold text_dark_grey fs_9xl mt-2 mb-0">
+              <h3 className="ff_inter fw-bold text_dark_grey mt-2 mb-0">
                 Babita Choudhary
               </h3>
               <p className="ff_inter fw-lighter fs_lg mt-2 text_grey mb-0">
@@ -98,12 +90,16 @@ const Students = () => {
             </div>
           </div>
           <div className="row d-flex align-items-center my-5 py-4">
-            <div className="col-lg-6 mx-auto mx-lg-0">
-              <img className="our_student" src={OurStudent} alt="OurStudent" />
+            <div className="col-lg-6">
+              <img
+                className="our_student mx-auto"
+                src={OurStudent}
+                alt="OurStudent"
+              />
             </div>
-            <div className="col-lg-6 text-center text-lg-start">
+            <div className="col-lg-6 mx-auto">
               <img className="mt-4 mt-lg-0" src={Quotes} alt="quotes" />
-              <h3 className="ff_inter fw-bold text_dark_grey fs_9xl mt-2 mb-0">
+              <h3 className="ff_inter fw-bold text_dark_grey mt-2 mb-0">
                 Babita Choudhary
               </h3>
               <p className="ff_inter fw-lighter fs_lg mt-2 text_grey mb-0">

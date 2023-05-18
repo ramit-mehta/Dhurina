@@ -40,7 +40,7 @@ const LearnEnglish = () => {
               </p>
             </div>
             <div className="col-3 col-lg-2 text-center text-lg-start">
-              <Link to="/register">
+              <Link>
                 <button className="fs_xl text-white ff_inter bg_gradient border-0 px-2 py-1 px-sm-4 py-sm-2 ">
                   Register
                 </button>
@@ -70,7 +70,7 @@ const LearnEnglish = () => {
               </p>
             </div>
             <div className="col-3 col-lg-2 text-center text-lg-start">
-              <Link to="/register">
+              <Link>
                 <button className="fs_xl text-white ff_inter bg_gradient border-0 px-2 py-1 px-sm-4 py-sm-2 ">
                   Register
                 </button>
@@ -100,7 +100,7 @@ const LearnEnglish = () => {
               </p>
             </div>
             <div className="col-3 col-lg-2 text-center text-lg-start">
-              <Link to="/register">
+              <Link>
                 <button className="fs_xl text-white ff_inter bg_gradient border-0 px-2 py-1 px-sm-4 py-sm-2 ">
                   Register
                 </button>

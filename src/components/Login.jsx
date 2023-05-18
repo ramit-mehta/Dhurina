@@ -28,6 +28,7 @@ const Login = ({ setLoginPopup }) => {
         className="cursor_pointer"
         onClick={() => {
           setLoginPopup(false);
+          document.body.parentElement.classList.toggle("overflow-hidden");
         }}
         src={Close}
         alt="popup_close"
