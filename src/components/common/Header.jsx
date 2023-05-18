@@ -59,20 +59,23 @@ const Header = () => {
                   <Link
                     className="color_dark_blue d-block"
                     to="/bpsc"
-                    onClick={(handleOptionSelect, handleClick)}
+                    onClick={handleOptionSelect}
                   >
                     BPSC
                   </Link>
                 </Dropdown.Item>
-                <Dropdown.Item
-                  className="ff_inter"
-                  onClick={(handleOptionSelect, handleClick)}
-                >
-                  Another action
+                <Dropdown.Item className="ff_inter">
+                  <Link
+                    className="color_dark_blue d-block"
+                    to="/bihar"
+                    onClick={handleOptionSelect}
+                  >
+                    Bihar
+                  </Link>
                 </Dropdown.Item>
                 <Dropdown.Item
                   className="ff_inter"
-                  onClick={(handleOptionSelect, handleClick)}
+                  onClick={handleOptionSelect}
                 >
                   Something else
                 </Dropdown.Item>
