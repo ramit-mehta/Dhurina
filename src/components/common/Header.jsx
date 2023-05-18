@@ -26,7 +26,9 @@ const Header = () => {
     document.body.classList.toggle("humburger");
     document.body.parentElement.classList.toggle("overflow-hidden");
   };
-
+  const navToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
   const show = () => {
     setShowList(!showList);
   };
@@ -129,7 +131,7 @@ const Header = () => {
           }
         >
           <ul className="list_style_none d-flex flex-column mt-5 vh_70">
-            <Link to="/">
+            <Link to="/" onClick={handleClick}>
               <li className="d-flex align-items-center mt-3">
                 <img src={HomeUl} alt="home_icon" />
                 <p className="ff_inter fw-semibold color_dark_blue mb-0 ms-2 fs-5">
@@ -146,7 +148,11 @@ const Header = () => {
               </li>
               {showList && (
                 <ul className="ps-5 ms-5" style={{ listStyleType: "disc" }}>
-                  <li className="ff_inter fw-semibold color_dark_blue">SSC</li>
+                  <Link to="/bpsc" onClick={handleClick}>
+                    <li className="ff_inter fw-semibold color_dark_blue">
+                      SSC
+                    </li>
+                  </Link>
                   <li className="ff_inter fw-semibold color_dark_blue">BPSC</li>
                   <li className="ff_inter fw-semibold color_dark_blue">
                     BANKING

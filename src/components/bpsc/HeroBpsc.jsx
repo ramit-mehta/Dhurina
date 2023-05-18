@@ -22,11 +22,11 @@ const HeroBpsc = () => {
       <div className="row mt-5 justify-content-between">
         <div className="col-lg-8 border-end">
           <h2 className="ff_inter fw-semibold fs_8xl mb-0 heading_text">
-            BSSC Study Material 2023, Study Plan, Notes
+            BPSC Study Material 2023, Study Plan, Notes
           </h2>
           <p className="mb-0 ff_inter fs_lg text_grey mt-3">
-            Buy BSSC Study Material 2023 at Dhurina to get Comprehensive BSSC
-            Study notes,BSSC Exam Tips,Study Plan at low price
+            Buy BPSC Study Material 2023 at Dhurina to get Comprehensive BSSC
+            Study notes,BPSC Exam Tips,Study Plan at low price
           </p>
 
           <div className="d-flex flex-wrap mt-3">

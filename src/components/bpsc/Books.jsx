@@ -27,7 +27,7 @@ const RecordedVideos = () => {
                       </p>
                     </div>
                   </div>
-                  <p className="ff_inter text_grey fs_md pt-3 fw-semibol mb-0 px-3">
+                  <p className="ff_inter text_grey fs_desc pt-3 fw-semibol mb-0 px-3">
                     {item.desc}
                   </p>
                   <div className="mt-3 d-flex align-items-center justify-content-between px-3 pb-3">
@@ -35,7 +35,7 @@ const RecordedVideos = () => {
                       <span className="mb-0 text_gradient fw-bold fs_3xl mb-0">
                         ₹{item.price}{" "}
                       </span>
-                      <span className="fs_md text_grey ff_inter text-decoration-line-through mb-0">
+                      <span className="fs_desc text_grey ff_inter text-decoration-line-through mb-0">
                         ₹5000
                       </span>
                     </div>
