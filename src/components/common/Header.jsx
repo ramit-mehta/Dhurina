@@ -26,9 +26,7 @@ const Header = () => {
     document.body.classList.toggle("humburger");
     document.body.parentElement.classList.toggle("overflow-hidden");
   };
-  const navToggle = () => {
-    setMenuOpen(!menuOpen);
-  };
+
   const show = () => {
     setShowList(!showList);
   };
