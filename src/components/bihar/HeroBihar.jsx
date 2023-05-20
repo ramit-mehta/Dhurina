@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import LiveClasses from "./LiveClasses";
-import RecordedVideos from "./RecordedVideos";
-import Test from "./Test";
-import Ebooks from "./Ebooks";
-import Books from "./Books";
-import Register from "./Register";
+// import LiveClasses from "./LiveClasses";
+// import RecordedVideos from "./RecordedVideos";
+// import Test from "./Test";
+// import Ebooks from "./Ebooks";
+// import Books from "./Books";
+// import Register from "./Register";
 
-const HeroBpsc = () => {
+const HeroBihar = () => {
   const Study = [
     { name: "Live Class", path: "#liveclass" },
     { name: "Videos", path: "#videos" },
@@ -21,8 +21,8 @@ const HeroBpsc = () => {
     <div className="custom_container container py-5">
       <div className="row mt-5 justify-content-between">
         <div className="col-lg-8 border-end">
-          <h2 className="ff_inter fw-semibold fs_8xl mb-0 heading_text">
-            BPSC Study Material 2023, Study Plan, Notes
+          <h2 className="ff_inter fw-semibold fs_8xl mb-0 heading_text text-uppercase">
+            BIHAR STUDY MATERIAl
           </h2>
           <p className="mb-0 ff_inter fs_lg text_grey mt-3">
             Buy BPSC Study Material 2023 at Dhurina to get Comprehensive BPSC
@@ -49,18 +49,16 @@ const HeroBpsc = () => {
               );
             })}
           </div>
-          <LiveClasses />
+          {/* <LiveClasses />
           <RecordedVideos />
           <Test />
           <Ebooks />
-          <Books />
+          <Books /> */}
         </div>
-        <div className="col-lg-4">
-          <Register />
-        </div>
+        <div className="col-lg-4">{/* <Register /> */}</div>
       </div>
     </div>
   );
 };
 
-export default HeroBpsc;
+export default HeroBihar;

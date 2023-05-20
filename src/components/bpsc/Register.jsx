@@ -27,7 +27,7 @@ const Register = () => {
   ];
   return (
     <div className="bg_register p-4">
-      <h2 className="text_gradient ff_inter fw-semibold fs_6xl mb-3">
+      <h2 className="text_gradient ff_inter fw-semibold fs-4 mb-3">
         Filter Search
       </h2>
       {filter.map((item, index) => {
@@ -40,7 +40,7 @@ const Register = () => {
               value={item.type}
             />
             <label
-              className="ff_inter fw-semibold fs_md text_dark_grey ms-2"
+              className="ff_inter fw-semibold fs_desc text_dark_grey ms-2"
               for="
               "
             >
@@ -50,38 +50,40 @@ const Register = () => {
         );
       })}
 
-      <h2 className="text_gradient ff_inter fw-semibold fs_6xl mb-3 mt-5">
+      <h2 className="text_gradient ff_inter fw-semibold fs-4 mb-3 mt-5">
         Quick Links
       </h2>
       <Link>
-        <p className="mb-0 ff_inter text_grey fs_md">
+        <p className="mb-0 ff_inter text_grey fs_desc">
           BSSC CGL ONLINE COACHING
         </p>
       </Link>
       <Link>
-        <p className="mb-0 ff_inter text_dark_grey fs_md">BIHAR CIVIL COURT</p>
+        <p className="mb-0 ff_inter text_dark_grey fs_desc">
+          BIHAR CIVIL COURT
+        </p>
       </Link>
       <Link>
-        <p className="mb-0 ff_inter text_dark_grey fs_md">Online Coaching</p>
+        <p className="mb-0 ff_inter text_dark_grey fs_desc">Online Coaching</p>
       </Link>
       <Link>
-        <p className="mb-0 ff_inter text_dark_grey fs_md">
+        <p className="mb-0 ff_inter text_dark_grey fs_desc">
           Bihar PSC Online Coaching
         </p>
       </Link>
       <Link>
-        <p className="mb-0 ff_inter text_dark_grey fs_md">BIHAR POLICE</p>
+        <p className="mb-0 ff_inter text_dark_grey fs_desc">BIHAR POLICE</p>
       </Link>
       <Link>
-        <p className="mb-0 ff_inter text_dark_grey fs_md">Online Coaching</p>
+        <p className="mb-0 ff_inter text_dark_grey fs_desc">Online Coaching</p>
       </Link>
       <Link>
-        <p className="mb-0 ff_inter text_dark_grey fs_md">
+        <p className="mb-0 ff_inter text_dark_grey fs_desc">
           BIHAR CO OPERATIVE BANK
         </p>
       </Link>
       <Link>
-        <p className="mb-0 ff_inter text_dark_grey fs_md">Online Coaching</p>
+        <p className="mb-0 ff_inter text_dark_grey fs_desc">Online Coaching</p>
       </Link>
 
       <div className="bg_crack_bpsc mt-3 p-3 position-relative col-md-6 col-lg-12">

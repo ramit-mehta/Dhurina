@@ -33,15 +33,15 @@ const RecordedVideos = () => {
                     <img className="mx-auto" src={item.img} alt="bpsc_logo" />
 
                     <div className="mb-0">
-                      <h2 className="ff_inter fw-bolder fs_8xl text-white mb-0 mt-2">
+                      <h2 className="ff_inter fw-bolder text-white mb-0 mt-2">
                         {item.bpscTitle}
                       </h2>
-                      <p className="ff_inter fs_7xl text-white mb-0 notes mx-auto">
+                      <p className="ff_inter fs-4 text-white mb-0 notes mx-auto">
                         {item.type}
                       </p>
                     </div>
                   </div>
-                  <p className="ff_inter text_grey fs_md pt-3 fw-semibol mb-0 px-2">
+                  <p className="ff_inter text_grey fs_desc pt-3 fw-semibol mb-0 px-2">
                     {item.desc}
                   </p>
                   <div className="mt-3 d-flex align-items-center justify-content-between px-2 pb-3">
@@ -49,7 +49,7 @@ const RecordedVideos = () => {
                       <span className="mb-0 text_gradient fw-bold fs_3xl mb-0">
                         ₹{item.price}{" "}
                       </span>
-                      <span className="fs_md text_grey ff_inter text-decoration-line-through mb-0">
+                      <span className="fs_desc text_grey ff_inter text-decoration-line-through mb-0">
                         ₹1177
                       </span>
                     </div>
@@ -74,15 +74,15 @@ const RecordedVideos = () => {
                     <img className="mx-auto" src={item.img} alt="bpsc_logo" />
 
                     <div className="mb-0">
-                      <h2 className="ff_inter fw-bolder fs_8xl text-white mb-0 mt-2">
+                      <h2 className="ff_inter fw-bolder text-white mb-0 mt-2">
                         {item.bpscTitle}
                       </h2>
-                      <p className="ff_inter fs_7xl text-white mb-0 notes mx-auto">
+                      <p className="ff_inter fs-4 text-white mb-0 notes mx-auto">
                         {item.type}
                       </p>
                     </div>
                   </div>
-                  <p className="ff_inter text_grey fs_md pt-3 fw-semibol mb-0 px-2">
+                  <p className="ff_inter text_grey fs_desc pt-3 fw-semibol mb-0 px-2">
                     {item.desc}
                   </p>
                   <div className="mt-3 d-flex align-items-center justify-content-between px-2 pb-3">
@@ -90,7 +90,7 @@ const RecordedVideos = () => {
                       <span className="mb-0 text_gradient fw-bold fs_3xl mb-0">
                         ₹{item.price}{" "}
                       </span>
-                      <span className="fs_md text_grey ff_inter text-decoration-line-through mb-0">
+                      <span className="fs_desc text_grey ff_inter text-decoration-line-through mb-0">
                         ₹1177
                       </span>
                     </div>
@@ -115,15 +115,15 @@ const RecordedVideos = () => {
                     <img className="mx-auto" src={item.img} alt="bpsc_logo" />
 
                     <div className="mb-0">
-                      <h2 className="ff_inter fw-bolder fs_8xl text-white mb-0 mt-2">
+                      <h2 className="ff_inter fw-bolder text-white mb-0 mt-2">
                         {item.bpscTitle}
                       </h2>
-                      <p className="ff_inter fs_7xl text-white mb-0 notes mx-auto">
+                      <p className="ff_inter fs-4 text-white mb-0 notes mx-auto">
                         {item.type}
                       </p>
                     </div>
                   </div>
-                  <p className="ff_inter text_grey fs_md pt-3 fw-semibol mb-0 px-2">
+                  <p className="ff_inter text_grey fs_desc pt-3 fw-semibol mb-0 px-2">
                     {item.desc}
                   </p>
                   <div className="mt-3 d-flex align-items-center justify-content-between px-2 pb-3">
@@ -131,7 +131,7 @@ const RecordedVideos = () => {
                       <span className="mb-0 text_gradient fw-bold fs_3xl mb-0">
                         ₹{item.price}{" "}
                       </span>
-                      <span className="fs_md text_grey ff_inter text-decoration-line-through mb-0">
+                      <span className="fs_desc text_grey ff_inter text-decoration-line-through mb-0">
                         ₹1177
                       </span>
                     </div>

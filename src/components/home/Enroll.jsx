@@ -18,7 +18,7 @@ const Enroll = () => {
   return (
     <div className="custom_container container py-5">
       <div className="d-lg-flex justify-content-between align-items-center">
-        <h2 className="ff_inter fw-bold fs_9xl color_dark_blue mb-0 text-center text-lg-start">
+        <h2 className="ff_inter fw-bold color_dark_blue mb-0 text-center text-lg-start">
           How to Enroll in <span className="text_gradient"> Dhurina </span>
         </h2>
         <div className="mb-0 d-flex align-items-center justify-content-center mt-4 mt-lg-0">
