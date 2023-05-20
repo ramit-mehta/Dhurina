@@ -196,7 +196,16 @@ export const BpscRecorded = [
     coupon: "BPSC",
   },
 ];
-
+export const BpscTest = [
+  {
+    img: Icon,
+    Title: "BPSC",
+    type: "SIDDHI Selection",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    price: 1299,
+    coupon: "BPSC",
+  },
+];
 // BPSC Ebooks
 export const Ebooks = [
   {

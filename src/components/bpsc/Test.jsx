@@ -1,5 +1,5 @@
 import React from "react";
-import { BpscClass } from "../common/Helper";
+import { BpscTest } from "../common/Helper";
 import { Link } from "react-router-dom";
 
 const RecordedVideos = () => {
@@ -7,7 +7,7 @@ const RecordedVideos = () => {
     <div id="tests" className="custom_container container py-5">
       <h2 className="text_gradient ff_inter fw-bold fs_4xl">Tests</h2>
       <div className="row">
-        {BpscClass.map((item, index) => {
+        {BpscTest.map((item, index) => {
           return (
             <div key={index} className="col-md-6 mt-4">
               <Link>
