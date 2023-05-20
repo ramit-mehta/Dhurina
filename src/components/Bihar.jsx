@@ -11,6 +11,7 @@ import RecordedVideos from "./bpsc/RecordedVideos";
 import Test from "./bpsc/Test";
 import Ebooks from "./bpsc/Ebooks";
 import Books from "./bpsc/Books";
+import Register from "./bpsc/Register";
 
 const Bihar = () => {
   return (
@@ -24,7 +25,9 @@ const Bihar = () => {
           <Ebooks Ebook={BiharEbooks} />
           <Books Books={BiharBooks} />
         </div>
-        <div className="col-lg-4"></div>
+        <div className="col-lg-4">
+          <Register />
+        </div>
       </div>
     </div>
   );
