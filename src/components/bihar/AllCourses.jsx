@@ -7,7 +7,6 @@ import Register from "../bpsc/Register";
 const AllCourses = () => {
   return (
     <>
-      <div></div>
       <div className="custom_container container py-5">
         <div className="row mt-5 justify-content-between">
           <div className="col-lg-8 border-end">
