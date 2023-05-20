@@ -9,6 +9,9 @@ import Register from "./bpsc/Register";
 import { HeroBpsc } from "./common/Helper";
 import { BpscClass } from "./common/Helper";
 import { BpscRecorded } from "./common/Helper";
+import { BpscTest } from "./common/Helper";
+import { BpscEbooks } from "./common/Helper";
+import { BpscBooks } from "./common/Helper";
 
 const BPSC = () => {
   return (
@@ -19,9 +22,9 @@ const BPSC = () => {
             <Hero display={true} Hero={HeroBpsc} />
             <LiveClasses display={true} Classes={BpscClass} />
             <RecordedVideos Recorded={BpscRecorded} />
-            <Test />
-            <Ebooks />
-            <Books />
+            <Test Test={BpscTest} />
+            <Ebooks Ebook={BpscEbooks} />
+            <Books Books={BpscBooks} />
           </div>
           <div className="col-lg-4">
             <Register />

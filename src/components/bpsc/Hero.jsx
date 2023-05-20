@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 const Hero = ({ Hero, display }) => {
   const [goal, setGoal] = useState();
-  console.log(Hero[0].para);
 
   return (
     <>

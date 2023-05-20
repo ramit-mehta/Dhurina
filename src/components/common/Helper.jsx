@@ -44,7 +44,7 @@ export const ExploreProducts = [
   {
     image: P5,
     title: "Top Rated",
-    description: "Handwritten Notes",
+    description: "Patna High Court",
   },
   {
     image: P6,
@@ -148,7 +148,7 @@ export const BpscClass = [
     Title: "BPSC",
     type: "SIDDHI Selection",
     desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
-    price: 1299,
+    price: 899,
     coupon: "BPSC",
   },
   {
@@ -207,12 +207,12 @@ export const BpscTest = [
   },
 ];
 // BPSC Ebooks
-export const Ebooks = [
+export const BpscEbooks = [
   {
     img: EbooksIcon,
     Title: "BPSC",
     type: "Handwritten Notes",
-    desc: "Bihar SSC CGL Mains SIDDHI Selection Hand-Written Notes",
+    desc: "Bpsc SSC CGL Mains SIDDHI Selection Hand-Written Notes",
     price: 899,
     coupon: "BPSC10",
   },
@@ -222,7 +222,13 @@ export const Ebooks = [
 export const BpscBooks = [
   {
     img: Books,
-    desc: "Bihar SSC CGL Mains SIDDHI Book Combo 3 Books",
+    desc: "Bpsc SSC CGL Mains SIDDHI Book Combo 3 Books",
+    price: 1299,
+    coupon: "BPSC10",
+  },
+  {
+    img: Books,
+    desc: "Bpsc SSC CGL Mains SIDDHI Book Combo 3 Books",
     price: 1299,
     coupon: "BPSC10",
   },
@@ -250,7 +256,7 @@ export const BiharClass = [
   {
     img: Icon,
     Title: "BIHAR",
-    type: "SIDDHI Selection",
+    type: "Patna High Court",
     desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
     price: 1299,
     coupon: "BIHAR",
@@ -258,7 +264,7 @@ export const BiharClass = [
   {
     img: Icon,
     Title: "BIHAR",
-    type: "SIDDHI Selection",
+    type: "Patna High Court",
     desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
     price: 1299,
     coupon: "BIHAR",
@@ -266,7 +272,7 @@ export const BiharClass = [
   {
     img: Icon,
     Title: "BIHAR",
-    type: "SIDDHI Selection",
+    type: "Patna High Court",
     desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
     price: 1299,
     coupon: "BIHAR",
@@ -278,7 +284,7 @@ export const BiharRecorded = [
   {
     img: Icon,
     Title: "Bihar",
-    type: "SIDDHI Selection",
+    type: "Patna High Court",
     desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
     price: 1299,
     coupon: "Bihar",
@@ -286,7 +292,7 @@ export const BiharRecorded = [
   {
     img: Icon,
     Title: "Bihar",
-    type: "SIDDHI Selection",
+    type: "Patna High Court",
     desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
     price: 1299,
     coupon: "Bihar",
@@ -294,66 +300,106 @@ export const BiharRecorded = [
   {
     img: Icon,
     Title: "Bihar",
-    type: "SIDDHI Selection",
+    type: "Patna High Court",
     desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
     price: 1299,
     coupon: "Bihar",
+  },
+];
+
+// Bihar Test
+export const BiharTest = [
+  {
+    img: Icon,
+    Title: "Bihar",
+    type: "Patna High Court",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    price: 1299,
+    coupon: "Bihar",
+  },
+];
+// Bihar Ebooks
+export const BiharEbooks = [
+  {
+    img: EbooksIcon,
+    Title: "Bihar",
+    type: "Patna High Court",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Hand-Written Notes",
+    price: 899,
+    coupon: "Bihar10",
+  },
+];
+
+// Bihar Books
+export const BiharBooks = [
+  {
+    img: Books,
+    desc: "Bihar SSC CGL Mains SIDDHI Book Combo 3 Books",
+    price: 1299,
+    coupon: "Bihar10",
+  },
+
+  {
+    img: Books,
+    desc: "Bihar SSC CGL Mains SIDDHI Book Combo 3 Books",
+    price: 899,
+    coupon: "Bihar10",
   },
 ];
 export const AllLiveCourses = [
   {
     img: Icon,
     Title: "BIHAR",
-    type: "SIDDHI Selection",
-    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    type: "Patna High Court",
+    desc: "Patna High Court Assistant Written Test (Descriptive Type) 2023 Final Selection....",
     price: 1299,
     coupon: "BIHAR",
   },
   {
     img: Icon,
     Title: "BIHAR",
-    type: "SIDDHI Selection",
-    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    type: "Patna High Court",
+    desc: "Patna High Court Assistant Written Test (Descriptive Type) 2023 Final Selection....",
     price: 1299,
     coupon: "BIHAR",
   },
   {
     img: Icon,
     Title: "BIHAR",
-    type: "SIDDHI Selection",
-    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    type: "Patna High Court",
+    desc: "Patna High Court Assistant Written Test (Descriptive Type) 2023 Final Selection....",
     price: 1299,
     coupon: "BIHAR",
   },
   {
     img: Icon,
     Title: "BIHAR",
-    type: "SIDDHI Selection",
-    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    type: "Patna High Court",
+    desc: "Patna High Court Assistant Written Test (Descriptive Type) 2023 Final Selection....",
     price: 1299,
     coupon: "BIHAR",
   },
   {
     img: Icon,
     Title: "BIHAR",
-    type: "SIDDHI Selection",
-    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    type: "Patna High Court",
+    desc: "Patna High Court Assistant Written Test (Descriptive Type) 2023 Final Selection....",
     price: 1299,
     coupon: "BIHAR",
   },
   {
     img: Icon,
     Title: "BIHAR",
-    type: "SIDDHI Selection",
-    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    type: "Patna High Court",
+    desc: "Patna High Court Assistant Written Test (Descriptive Type) 2023 Final Selection....",
     price: 1299,
     coupon: "BIHAR",
   },
   {
     img: Icon,
     Title: "BIHAR",
-    type: "SIDDHI Selection",
-    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    type: "Patna High Court",
+    desc: "Patna High Court Assistant Written Test (Descriptive Type) 2023 Final Selection....",
     price: 1299,
     coupon: "BIHAR",
   },

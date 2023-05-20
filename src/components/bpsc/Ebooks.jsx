@@ -1,11 +1,10 @@
 import React from "react";
-import { Ebooks } from "../common/Helper";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 
-const RecordedVideos = () => {
+const Ebooks = ({ Ebook }) => {
   const settings = {
     infinite: true,
     speed: 500,
@@ -34,7 +33,7 @@ const RecordedVideos = () => {
       </div>
       <div className="row ">
         <Slider className="ms-lg-4" {...settings}>
-          {Ebooks.map((item, index) => {
+          {Ebook.map((item, index) => {
             return (
               <div key={index} className="col-md-6 mt-4">
                 <div className="border_light_brown mx-2">
@@ -75,7 +74,7 @@ const RecordedVideos = () => {
               </div>
             );
           })}
-          {Ebooks.map((item, index) => {
+          {Ebook.map((item, index) => {
             return (
               <div key={index} className="col-md-6 mt-4">
                 <div className="border_light_brown mx-2">
@@ -116,7 +115,7 @@ const RecordedVideos = () => {
               </div>
             );
           })}
-          {Ebooks.map((item, index) => {
+          {Ebook.map((item, index) => {
             return (
               <div key={index} className="col-md-6 mt-4">
                 <div className="border_light_brown mx-2">
@@ -163,4 +162,4 @@ const RecordedVideos = () => {
   );
 };
 
-export default RecordedVideos;
+export default Ebooks;

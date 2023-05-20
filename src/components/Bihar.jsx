@@ -3,11 +3,15 @@ import Hero from "./bpsc/Hero";
 import { HeroBihar } from "./common/Helper";
 import { BiharClass } from "./common/Helper";
 import { BiharRecorded } from "./common/Helper";
+import { BiharTest } from "./common/Helper";
+import { BiharEbooks } from "./common/Helper";
+import { BiharBooks } from "./common/Helper";
 import LiveClasses from "./bpsc/LiveClasses";
 import RecordedVideos from "./bpsc/RecordedVideos";
 import Test from "./bpsc/Test";
 import Ebooks from "./bpsc/Ebooks";
 import Books from "./bpsc/Books";
+import Register from "./bpsc/Register";
 
 const Bihar = () => {
   return (
@@ -17,11 +21,13 @@ const Bihar = () => {
           <Hero display={true} Hero={HeroBihar} />
           <LiveClasses display={true} Classes={BiharClass} />
           <RecordedVideos Recorded={BiharRecorded} />
-          <Test />
-          <Ebooks />
-          <Books />
+          <Test Test={BiharTest} />
+          <Ebooks Ebook={BiharEbooks} />
+          <Books Books={BiharBooks} />
         </div>
-        <div className="col-lg-4"></div>
+        <div className="col-lg-4">
+          <Register />
+        </div>
       </div>
     </div>
   );
