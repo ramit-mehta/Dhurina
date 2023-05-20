@@ -124,7 +124,7 @@ export const MockTests = [
   { label: "RRB NTPC", url: "#" },
 ];
 
-// BPSC PAGE
+// **************BPSC PAGE*********************
 
 // Hero Bpsc
 export const HeroBpsc = [
@@ -219,7 +219,7 @@ export const BpscBooks = [
   },
 ];
 
-// BIHAR PAGE
+// **************BIHAR PAGE*********************
 
 // Hero Bihar
 export const HeroBihar = [
