@@ -173,3 +173,31 @@ export const BpscBooks = [
     coupon: "BPSC10",
   },
 ];
+// Hero Bpsc
+
+export const HeroBpsc = [
+  {
+    heading: "BPSC Study Material 2023, Study Plan, Notes",
+    para: "Buy BPSC Study Material 2023 at Dhurina to get Comprehensive BPSC Study notes,BPSC Exam Tips,Study Plan at low price",
+    Study: [
+      { name: "Live Class", path: "#liveclass" },
+      { name: "Videos", path: "#videos" },
+      { name: "Tests", path: "#tests" },
+      { name: "Ebooks", path: "#ebooks" },
+      { name: "Books", path: "#books" },
+    ],
+  },
+];
+export const HeroBihar = [
+  {
+    heading: "BIHAR STUDY MATERIAL",
+    para: "Buy BSSC Study Material 2023 at Dhurina to get Comprehensive BSSC Study notes,BSSC Exam Tips,Study Plan at low price",
+    Study: [
+      { name: "Live Class", path: "#liveclass" },
+      { name: "Recorded Class", path: "#Recorded" },
+      { name: "Tests", path: "#tests" },
+      { name: "Ebooks", path: "#ebooks" },
+      { name: "Books", path: "#books" },
+    ],
+  },
+];
