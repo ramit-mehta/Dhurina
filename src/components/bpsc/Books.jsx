@@ -1,13 +1,12 @@
 import React from "react";
-import { BpscBooks } from "../common/Helper";
 import { Link } from "react-router-dom";
 
-const RecordedVideos = () => {
+const RecordedVideos = ({ Books }) => {
   return (
     <div id="books" className="custom_container container py-5">
       <h2 className="text_gradient ff_inter fw-bold fs_4xl">Books</h2>
       <div className="row ">
-        {BpscBooks.map((item, index) => {
+        {Books.map((item, index) => {
           return (
             <div key={index} className="col-md-6 mt-4">
               <Link>

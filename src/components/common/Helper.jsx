@@ -148,7 +148,7 @@ export const BpscClass = [
     Title: "BPSC",
     type: "SIDDHI Selection",
     desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
-    price: 1299,
+    price: 899,
     coupon: "BPSC",
   },
   {
@@ -207,12 +207,12 @@ export const BpscTest = [
   },
 ];
 // BPSC Ebooks
-export const Ebooks = [
+export const BpscEbooks = [
   {
     img: EbooksIcon,
     Title: "BPSC",
     type: "Handwritten Notes",
-    desc: "Bihar SSC CGL Mains SIDDHI Selection Hand-Written Notes",
+    desc: "Bpsc SSC CGL Mains SIDDHI Selection Hand-Written Notes",
     price: 899,
     coupon: "BPSC10",
   },
@@ -222,7 +222,13 @@ export const Ebooks = [
 export const BpscBooks = [
   {
     img: Books,
-    desc: "Bihar SSC CGL Mains SIDDHI Book Combo 3 Books",
+    desc: "Bpsc SSC CGL Mains SIDDHI Book Combo 3 Books",
+    price: 1299,
+    coupon: "BPSC10",
+  },
+  {
+    img: Books,
+    desc: "Bpsc SSC CGL Mains SIDDHI Book Combo 3 Books",
     price: 1299,
     coupon: "BPSC10",
   },
@@ -298,5 +304,45 @@ export const BiharRecorded = [
     desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
     price: 1299,
     coupon: "Bihar",
+  },
+];
+
+// Bihar Test
+export const BiharTest = [
+  {
+    img: Icon,
+    Title: "Bihar",
+    type: "SIDDHI Selection",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    price: 1299,
+    coupon: "Bihar",
+  },
+];
+// Bihar Ebooks
+export const BiharEbooks = [
+  {
+    img: EbooksIcon,
+    Title: "Bihar",
+    type: "Handwritten Notes",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Hand-Written Notes",
+    price: 899,
+    coupon: "Bihar10",
+  },
+];
+
+// Bihar Books
+export const BiharBooks = [
+  {
+    img: Books,
+    desc: "Bihar SSC CGL Mains SIDDHI Book Combo 3 Books",
+    price: 1299,
+    coupon: "Bihar10",
+  },
+
+  {
+    img: Books,
+    desc: "Bihar SSC CGL Mains SIDDHI Book Combo 3 Books",
+    price: 899,
+    coupon: "Bihar10",
   },
 ];
