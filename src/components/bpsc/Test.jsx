@@ -5,7 +5,15 @@ import { Link } from "react-router-dom";
 const RecordedVideos = () => {
   return (
     <div id="tests" className="custom_container container py-5">
-      <h2 className="text_gradient ff_inter fw-bold fs_4xl">Tests</h2>
+      <div className="d-flex justify-content-between align-content-center">
+        <h2 className="text_gradient ff_inter fw-bold fs_4xl">Tests</h2>
+        <Link
+          to="/all-live-course"
+          className="ff_inter fw-semibold text_gradient mb-0"
+        >
+          View All <span>&rarr;</span>{" "}
+        </Link>
+      </div>
       <div className="row">
         {BpscTest.map((item, index) => {
           return (
