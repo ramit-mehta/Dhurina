@@ -14,8 +14,8 @@ const Bihar = () => {
     <div className="custom_container container py-5">
       <div className="row mt-5 justify-content-between">
         <div className="col-lg-8 border-end">
-          <Hero Hero={HeroBihar} />
-          <LiveClasses Classes={BiharClass} />
+          <Hero display={true} Hero={HeroBihar} />
+          <LiveClasses display={true} Classes={BiharClass} />
           <RecordedVideos Recorded={BiharRecorded} />
           <Test />
           <Ebooks />

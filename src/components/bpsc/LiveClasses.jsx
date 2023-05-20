@@ -1,15 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const LiveClasses = ({ Classes }) => {
+const LiveClasses = ({ Classes, display }) => {
   return (
     <div id="liveclass" className="custom_container container py-5">
-      <div className="d-flex justify-content-between align-content-center">
-        <h2 className="text_gradient ff_inter fw-bold fs_4xl">Live Class</h2>
-        <Link className="ff_inter fw-semibold text_gradient mb-0">
-          View All <span>&rarr;</span>{" "}
-        </Link>
-      </div>
+      {display ? (
+        <div className="d-flex justify-content-between align-content-center">
+          <h2 className="text_gradient ff_inter fw-bold fs_4xl">Live Class</h2>
+          <Link
+            to="/all-live-course"
+            className="ff_inter fw-semibold text_gradient mb-0"
+          >
+            View All <span>&rarr;</span>{" "}
+          </Link>
+        </div>
+      ) : (
+        ""
+      )}
+
       <div className="row">
         {Classes.map((item, index) => {
           return (
