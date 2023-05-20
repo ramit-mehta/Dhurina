@@ -4,7 +4,15 @@ import { Link } from "react-router-dom";
 const RecordedVideos = ({ Books }) => {
   return (
     <div id="books" className="custom_container container py-5">
-      <h2 className="text_gradient ff_inter fw-bold fs_4xl">Books</h2>
+      <div className="d-flex justify-content-between align-content-center">
+        <h2 className="text_gradient ff_inter fw-bold fs_4xl">Books</h2>
+        <Link
+          to="/all-live-course"
+          className="ff_inter fw-semibold text_gradient mb-0"
+        >
+          View All <span>&rarr;</span>{" "}
+        </Link>
+      </div>
       <div className="row ">
         {Books.map((item, index) => {
           return (
