@@ -7,3 +7,7 @@
 .vh_100 {
   max-height: 100vh;
 }
+.short_hero {
+  background: linear-gradient(180deg, #fe8106 0%, #fe6d02 100%);
+  mix-blend-mode: normal;
+}
