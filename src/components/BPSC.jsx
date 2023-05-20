@@ -19,8 +19,8 @@ const BPSC = () => {
       <div className="custom_container container py-5">
         <div className="row mt-5 justify-content-between">
           <div className="col-lg-8 border-end">
-            <Hero Hero={HeroBpsc} />
-            <LiveClasses Classes={BpscClass} />
+            <Hero display={true} Hero={HeroBpsc} />
+            <LiveClasses display={true} Classes={BpscClass} />
             <RecordedVideos Recorded={BpscRecorded} />
             <Test Test={BpscTest} />
             <Ebooks Ebook={BpscEbooks} />

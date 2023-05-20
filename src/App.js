@@ -9,6 +9,7 @@ import Header from "./components/common/Header";
 import { Route, Routes } from "react-router-dom";
 import BPSC from "./components/BPSC";
 import Bihar from "./components/Bihar";
+import AllCourses from "./components/bihar/AllCourses";
 function App() {
   return (
     <>
@@ -17,6 +18,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/bpsc" element={<BPSC />} />
         <Route path="/bihar" element={<Bihar />} />
+
+        <Route path="/all-live-course" element={<AllCourses />} />
       </Routes>
 
       <Footer />
