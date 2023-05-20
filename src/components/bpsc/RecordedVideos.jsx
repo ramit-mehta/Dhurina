@@ -1,13 +1,12 @@
 import React from "react";
-import { BpscClass } from "../common/Helper";
 import { Link } from "react-router-dom";
 
-const RecordedVideos = () => {
+const RecordedVideos = ({ Recorded }) => {
   return (
     <div id="videos" className="custom_container container py-5">
       <h2 className="text_gradient ff_inter fw-bold fs_4xl">Recorded Videos</h2>
       <div className="row">
-        {BpscClass.map((item, index) => {
+        {Recorded.map((item, index) => {
           return (
             <div key={index} className="col-md-6 mt-4">
               <Link>
@@ -17,7 +16,7 @@ const RecordedVideos = () => {
                       <img src={item.img} alt="bpsc_logo" />
                       <div className="ms-2 mb-0">
                         <h2 className="ff_inter fw-bolder fs-6 text_gradient mb-0">
-                          {item.bpscTitle}
+                          {item.Title}
                         </h2>
                         <p className="ff_inter fw-semibold text_gradient mb-0">
                           {item.type}

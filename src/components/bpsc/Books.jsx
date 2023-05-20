@@ -20,7 +20,7 @@ const RecordedVideos = () => {
 
                     <div className="mb-0">
                       <h2 className="ff_inter fw-bolder fs_8xl text-white mb-0 mt-2">
-                        {item.bpscTitle}
+                        {item.Title}
                       </h2>
                       <p className="ff_inter fs_7xl text-white mb-0 notes mx-auto">
                         {item.type}

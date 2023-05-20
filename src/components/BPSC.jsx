@@ -7,6 +7,9 @@ import Ebooks from "./bpsc/Ebooks";
 import Books from "./bpsc/Books";
 import Register from "./bpsc/Register";
 import { HeroBpsc } from "./common/Helper";
+import { BpscClass } from "./common/Helper";
+import { BpscRecorded } from "./common/Helper";
+
 const BPSC = () => {
   return (
     <>
@@ -14,8 +17,8 @@ const BPSC = () => {
         <div className="row mt-5 justify-content-between">
           <div className="col-lg-8 border-end">
             <Hero Hero={HeroBpsc} />
-            <LiveClasses />
-            <RecordedVideos />
+            <LiveClasses Classes={BpscClass} />
+            <RecordedVideos Recorded={BpscRecorded} />
             <Test />
             <Ebooks />
             <Books />

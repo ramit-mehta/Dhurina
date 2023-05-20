@@ -124,11 +124,28 @@ export const MockTests = [
   { label: "RRB NTPC", url: "#" },
 ];
 
-// BPSC PAGE CLASSES
+// BPSC PAGE
+
+// Hero Bpsc
+export const HeroBpsc = [
+  {
+    heading: "BPSC Study Material 2023, Study Plan, Notes",
+    para: "Buy BPSC Study Material 2023 at Dhurina to get Comprehensive BPSC Study notes,BPSC Exam Tips,Study Plan at low price",
+    Study: [
+      { name: "Live Class", path: "#liveclass" },
+      { name: "Videos", path: "#videos" },
+      { name: "Tests", path: "#tests" },
+      { name: "Ebooks", path: "#ebooks" },
+      { name: "Books", path: "#books" },
+    ],
+  },
+];
+
+// Live Classes BPSC
 export const BpscClass = [
   {
     img: Icon,
-    bpscTitle: "BPSC",
+    Title: "BPSC",
     type: "SIDDHI Selection",
     desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
     price: 1299,
@@ -136,7 +153,7 @@ export const BpscClass = [
   },
   {
     img: Icon,
-    bpscTitle: "BPSC",
+    Title: "BPSC",
     type: "SIDDHI Selection",
     desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
     price: 1299,
@@ -144,7 +161,35 @@ export const BpscClass = [
   },
   {
     img: Icon,
-    bpscTitle: "BPSC",
+    Title: "BPSC",
+    type: "SIDDHI Selection",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    price: 1299,
+    coupon: "BPSC",
+  },
+];
+
+// Recorded videos bpsc
+export const BpscRecorded = [
+  {
+    img: Icon,
+    Title: "BPSC",
+    type: "SIDDHI Selection",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    price: 1299,
+    coupon: "BPSC",
+  },
+  {
+    img: Icon,
+    Title: "BPSC",
+    type: "SIDDHI Selection",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    price: 1299,
+    coupon: "BPSC",
+  },
+  {
+    img: Icon,
+    Title: "BPSC",
     type: "SIDDHI Selection",
     desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
     price: 1299,
@@ -156,7 +201,7 @@ export const BpscClass = [
 export const Ebooks = [
   {
     img: EbooksIcon,
-    bpscTitle: "BPSC",
+    Title: "BPSC",
     type: "Handwritten Notes",
     desc: "Bihar SSC CGL Mains SIDDHI Selection Hand-Written Notes",
     price: 899,
@@ -173,21 +218,10 @@ export const BpscBooks = [
     coupon: "BPSC10",
   },
 ];
-// Hero Bpsc
 
-export const HeroBpsc = [
-  {
-    heading: "BPSC Study Material 2023, Study Plan, Notes",
-    para: "Buy BPSC Study Material 2023 at Dhurina to get Comprehensive BPSC Study notes,BPSC Exam Tips,Study Plan at low price",
-    Study: [
-      { name: "Live Class", path: "#liveclass" },
-      { name: "Videos", path: "#videos" },
-      { name: "Tests", path: "#tests" },
-      { name: "Ebooks", path: "#ebooks" },
-      { name: "Books", path: "#books" },
-    ],
-  },
-];
+// BIHAR PAGE
+
+// Hero Bihar
 export const HeroBihar = [
   {
     heading: "BIHAR STUDY MATERIAL",
@@ -199,5 +233,61 @@ export const HeroBihar = [
       { name: "Ebooks", path: "#ebooks" },
       { name: "Books", path: "#books" },
     ],
+  },
+];
+
+// Bihar Live classes
+export const BiharClass = [
+  {
+    img: Icon,
+    Title: "BIHAR",
+    type: "SIDDHI Selection",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    price: 1299,
+    coupon: "BIHAR",
+  },
+  {
+    img: Icon,
+    Title: "BIHAR",
+    type: "SIDDHI Selection",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    price: 1299,
+    coupon: "BIHAR",
+  },
+  {
+    img: Icon,
+    Title: "BIHAR",
+    type: "SIDDHI Selection",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    price: 1299,
+    coupon: "BIHAR",
+  },
+];
+
+// Recorded videos Bihar
+export const BiharRecorded = [
+  {
+    img: Icon,
+    Title: "Bihar",
+    type: "SIDDHI Selection",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    price: 1299,
+    coupon: "Bihar",
+  },
+  {
+    img: Icon,
+    Title: "Bihar",
+    type: "SIDDHI Selection",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    price: 1299,
+    coupon: "Bihar",
+  },
+  {
+    img: Icon,
+    Title: "Bihar",
+    type: "SIDDHI Selection",
+    desc: "Bihar SSC CGL Mains SIDDHI Selection Batch 2.0 Hinglish | Online Live Class By Dhurina",
+    price: 1299,
+    coupon: "Bihar",
   },
 ];
