@@ -346,7 +346,69 @@ export const BiharBooks = [
     coupon: "Bihar10",
   },
 ];
+
+// BPSC ALL LIVE COURSES
 export const AllLiveCourses = [
+  {
+    img: Icon,
+    Title: "BIHAR",
+    type: "Patna High Court",
+    desc: "Patna High Court Assistant Written Test (Descriptive Type) 2023 Final Selection....",
+    price: 1299,
+    coupon: "BIHAR",
+  },
+  {
+    img: Icon,
+    Title: "BIHAR",
+    type: "Patna High Court",
+    desc: "Patna High Court Assistant Written Test (Descriptive Type) 2023 Final Selection....",
+    price: 1299,
+    coupon: "BIHAR",
+  },
+  {
+    img: Icon,
+    Title: "BIHAR",
+    type: "Patna High Court",
+    desc: "Patna High Court Assistant Written Test (Descriptive Type) 2023 Final Selection....",
+    price: 1299,
+    coupon: "BIHAR",
+  },
+  {
+    img: Icon,
+    Title: "BIHAR",
+    type: "Patna High Court",
+    desc: "Patna High Court Assistant Written Test (Descriptive Type) 2023 Final Selection....",
+    price: 1299,
+    coupon: "BIHAR",
+  },
+  {
+    img: Icon,
+    Title: "BIHAR",
+    type: "Patna High Court",
+    desc: "Patna High Court Assistant Written Test (Descriptive Type) 2023 Final Selection....",
+    price: 1299,
+    coupon: "BIHAR",
+  },
+  {
+    img: Icon,
+    Title: "BIHAR",
+    type: "Patna High Court",
+    desc: "Patna High Court Assistant Written Test (Descriptive Type) 2023 Final Selection....",
+    price: 1299,
+    coupon: "BIHAR",
+  },
+  {
+    img: Icon,
+    Title: "BIHAR",
+    type: "Patna High Court",
+    desc: "Patna High Court Assistant Written Test (Descriptive Type) 2023 Final Selection....",
+    price: 1299,
+    coupon: "BIHAR",
+  },
+];
+
+// BIHAR ALL LIVE COURSES
+export const BiharAllLiveCourses = [
   {
     img: Icon,
     Title: "BIHAR",
