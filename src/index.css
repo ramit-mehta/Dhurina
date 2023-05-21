@@ -1,3 +1,4 @@
+@import url("./App.css");
 .bg_light_orange2 {
   background-color: #fff2d4;
 }
@@ -10,4 +11,24 @@
 .short_hero {
   background: linear-gradient(180deg, #fe8106 0%, #fe6d02 100%);
   mix-blend-mode: normal;
+}
+
+.short_input {
+  background: #ffffff;
+  box-shadow: 0px 3.30459px 67.7441px rgba(0, 0, 0, 0.06);
+  border-radius: 40.8709px;
+}
+.short_input ::placeholder {
+  font-size: var(--fs-3xl);
+  font-family: "Inter";
+  font-weight: 400;
+  line-height: 25.53px;
+}
+@media (min-width: 576px) {
+  .short_hero_para {
+    transform: translateX(8%);
+  }
+  .short_hero_img {
+    transform: translateX(-8%);
+  }
 }

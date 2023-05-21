@@ -19,6 +19,15 @@ import Icon from "../../assets/images/svg/bpsc-icon.svg";
 import EbooksIcon from "../../assets/images/svg/bpsc-ebook.svg";
 import Books from "../../assets/images/png/bpsc-books.png";
 
+// shorts image
+
+import ShortPoster1 from "../../assets/images/png/short-1-poster.png";
+import ShortPoster2 from "../../assets/images/png/short-2-poster.png";
+import ShortPoster3 from "../../assets/images/png/short-3-poster.png";
+import ShortPoster4 from "../../assets/images/png/short-4-poster.png";
+import ShortPoster5 from "../../assets/images/png/short-5-poster.png";
+import ResumeIcon from "../../assets/images/svg/resume-icon.svg";
+import ViewIcon from "../../assets/images/svg/view-icon.svg";
 // PRODUCTS
 export const ExploreProducts = [
   {
@@ -402,5 +411,43 @@ export const AllLiveCourses = [
     desc: "Patna High Court Assistant Written Test (Descriptive Type) 2023 Final Selection....",
     price: 1299,
     coupon: "BIHAR",
+  },
+];
+// shorts
+export const Short = [
+  {
+    img: ShortPoster1,
+    resumeBtn: ResumeIcon,
+    para: "Rajasthan geo pade ya nahi..",
+    viewIcon: ViewIcon,
+    views: "16K Views",
+  },
+  {
+    img: ShortPoster2,
+    resumeBtn: ResumeIcon,
+    para: "Ab hoga Ran ka aagaj",
+    viewIcon: ViewIcon,
+    views: "11K Views",
+  },
+  {
+    img: ShortPoster3,
+    resumeBtn: ResumeIcon,
+    para: "REET 5 Din ki dvai by Sibhash Charan ",
+    viewIcon: ViewIcon,
+    views: "181K Views",
+  },
+  {
+    img: ShortPoster4,
+    resumeBtn: ResumeIcon,
+    para: "Rajasthan geo pade ya nahi.. ",
+    viewIcon: ViewIcon,
+    views: "16K Views",
+  },
+  {
+    img: ShortPoster5,
+    resumeBtn: ResumeIcon,
+    para: "Ab hoga Ran ka aagaj ",
+    viewIcon: ViewIcon,
+    views: "11K Views",
   },
 ];
