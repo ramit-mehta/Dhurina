@@ -581,7 +581,29 @@ input[type="radio"]:checked::before {
     rgba(255, 244, 212, 0) 73.2%
   );
   mix-blend-mode: normal;
+  border: 1.5px solid;
+  border-image-source: linear-gradient(
+    263.13deg,
+    #fe6b02 13.61%,
+    rgba(255, 255, 255, 0) 75.57%
+  );
+  border-image-slice: 1 0;
 }
+.ul_ticks {
+  list-style-image: url("./assets/images/png/ul-img.png") !important;
+}
+.bg_gradient_ssc {
+  background: linear-gradient(95.01deg, #feac0d -8.69%, #fe6b02 79.21%);
+}
+.mock_box {
+  background: #fff7e8;
+  border: 1px solid #ffd8a0 !important;
+  border-radius: 10.6645px;
+}
+.border_brown_bottom {
+  border-bottom: 1.5px solid #ffcda1;
+}
+
 /* ********3. SSC PAGE END********** */
 
 /* *********FOOTER START********* */
@@ -808,6 +830,9 @@ input::-webkit-inner-spin-button {
   }
   .orange_dots {
     left: 8%;
+  }
+  .translate_top {
+    transform: translateY(-50%);
   }
 }
 
