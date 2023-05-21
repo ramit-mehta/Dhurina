@@ -296,9 +296,7 @@ select:focus {
   ) !important;
   color: white !important;
 }
-.collapsed svg rect {
-  fill: red;
-}
+
 .vh_70 {
   height: 70vh;
 }
