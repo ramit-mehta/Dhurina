@@ -406,3 +406,24 @@ export const AllLiveCourses = [
     coupon: "BIHAR",
   },
 ];
+
+// **************SSC PAGE*********************
+// hero ssc
+export const SscHero = [
+  {
+    heading:
+      "Delhi Police Constable Test Series 2022 - Mock Test Online in Hindi & Eng",
+    para: "Attempt free Delhi Police Constable Mock Test in Hindi & English to score better in Delhi Police Constable & Head Constable 2022 Exam.",
+    list: [
+      {
+        detail: "10 Mock Tests",
+      },
+      {
+        detail: "Available in Hindi & English",
+      },
+      {
+        detail: "Detailed solutions with short trick method",
+      },
+    ],
+  },
+];

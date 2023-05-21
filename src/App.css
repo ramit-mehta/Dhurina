@@ -573,6 +573,17 @@ input[type="radio"]:checked::before {
 }
 /* ********2. BPSC PAGE END********** */
 
+/* ********3. SSC PAGE START********** */
+.bg_hero_ssc {
+  background: linear-gradient(
+    115.6deg,
+    #fff4d4 -2.14%,
+    rgba(255, 244, 212, 0) 73.2%
+  );
+  mix-blend-mode: normal;
+}
+/* ********3. SSC PAGE END********** */
+
 /* *********FOOTER START********* */
 .footer_logo {
   height: 80px;

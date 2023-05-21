@@ -11,6 +11,7 @@ import BPSC from "./components/BPSC";
 import Bihar from "./components/Bihar";
 import AllCourses from "./components/bihar/AllCourses";
 import Shorts from "./components/Shorts";
+import Ssc from "./components/Ssc";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/bpsc" element={<BPSC />} />
         <Route path="/bihar" element={<Bihar />} />
+        <Route path="/ssc" element={<Ssc />} />
 
         <Route path="/all-live-course" element={<AllCourses />} />
         <Route path="/shorts" element={<Shorts />} />
