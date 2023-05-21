@@ -355,6 +355,8 @@ export const BiharBooks = [
     coupon: "Bihar10",
   },
 ];
+
+// BPSC ALL LIVE COURSES
 export const AllLiveCourses = [
   {
     img: Icon,
