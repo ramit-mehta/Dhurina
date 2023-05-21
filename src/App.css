@@ -603,6 +603,25 @@ input[type="radio"]:checked::before {
 .border_brown_bottom {
   border-bottom: 1.5px solid #ffcda1;
 }
+.gradient_height {
+  height: 250px !important;
+}
+.bg_eng_quiz {
+  background-image: url("./assets/images/png/english-quiz-bg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.trophy_mw {
+  max-width: 300px;
+}
+.btn_register {
+  background: #ffffff;
+  box-shadow: 4.25629px 5.32037px 13.833px rgba(254, 119, 4, 0.25);
+  border-radius: 5.32037px;
+}
+.ul_tick2 {
+  list-style-image: url("./assets/images/png/ul-img2.png") !important;
+}
 
 /* ********3. SSC PAGE END********** */
 
@@ -779,6 +798,9 @@ input::-webkit-inner-spin-button {
   .our_students_line::after {
     width: 58px;
     left: 45%;
+  }
+  .trophy_mw {
+    max-width: 220px;
   }
 }
 

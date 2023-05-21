@@ -452,3 +452,77 @@ export const MockTest = [
     time: "90 Mins",
   },
 ];
+//SSC Previous Year 10 tests
+export const PreviousPapers = [
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+];
+
+//SSC Previous Year 12 tests
+export const PreviousPapers2 = [
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+];
+
+//SSC Premium Test
+export const Premium = [
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+];
