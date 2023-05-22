@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const RecordedVideos = ({ Recorded }) => {
+  const navigate = useNavigate();
+
   return (
     <div id="videos" className="custom_container container py-5">
       <div className="d-flex justify-content-between align-content-center">
@@ -18,7 +21,13 @@ const RecordedVideos = ({ Recorded }) => {
       <div className="row">
         {Recorded.map((item, index) => {
           return (
-            <div key={index} className="col-md-6 mt-4">
+            <div
+              onClick={() => {
+                navigate("/course");
+              }}
+              key={index}
+              className="col-md-6 mt-4"
+            >
               <Link>
                 <div className="border_light_brown">
                   <div className="bg_classes py-4">

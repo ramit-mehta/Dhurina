@@ -1,40 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
+import Register from "../bpsc/Register";
 
-const Course = () => {
-  const [validity, setValidity] = useState();
-  const validityPeriods = [{ time: 12 }, { time: 6 }];
+const SingleBook = () => {
   return (
     <div className="custom_container container">
       <div className="py-5">
         <div className="row">
           <div className="col-lg-8">
             <h2 className="ff_inter fw-semibold fs_8xl mb-0 pe-lg-5 course_heading">
-              Patna High Court Assistant Written Test (Descriptive Type) 2023
-              Final Selection Batch 2.0
+              BPSC Practice Workbook 67th Prelim Exam
             </h2>
-            <span className="me-3 text_gradient fs_lg ff_inter fw-bold">
-              Select Validity
-            </span>
-            {validityPeriods.map((item, index) => {
-              return (
-                <button
-                  onClick={() => setValidity(item.time)}
-                  key={index}
-                  className={`${
-                    validity === item.time
-                      ? "bg_gradient text-white"
-                      : "bg_light_orange2 color_black2"
-                  } me-3 border-0  px-3 py-2 fw-normal rounded-1 mt-3 fw-semibold ff_inter mt-5`}
-                  value={item.time}
-                >
-                  {item.time} Months
-                </button>
-              );
-            })}
-            <h3 className="ff_inter fw-semibold fs_8xl mb-0 mt-3">
-              Course Descipition
+
+            <h3 className="ff_inter text_gradient fw-semibold fs_8xl mb-0 py-3 mt-4">
+              Book Highlights
             </h3>
-            <p className="ff_inter fw-normal text_grey fs_lg pe-lg-5 mt-3">
+            <p className="ff_inter fw-normal text_grey fs_lg pe-lg-5">
               Patna High Court Recruitment 2023 Notification for 550 assistant
               posts has been released on employment news. The official pdf will
               be available to download from the official website by 6th February
@@ -43,9 +23,9 @@ const Course = () => {
             </p>
             <div className="course_highlight pb-5 mt-5">
               <div className="bg_light_orange course_des">
-                <h3 className="ff_inter text_gradient fw-semibold fs_8xl mb-0 py-3 text-center ">
-                  Course Descipition
-                </h3>
+                <h4 className="ff_inter text_gradient fw-semibold fs_8xl mb-0 py-3 text-center ">
+                  Book Highlights
+                </h4>
               </div>
               <ul>
                 <li className="text_grey fw-normal fs_lg ff_inter mt-1">
@@ -86,11 +66,13 @@ const Course = () => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-4"></div>
+          <div className="col-lg-4">
+            <Register />
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Course;
+export default SingleBook;

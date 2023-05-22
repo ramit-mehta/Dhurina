@@ -1,13 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const RecordedVideos = ({ Books }) => {
+  const navigate = useNavigate();
   return (
     <div id="books" className="custom_container container py-5">
       <div className="d-flex justify-content-between align-content-center">
         <h2 className="text_gradient ff_inter fw-bold fs_4xl">Books</h2>
         <Link
-          to="/all-live-course"
+          to="/all-books"
           className="ff_inter fw-semibold text_gradient mb-0"
         >
           View All <span>&rarr;</span>{" "}
@@ -16,7 +17,13 @@ const RecordedVideos = ({ Books }) => {
       <div className="row">
         {Books.map((item, index) => {
           return (
-            <div key={index} className="col-md-6 mt-4">
+            <div
+              onClick={() => {
+                navigate("/book");
+              }}
+              key={index}
+              className="col-md-6 mt-4 cursor_pointer"
+            >
               <Link>
                 <div className="border_light_brown">
                   <div className="bg_books py-5 text-center position-relative">

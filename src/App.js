@@ -13,6 +13,9 @@ import AllCourses from "./components/bihar/AllCourses";
 import Shorts from "./components/Shorts";
 import Ssc from "./components/Ssc";
 import Course from "./components/common/Course";
+import AllEbooks from "./components/bihar/AllEbooks";
+import Allbooks from "./components/bihar/Allbooks";
+import SingleBook from "./components/bihar/SingleBook";
 function App() {
   return (
     <>
@@ -24,8 +27,11 @@ function App() {
         <Route path="/ssc" element={<Ssc />} />
 
         <Route path="/all-live-course" element={<AllCourses />} />
+        <Route path="/all-ebooks" element={<AllEbooks />} />
+        <Route path="/all-books" element={<Allbooks />} />
         <Route path="/shorts" element={<Shorts />} />
         <Route path="/course" element={<Course />} />
+        <Route path="/book" element={<SingleBook />} />
       </Routes>
 
       <Footer />

@@ -25,7 +25,7 @@ const Ebooks = ({ Ebook }) => {
       <div className="d-flex justify-content-between align-content-center">
         <h2 className="text_gradient ff_inter fw-bold fs_4xl">EBooks</h2>
         <Link
-          to="/all-live-course"
+          to="/all-ebooks"
           className="ff_inter fw-semibold text_gradient mb-0"
         >
           View All <span>&rarr;</span>{" "}

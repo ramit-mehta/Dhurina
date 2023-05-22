@@ -226,9 +226,83 @@ export const BpscEbooks = [
     coupon: "BPSC10",
   },
 ];
+export const AllEbook = [
+  {
+    img: EbooksIcon,
+    Title: "BPSC",
+    type: "Handwritten Notes",
+    desc: "Bpsc SSC CGL Mains SIDDHI Selection Hand-Written Notes",
+    price: 899,
+    coupon: "BPSC10",
+  },
+  {
+    img: EbooksIcon,
+    Title: "BPSC",
+    type: "Handwritten Notes",
+    desc: "Bpsc SSC CGL Mains SIDDHI Selection Hand-Written Notes",
+    price: 899,
+    coupon: "BPSC10",
+  },
+  {
+    img: EbooksIcon,
+    Title: "BPSC",
+    type: "Handwritten Notes",
+    desc: "Bpsc SSC CGL Mains SIDDHI Selection Hand-Written Notes",
+    price: 899,
+    coupon: "BPSC10",
+  },
+  {
+    img: EbooksIcon,
+    Title: "BPSC",
+    type: "Handwritten Notes",
+    desc: "Bpsc SSC CGL Mains SIDDHI Selection Hand-Written Notes",
+    price: 899,
+    coupon: "BPSC10",
+  },
+  {
+    img: EbooksIcon,
+    Title: "BPSC",
+    type: "Handwritten Notes",
+    desc: "Bpsc SSC CGL Mains SIDDHI Selection Hand-Written Notes",
+    price: 899,
+    coupon: "BPSC10",
+  },
+];
 
 // BPSC Books
 export const BpscBooks = [
+  {
+    img: Books,
+    desc: "Bpsc SSC CGL Mains SIDDHI Book Combo 3 Books",
+    price: 1299,
+    coupon: "BPSC10",
+  },
+  {
+    img: Books,
+    desc: "Bpsc SSC CGL Mains SIDDHI Book Combo 3 Books",
+    price: 1299,
+    coupon: "BPSC10",
+  },
+];
+export const AllBook = [
+  {
+    img: Books,
+    desc: "Bpsc SSC CGL Mains SIDDHI Book Combo 3 Books",
+    price: 1299,
+    coupon: "BPSC10",
+  },
+  {
+    img: Books,
+    desc: "Bpsc SSC CGL Mains SIDDHI Book Combo 3 Books",
+    price: 1299,
+    coupon: "BPSC10",
+  },
+  {
+    img: Books,
+    desc: "Bpsc SSC CGL Mains SIDDHI Book Combo 3 Books",
+    price: 1299,
+    coupon: "BPSC10",
+  },
   {
     img: Books,
     desc: "Bpsc SSC CGL Mains SIDDHI Book Combo 3 Books",

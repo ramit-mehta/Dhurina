@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const RecordedVideos = ({ Test }) => {
+  const navigate = useNavigate();
+
   return (
     <div id="tests" className="custom_container container py-5">
       <div className="d-flex justify-content-between align-content-center">
@@ -16,7 +18,13 @@ const RecordedVideos = ({ Test }) => {
       <div className="row">
         {Test.map((item, index) => {
           return (
-            <div key={index} className="col-md-6 mt-4">
+            <div
+              onClick={() => {
+                navigate("/course");
+              }}
+              key={index}
+              className="col-md-6 mt-4"
+            >
               <Link>
                 <div className="border_light_brown">
                   <div className="bg_classes py-4">
