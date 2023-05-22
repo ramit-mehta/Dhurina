@@ -73,11 +73,14 @@ const Header = () => {
                     Bihar
                   </Link>
                 </Dropdown.Item>
-                <Dropdown.Item
-                  className="ff_inter"
-                  onClick={handleOptionSelect}
-                >
-                  Something else
+                <Dropdown.Item className="ff_inter">
+                  <Link
+                    className="color_dark_blue d-block"
+                    to="/ssc"
+                    onClick={handleOptionSelect}
+                  >
+                    SSC
+                  </Link>
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

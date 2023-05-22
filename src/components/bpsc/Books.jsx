@@ -13,7 +13,7 @@ const RecordedVideos = ({ Books }) => {
           View All <span>&rarr;</span>{" "}
         </Link>
       </div>
-      <div className="row ">
+      <div className="row">
         {Books.map((item, index) => {
           return (
             <div key={index} className="col-md-6 mt-4">

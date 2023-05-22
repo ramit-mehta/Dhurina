@@ -573,6 +573,58 @@ input[type="radio"]:checked::before {
 }
 /* ********2. BPSC PAGE END********** */
 
+/* ********3. SSC PAGE START********** */
+.bg_hero_ssc {
+  background: linear-gradient(
+    115.6deg,
+    #fff4d4 -2.14%,
+    rgba(255, 244, 212, 0) 73.2%
+  );
+  mix-blend-mode: normal;
+  border: 1.5px solid;
+  border-image-source: linear-gradient(
+    263.13deg,
+    #fe6b02 13.61%,
+    rgba(255, 255, 255, 0) 75.57%
+  );
+  border-image-slice: 1 0;
+}
+.ul_ticks {
+  list-style-image: url("./assets/images/png/ul-img.png") !important;
+}
+.bg_gradient_ssc {
+  background: linear-gradient(95.01deg, #feac0d -8.69%, #fe6b02 79.21%);
+}
+.mock_box {
+  background: #fff7e8;
+  border: 1px solid #ffd8a0 !important;
+  border-radius: 10.6645px;
+}
+.border_brown_bottom {
+  border-bottom: 1.5px solid #ffcda1;
+}
+.gradient_height {
+  height: 250px !important;
+}
+.bg_eng_quiz {
+  background-image: url("./assets/images/png/english-quiz-bg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.trophy_mw {
+  max-width: 300px;
+}
+.btn_register {
+  background: #ffffff;
+  box-shadow: 4.25629px 5.32037px 13.833px rgba(254, 119, 4, 0.25);
+  border-radius: 5.32037px;
+}
+.ul_tick2 {
+  list-style-image: url("./assets/images/png/ul-img2.png") !important;
+}
+
+/* ********3. SSC PAGE END********** */
+
 /* *********FOOTER START********* */
 .footer_logo {
   height: 80px;
@@ -747,6 +799,9 @@ input::-webkit-inner-spin-button {
     width: 58px;
     left: 45%;
   }
+  .trophy_mw {
+    max-width: 220px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -797,6 +852,9 @@ input::-webkit-inner-spin-button {
   }
   .orange_dots {
     left: 8%;
+  }
+  .translate_top {
+    transform: translateY(-50%);
   }
 }
 

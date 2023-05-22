@@ -453,3 +453,122 @@ export const Short = [
     views: "11K Views",
   },
 ];
+// **************SSC PAGE*********************
+// hero ssc
+export const SscHero = [
+  {
+    heading:
+      "Delhi Police Constable Test Series 2022 - Mock Test Online in Hindi & Eng",
+    para: "Attempt free Delhi Police Constable Mock Test in Hindi & English to score better in Delhi Police Constable & Head Constable 2022 Exam.",
+    list: [
+      {
+        detail: "10 Mock Tests",
+      },
+      {
+        detail: "Available in Hindi & English",
+      },
+      {
+        detail: "Detailed solutions with short trick method",
+      },
+    ],
+  },
+];
+
+//SSC Mock Test
+export const MockTest = [
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+];
+//SSC Previous Year 10 tests
+export const PreviousPapers = [
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+];
+
+//SSC Previous Year 12 tests
+export const PreviousPapers2 = [
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+];
+
+//SSC Premium Test
+export const Premium = [
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+  {
+    title: "DP CONST 2020 27 NOV S1",
+    expire: "Expires on 31 Dec 2023",
+    ques: 100,
+    marks: 100,
+    time: "90 Mins",
+  },
+];
