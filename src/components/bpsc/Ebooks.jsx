@@ -2,9 +2,10 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Ebooks = ({ Ebook }) => {
+  const navigate = useNavigate();
   const settings = {
     infinite: true,
     speed: 500,
@@ -35,7 +36,13 @@ const Ebooks = ({ Ebook }) => {
         <Slider className="ms-lg-4" {...settings}>
           {Ebook.map((item, index) => {
             return (
-              <div key={index} className="col-md-6 mt-4">
+              <div
+                onClick={() => {
+                  navigate("/ebook");
+                }}
+                key={index}
+                className="col-md-6 mt-4 cursor_pointer"
+              >
                 <div className="border_light_brown mx-2">
                   <div className="bg_ebooks py-4 px-2 text-center">
                     <img className="mx-auto" src={item.img} alt="bpsc_logo" />
@@ -76,7 +83,13 @@ const Ebooks = ({ Ebook }) => {
           })}
           {Ebook.map((item, index) => {
             return (
-              <div key={index} className="col-md-6 mt-4">
+              <div
+                onClick={() => {
+                  navigate("/ebook");
+                }}
+                key={index}
+                className="col-md-6 mt-4 cursor_pointer"
+              >
                 <div className="border_light_brown mx-2">
                   <div className="bg_ebooks py-4 px-2 text-center">
                     <img className="mx-auto" src={item.img} alt="bpsc_logo" />
@@ -117,7 +130,13 @@ const Ebooks = ({ Ebook }) => {
           })}
           {Ebook.map((item, index) => {
             return (
-              <div key={index} className="col-md-6 mt-4">
+              <div
+                onClick={() => {
+                  navigate("/ebook");
+                }}
+                key={index}
+                className="col-md-6 mt-4 cursor_pointer"
+              >
                 <div className="border_light_brown mx-2">
                   <div className="bg_ebooks py-4 px-2 text-center">
                     <img className="mx-auto" src={item.img} alt="bpsc_logo" />

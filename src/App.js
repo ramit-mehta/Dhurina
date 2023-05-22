@@ -16,6 +16,7 @@ import Course from "./components/common/Course";
 import AllEbooks from "./components/bihar/AllEbooks";
 import Allbooks from "./components/bihar/Allbooks";
 import SingleBook from "./components/bihar/SingleBook";
+import SingleEbook from "./components/bihar/SingleEbook";
 function App() {
   return (
     <>
@@ -32,6 +33,7 @@ function App() {
         <Route path="/shorts" element={<Shorts />} />
         <Route path="/course" element={<Course />} />
         <Route path="/book" element={<SingleBook />} />
+        <Route path="/ebook" element={<SingleEbook />} />
       </Routes>
 
       <Footer />
