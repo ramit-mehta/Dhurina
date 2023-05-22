@@ -149,12 +149,21 @@ const Header = () => {
               </li>
               {showList && (
                 <ul className="ps-5 ms-5" style={{ listStyleType: "disc" }}>
-                  <Link to="/bpsc" onClick={handleClick}>
+                  <Link to="/ssc" onClick={handleClick}>
                     <li className="ff_inter fw-semibold color_dark_blue">
                       SSC
                     </li>
                   </Link>
-                  <li className="ff_inter fw-semibold color_dark_blue">BPSC</li>
+                  <Link to="/bihar" onClick={handleClick}>
+                    <li className="ff_inter fw-semibold color_dark_blue">
+                      Bihar
+                    </li>
+                  </Link>
+                  <Link to="/bpsc" onClick={handleClick}>
+                    <li className="ff_inter fw-semibold color_dark_blue">
+                      BPSC
+                    </li>
+                  </Link>
                   <li className="ff_inter fw-semibold color_dark_blue">
                     BANKING
                   </li>
