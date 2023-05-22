@@ -32,3 +32,27 @@
     transform: translateX(-8%);
   }
 }
+/* course  */
+.course_heading {
+  position: relative;
+}
+.course_heading::before {
+  content: "";
+  position: absolute;
+  background-color: #fe8605;
+  height: 4px;
+  width: 153.5px;
+  bottom: -24px;
+
+  left: 0px;
+}
+.course_highlight {
+  background: #ffffff;
+  border: 0.2px solid #fe8605;
+  border-radius: 11px;
+}
+.course_des {
+  border: 0.2px solid #fe8605;
+  border-radius: 11px 11px 0px 0px;
+  border-width: 0px 0px 0.2px 0px;
+}
