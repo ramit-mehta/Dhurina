@@ -1,9 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const LiveClasses = ({ Classes, display }) => {
+  const navigate = useNavigate();
   return (
-    <div id="liveclass" className="custom_container container py-5">
+    <div
+      onClick={() => {
+        navigate("/course");
+      }}
+      id="liveclass"
+      className="custom_container container py-5"
+    >
       {display ? (
         <div className="d-flex justify-content-between align-content-center">
           <h2 className="text_gradient ff_inter fw-bold fs_4xl">Live Class</h2>
