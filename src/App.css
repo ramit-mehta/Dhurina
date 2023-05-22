@@ -701,7 +701,7 @@ input::-webkit-inner-spin-button {
 @media (max-width: 576px) {
   :root {
     --fs-md: 7px;
-    --fs-lg: 11px;
+    --fs-lg: 10px;
     --fs-xl: 9px;
     --fs-xxl: 17px;
     --fs-3xl: 16px;
@@ -784,7 +784,11 @@ input::-webkit-inner-spin-button {
     max-width: 180px;
   }
   .accordion-button {
-    padding: 5px 10px !important;
+    padding: 5px 0px !important;
+  }
+  .accordion-button::after {
+    background-size: 12px !important;
+    margin-top: 14px !important;
   }
   .our_student {
     width: 75% !important;
@@ -815,6 +819,9 @@ input::-webkit-inner-spin-button {
   }
   .gradient_after::after {
     height: 100%;
+  }
+  .ps_0 {
+    padding-left: 0px !important;
   }
 }
 
