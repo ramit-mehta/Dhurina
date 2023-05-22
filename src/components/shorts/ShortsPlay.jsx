@@ -19,10 +19,10 @@ const ShortsPlay = () => {
         {Short.map((item, index) => {
           return (
             <div
-              className="col-sm-6 col-lg-4 mt-5 text-center text-sm-start"
+              className="col-sm-6 col-lg-4 mt-5 text-center text-sm-start px-5"
               key={index}
             >
-              <div className="position-relative">
+              <div className="position-relative ">
                 <img className="img-fluid" src={item.img} alt={item.img} />
                 <img
                   className="position-absolute top-50 start-50 translate-middle cursor_pointer"
@@ -30,7 +30,7 @@ const ShortsPlay = () => {
                   alt={item.resumeBtn}
                 />
               </div>
-              <p className="mb-0 mt-2 ff_inter fw-semibold fs_7xl">
+              <p className="mb-0 mt-2 ff_inter fw-semibold fs_5xl">
                 {item.para}
               </p>
               <div className="d-flex align-items-center justify-content-center justify-content-sm-start">

@@ -1,8 +1,10 @@
 import React from "react";
 import { AllBook } from "../common/Helper";
 import Register from "../bpsc/Register";
+import { useNavigate } from "react-router-dom";
 
 const Allbooks = () => {
+  const navigate = useNavigate();
   return (
     <div className="custom_container container py-5">
       <div className="row mt-5 justify-content-between">
@@ -16,7 +18,11 @@ const Allbooks = () => {
           <div className="row mt-5">
             {AllBook.map((item, index) => {
               return (
-                <div key={index} className="col-md-6 mt-4">
+                <div
+                  onClick={() => navigate("/book")}
+                  key={index}
+                  className="col-md-6 mt-4 cursor_pointer"
+                >
                   <div className="border_light_brown">
                     <div className="bg_books py-5 text-center position-relative">
                       <p className="mb-0 text-white bg_gradient ff_inter position-absolute fs_sm px-3 py-1 combo_label">
