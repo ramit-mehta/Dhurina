@@ -1,4 +1,3 @@
-import React from "react";
 import LiveClasses from "../bpsc/LiveClasses";
 import { AllLiveCourses, HeroBihar } from "../common/Helper";
 import Hero from "../bpsc/Hero";
