@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import Icon from "../../assets/images/svg/bpsc-icon.svg";
+import LiveIcon from "../../assets/images/svg/live-icon.svg";
+import RecordIcon from "../../assets/images/svg/record-icon.svg";
+import TestIcon from "../../assets/images/svg/test-icon.svg";
+import Play from "../../assets/images/png/orange-play.png";
 
 const Course = () => {
   const [validity, setValidity] = useState();
@@ -7,7 +12,7 @@ const Course = () => {
     <div className="custom_container container">
       <div className="py-5">
         <div className="row">
-          <div className="col-8">
+          <div className="col-lg-8">
             <h2 className="ff_inter fw-semibold fs_8xl mb-0 pe-lg-5 course_heading">
               Patna High Court Assistant Written Test (Descriptive Type) 2023
               Final Selection Batch 2.0
@@ -86,7 +91,66 @@ const Course = () => {
               </ul>
             </div>
           </div>
-          <div className="col-4"></div>
+          <div className="col-lg-4">
+            <div className="border_light_brown">
+              <div className="bg_classes px-2 py-4">
+                <div className="d-flex align-items-center justify-content-center">
+                  <img src={Icon} alt="bpsc_logo" />
+                  <div className="ms-2 mb-0">
+                    <h2 className="ff_inter fw-bolder fs-5 text_gradient mb-0">
+                      BIHAR
+                    </h2>
+                    <p className="ff_inter fw-semibold text_gradient mb-0">
+                      Patna High Court
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="d-flex align-items-center mt-4">
+                <img className="ms-5" src={LiveIcon} alt="live_icon" />
+                <p className="mb-0 ff_inter fw-semibold text_grey fs_sm ms-1">
+                  12+ Live Classes
+                </p>
+              </div>
+              <div className="d-flex align-items-center mt-2">
+                <img className="ms-5" src={RecordIcon} alt="record_icon" />
+                <p className="mb-0 ff_inter fw-semibold text_grey fs_sm ms-1">
+                  26+ Recorded Classes
+                </p>
+              </div>
+              <div className="d-flex align-items-center mt-2">
+                <img className="ms-5" src={TestIcon} alt="test_icon" />
+                <p className="mb-0 ff_inter fw-semibold text_grey fs_sm ms-1">
+                  25+ Test
+                </p>
+              </div>
+              <div className="p-3 mt-3">
+                <h2 className="text_gradient fs-5 fw-semibold">Demo Class</h2>
+              </div>
+              <div className="border_light_brown mx-4">
+                <div className="bg_classes text-center p-4">
+                  <img src={Play} alt="play_btn" />
+                </div>
+                <p className="ff_inter fw-semibold text_grey px-3 fs_sm mt-2">
+                  General English:- The questions will be designed to test ....
+                </p>
+                <div className="px-3">
+                  <span className="mb-0 text_gradient fw-bold fs_3xl mb-0">
+                    ₹1299
+                  </span>
+                  <span className="fs_desc ms-1 text_grey ff_inter text-decoration-line-through mb-0">
+                    ₹6777
+                  </span>
+                  {/* <div className="d-flex mt-2"> */}
+                  <p className="mb-0 text_gradient fw-semibold fs_desc">
+                    "MAY"
+                  </p>
+                  <span className="text_grey">coupon available</span>
+                  {/* </div> */}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

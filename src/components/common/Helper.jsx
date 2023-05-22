@@ -20,7 +20,6 @@ import EbooksIcon from "../../assets/images/svg/bpsc-ebook.svg";
 import Books from "../../assets/images/png/bpsc-books.png";
 
 // shorts image
-
 import ShortPoster1 from "../../assets/images/png/short-1-poster.png";
 import ShortPoster2 from "../../assets/images/png/short-2-poster.png";
 import ShortPoster3 from "../../assets/images/png/short-3-poster.png";
@@ -28,6 +27,7 @@ import ShortPoster4 from "../../assets/images/png/short-4-poster.png";
 import ShortPoster5 from "../../assets/images/png/short-5-poster.png";
 import ResumeIcon from "../../assets/images/svg/resume-icon.svg";
 import ViewIcon from "../../assets/images/svg/view-icon.svg";
+
 // PRODUCTS
 export const ExploreProducts = [
   {

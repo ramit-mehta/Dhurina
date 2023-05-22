@@ -30,7 +30,7 @@ const ShortsPlay = () => {
                   alt={item.resumeBtn}
                 />
               </div>
-              <p className="mb-0 mt-2 ff_inter fw-semibold fs_7xl">
+              <p className="mb-0 mt-2 ff_inter fw-semibold fs_5xl">
                 {item.para}
               </p>
               <div className="d-flex align-items-center justify-content-center justify-content-sm-start">
