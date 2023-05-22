@@ -141,11 +141,14 @@ const Course = () => {
                   <span className="fs_desc ms-1 text_grey ff_inter text-decoration-line-through mb-0">
                     ₹6777
                   </span>
-                  <div className="d-flex mt-2">
-                    {/* <p className="mb-0 text_gradient fw-semibold fs_desc">
+                  <div className="d-flex mt-2 align-items-center">
+                    <p className="mb-0 ff_inter text_gradient fw-semibold fs_desc">
                       "MAY"
                     </p>
-                    <span className="text_grey">coupon available</span> */}
+                    <p className="text_grey fw-semibold fs_desc mb-0">
+                      coupon available
+                    </p>
+                    <button className="bg_classes border_orange ">Apply</button>
                   </div>
                 </div>
               </div>

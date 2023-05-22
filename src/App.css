@@ -116,6 +116,9 @@ body {
   border-radius: 4.13074px;
   transition: all 0.4s ease-in-out;
 }
+.border_orange {
+  border: 1px solid #fe6d02 !important;
+}
 .text_light_grey {
   color: #fffcfc !important;
 }
