@@ -116,9 +116,7 @@ body {
   border-radius: 4.13074px;
   transition: all 0.4s ease-in-out;
 }
-.border_orange {
-  border: 1px solid #fe6d02 !important;
-}
+
 .text_light_grey {
   color: #fffcfc !important;
 }
@@ -574,6 +572,11 @@ input[type="radio"]:checked::before {
 .fs_desc {
   font-size: 13px;
 }
+.apply_btn {
+  border: 1px solid #fe6d02 !important;
+  color: #fe6d02;
+  border-radius: 2px;
+}
 /* ********2. BPSC PAGE END********** */
 
 /* ********3. SSC PAGE START********** */
@@ -641,7 +644,7 @@ input[type="radio"]:checked::before {
 
 /* *********FOOTER START********* */
 .footer_logo {
-  height: 80px;
+  height: 65px;
 }
 .footer_icon {
   transition: all 0.3s ease-in-out;
@@ -844,9 +847,6 @@ input::-webkit-inner-spin-button {
     z-index: -1;
   }
 
-  .mt_footer_courses {
-    margin-top: 106px !important;
-  }
   .orange_ellipse2 {
     top: 14%;
     left: 10%;
