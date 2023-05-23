@@ -5,6 +5,7 @@ import RecordIcon from "../../assets/images/svg/record-icon.svg";
 import TestIcon from "../../assets/images/svg/test-icon.svg";
 import Play from "../../assets/images/png/orange-play.png";
 import { Link } from "react-router-dom";
+import Poster from "../../assets/images/png/bpsc-crack-img.png";
 
 const Course = () => {
   const [validity, setValidity] = useState();
@@ -160,6 +161,20 @@ const Course = () => {
                   </Link>
                 </div>
               </div>
+            </div>
+            <div className="bg_crack_bpsc mt-4 p-3 position-relative col-md-6 col-lg-12">
+              <h2 className="text-white ff_inter fw-bold fs_8xl">BPSC CRACK</h2>
+              <p className="mb-0 text-white ff_inter fs_8xl crack_bpsc_para">
+                krna Hua Bahut Aasan..
+              </p>
+              <button className="fw-semibold ff_inter fs_sm mt-2 register_btn position-relative border-0 py-1 px-3">
+                REGISTER
+              </button>
+              <img
+                className="position-absolute bottom-0 end-0 poster"
+                src={Poster}
+                alt="bpsc_crack"
+              />
             </div>
           </div>
         </div>
