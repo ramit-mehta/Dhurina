@@ -143,7 +143,10 @@ input::placeholder {
   cursor: pointer;
 }
 select:focus {
-  outline: none;
+  outline: none !important;
+}
+input:focus {
+  box-shadow: none !important;
 }
 
 /* ********HEADER START********** */

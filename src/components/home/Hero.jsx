@@ -3,29 +3,14 @@ import { useNavigate } from "react-router-dom";
 import HeroImg from "../../assets/images/png/hero-img.png";
 import Ellipse1 from "../../assets/images/png/hero-ellipse-1.png";
 import Ellipse2 from "../../assets/images/png/hero-ellipse-2.png";
-import PlayStore from "../../assets/images/png/google-play.png";
-import AppStore from "../../assets/images/png/app-store.png";
-import { Link } from "react-router-dom";
 import ApiCall from "../../api/callApi";
+import { Button, FormControl } from "react-bootstrap";
 
 const Image_URL = process.env.REACT_APP_Bucket_URL;
 
 const Hero = () => {
   const [data, setData] = useState(null);
 
-  // useEffect(() => {
-  //   // Fetch data from the API
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await makeApiCall(null, "get", "/your-api-endpoint");
-  //       setData(response.data); // Assuming the response data is in the format you expect
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
   const [loading, setLoading] = useState(true);
   const [cartcount, setCartCount] = useState(0);
   const [testSeriesData, setTestSeries] = useState([]);
@@ -55,42 +40,6 @@ const Hero = () => {
     }
     getData();
   }, []);
-
-  // const addToCart = (e, index, price) => {
-  //   let newArray = [...bookItemData];
-  //   let obj = newArray[index];
-  //   obj.cart_status = true;
-  //   newArray[index] = obj;
-  //   setBookItem(newArray);
-
-  //   var body = {
-  //     type: "book",
-  //     type_id: e,
-  //     quantity: 1,
-  //     user_id: localStorage.getItem("id"),
-  //     price: price,
-  //     pages: 5,
-  //   };
-  //   ApiCall(body, "post", "cart", cartcallback);
-  // };
-
-  const cartcallback = useCallback((response) => {
-    if (response.data.status === "true") {
-      setMessage("Book added in cart");
-      setShowSucc(true);
-      setShowFail(false);
-      setTimeout(() => {
-        setShowSucc(false);
-      }, 3000);
-    } else {
-      setMessage("Error in added cart");
-      setShowSucc(false);
-      setShowFail(true);
-      setTimeout(() => {
-        setShowFail(false);
-      }, 3000);
-    }
-  });
 
   function getData(params) {
     var body = {
@@ -159,26 +108,43 @@ const Hero = () => {
               Watch anywhere, anytime.
             </p>
             <div className="d-flex bg-white mx-auto mx-lg-0 px-3 py-2 hero_input mt-2 align-items-center">
-              <input
+              <FormControl
                 className=" border-0 bg-transparent w-100 ff_inter fs_md"
                 type="text"
-                placeholder="Find Exam Based Video, Mock Test & Notes"
+                placeholder="Search your Best Courses, Tests & Books... "
+                onChange={(e) => setSearchInput(e.target.value)}
               />
-              <button className="bg_gradient text-white border-0 rounded-pill px-3 py-1 px-lg-4 fs_xl">
+              <Button
+                variant="home-search"
+                className="mt-0 bg_gradient text-white border-0 rounded-pill px-3 py-1 px-lg-4 fs_xl"
+                onClick={(e) => RouteChange(e)}
+              >
                 Search
-              </button>
+              </Button>
             </div>
             <div className="mt-4 pt-sm-2">
-              <Link target="_blank" to="https://play.google.com/store">
-                <img className="store_icon" src={PlayStore} alt="PlayStore" />
-              </Link>
-              <Link target="_blank" to="https://www.apple.com/app-store/">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.dhurina"
+                target="_blank"
+                rel="noreferrer"
+                className="downloadappbtnmob mt- mb-3 d-inline-block me-sm-3"
+              >
                 <img
-                  className="ms-2 store_icon"
-                  src={AppStore}
-                  alt="AppStore"
+                  alt="Google Play"
+                  src={Image_URL + "img/google-play-button.png"}
                 />
-              </Link>
+              </a>
+              <a
+                href="https://apps.apple.com/in/app/dhurina/id1479858722"
+                target="_blank"
+                className="downloadappbtnmob"
+                rel="noreferrer"
+              >
+                <img
+                  alt="App Store"
+                  src={Image_URL + "img/app-store-button.png"}
+                />
+              </a>
             </div>
           </div>
         </div>
