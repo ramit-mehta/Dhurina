@@ -41,42 +41,6 @@ const Hero = () => {
     getData();
   }, []);
 
-  // const addToCart = (e, index, price) => {
-  //   let newArray = [...bookItemData];
-  //   let obj = newArray[index];
-  //   obj.cart_status = true;
-  //   newArray[index] = obj;
-  //   setBookItem(newArray);
-
-  //   var body = {
-  //     type: "book",
-  //     type_id: e,
-  //     quantity: 1,
-  //     user_id: localStorage.getItem("id"),
-  //     price: price,
-  //     pages: 5,
-  //   };
-  //   ApiCall(body, "post", "cart", cartcallback);
-  // };
-
-  const cartcallback = useCallback((response) => {
-    if (response.data.status === "true") {
-      setMessage("Book added in cart");
-      setShowSucc(true);
-      setShowFail(false);
-      setTimeout(() => {
-        setShowSucc(false);
-      }, 3000);
-    } else {
-      setMessage("Error in added cart");
-      setShowSucc(false);
-      setShowFail(true);
-      setTimeout(() => {
-        setShowFail(false);
-      }, 3000);
-    }
-  });
-
   function getData(params) {
     var body = {
       user_id: "",
