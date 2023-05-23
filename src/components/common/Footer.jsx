@@ -97,7 +97,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-4 mt-lg-0 d-flex flex-row flex-lg-column  align-items-end align-items-lg-start justify-content-between">
-          <img className="footer_logo" src={FooterLogo} alt="FooterLogo" />
+          <Link to="/">
+            <img className="footer_logo" src={FooterLogo} alt="FooterLogo" />
+          </Link>
           <div className="mt-0 mt-lg-4">
             <p className="ff_inter fs-6 text-light fw-lighter mb-2">
               Follow On:
