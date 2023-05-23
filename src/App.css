@@ -244,6 +244,9 @@ input:focus {
 .hero_input {
   max-width: 440px;
 }
+.store_icon {
+  max-width: 130px;
+}
 /* *********HERO END********* */
 
 /* *********LEARN ENGLISH START********* */
@@ -727,9 +730,7 @@ input::-webkit-inner-spin-button {
   .learn {
     border-radius: 0px 8px 30px 0px;
   }
-  .store_icon {
-    width: 80px;
-  }
+
   .login_popup {
     z-index: 100 !important;
     max-width: 100% !important;

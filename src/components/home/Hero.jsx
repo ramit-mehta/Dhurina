@@ -9,6 +9,7 @@ import { Button, FormControl } from "react-bootstrap";
 const Image_URL = process.env.REACT_APP_Bucket_URL;
 
 const Hero = () => {
+  console.log(Image_URL);
   const [data, setData] = useState(null);
 
   const [loading, setLoading] = useState(true);
@@ -127,9 +128,10 @@ const Hero = () => {
                 href="https://play.google.com/store/apps/details?id=com.dhurina"
                 target="_blank"
                 rel="noreferrer"
-                className="downloadappbtnmob mt- mb-3 d-inline-block me-sm-3"
+                className="mb-3 d-inline-block me-sm-3"
               >
                 <img
+                  className="store_icon"
                   alt="Google Play"
                   src={Image_URL + "img/google-play-button.png"}
                 />
@@ -137,10 +139,10 @@ const Hero = () => {
               <a
                 href="https://apps.apple.com/in/app/dhurina/id1479858722"
                 target="_blank"
-                className="downloadappbtnmob"
                 rel="noreferrer"
               >
                 <img
+                  className="store_icon"
                   alt="App Store"
                   src={Image_URL + "img/app-store-button.png"}
                 />
