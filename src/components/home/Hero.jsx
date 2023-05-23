@@ -1,12 +1,136 @@
-import React from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import HeroImg from "../../assets/images/png/hero-img.png";
 import Ellipse1 from "../../assets/images/png/hero-ellipse-1.png";
 import Ellipse2 from "../../assets/images/png/hero-ellipse-2.png";
 import PlayStore from "../../assets/images/png/google-play.png";
 import AppStore from "../../assets/images/png/app-store.png";
 import { Link } from "react-router-dom";
+import ApiCall from "../../api/callApi";
+
+const Image_URL = process.env.REACT_APP_Bucket_URL;
 
 const Hero = () => {
+  const [data, setData] = useState(null);
+
+  // useEffect(() => {
+  //   // Fetch data from the API
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await makeApiCall(null, "get", "/your-api-endpoint");
+  //       setData(response.data); // Assuming the response data is in the format you expect
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, []);
+  const [loading, setLoading] = useState(true);
+  const [cartcount, setCartCount] = useState(0);
+  const [testSeriesData, setTestSeries] = useState([]);
+  const [bookItemData, setBookItem] = useState([]);
+  const [allCourseData, setAllCourse] = useState([]);
+  const [newCourseData, setNewCourse] = useState([]);
+  const [mainloading, setMainLoading] = useState(true);
+  const [show_succ, setShowSucc] = useState(false);
+  const [show_fail, setShowFail] = useState(false);
+  const [message, setMessage] = useState("");
+  const [searchInput, setSearchInput] = useState("");
+  const [faculty, setFaculty] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    if (localStorage.getItem("selectpre")) {
+      var prepval = localStorage.getItem("selectpre");
+
+      if (prepval === "School") {
+        return navigate("/school");
+      }
+
+      if (prepval === "Skill") {
+        return navigate("/skill");
+      }
+    }
+    getData();
+  }, []);
+
+  // const addToCart = (e, index, price) => {
+  //   let newArray = [...bookItemData];
+  //   let obj = newArray[index];
+  //   obj.cart_status = true;
+  //   newArray[index] = obj;
+  //   setBookItem(newArray);
+
+  //   var body = {
+  //     type: "book",
+  //     type_id: e,
+  //     quantity: 1,
+  //     user_id: localStorage.getItem("id"),
+  //     price: price,
+  //     pages: 5,
+  //   };
+  //   ApiCall(body, "post", "cart", cartcallback);
+  // };
+
+  const cartcallback = useCallback((response) => {
+    if (response.data.status === "true") {
+      setMessage("Book added in cart");
+      setShowSucc(true);
+      setShowFail(false);
+      setTimeout(() => {
+        setShowSucc(false);
+      }, 3000);
+    } else {
+      setMessage("Error in added cart");
+      setShowSucc(false);
+      setShowFail(true);
+      setTimeout(() => {
+        setShowFail(false);
+      }, 3000);
+    }
+  });
+
+  function getData(params) {
+    var body = {
+      user_id: "",
+    };
+
+    if (
+      localStorage.getItem("id") !== null &&
+      localStorage.getItem("id") !== ""
+    ) {
+      body = {
+        user_id: localStorage.getItem("id"),
+      };
+    }
+    ApiCall(body, "post", "home_data", home_data);
+  }
+
+  const home_data = useCallback((response) => {
+    if (response.data.status === 200) {
+      console.log(response.data.books);
+      setCartCount(response.data.cart_count);
+      setFaculty(response.data.faculty);
+      setTestSeries(response.data.test_series);
+      setNewCourse(response.data.new_course);
+      setAllCourse(response.data.all_course);
+      setBookItem(response.data.books);
+
+      setLoading(false);
+      setMainLoading(false);
+    } else {
+      console.log("error");
+    }
+  });
+
+  const RouteChange = (e) => {
+    navigate("/search-result?keyword=" + searchInput, {
+      state: { course: searchInput },
+    });
+  };
+
   return (
     <>
       <div className="custom_container container">
