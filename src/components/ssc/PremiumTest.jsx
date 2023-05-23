@@ -1,19 +1,19 @@
 import React from "react";
-import { PreviousPapers2 } from "../common/Helper";
+import { Premium } from "../common/Helper";
 import Unlock from "../../assets/images/svg/lock-ssc.svg";
 
 const PremiumTest = () => {
   return (
-    <div className="bg_gradient gradient_heigh">
-      <div className="custom_container container py-5">
+    <div className="position-relative">
+      <div className="custom_container container py-5 gradient_after">
         <h2 className="ff_inter fw-bold fs-3 text-white">
           Delhi Police Constable Premium Tests
         </h2>
         <p className="ff_inter mt-2 text-white">19 Tests</p>
         <div className="row">
-          {PreviousPapers2.map((item, index) => {
+          {Premium.map((item, index) => {
             return (
-              <div key={index} className="col-lg-3 col-md-6 mt-4 mt-lg-0">
+              <div key={index} className="col-lg-3 col-md-6 mt-3">
                 <div className="mock_box p-3">
                   <div key={index}>
                     <h2 className="ff_inter fw-bold text_gradient fs-4 mb-0">

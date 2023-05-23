@@ -116,6 +116,7 @@ body {
   border-radius: 4.13074px;
   transition: all 0.4s ease-in-out;
 }
+
 .text_light_grey {
   color: #fffcfc !important;
 }
@@ -162,7 +163,7 @@ select:focus {
   color: #fe831b;
 }
 .dhurina_logo {
-  height: 80px;
+  height: 70px;
   z-index: 99;
 }
 
@@ -571,6 +572,11 @@ input[type="radio"]:checked::before {
 .fs_desc {
   font-size: 13px;
 }
+.apply_btn {
+  border: 1px solid #fe6d02 !important;
+  color: #fe6d02;
+  border-radius: 2px;
+}
 /* ********2. BPSC PAGE END********** */
 
 /* ********3. SSC PAGE START********** */
@@ -622,12 +628,23 @@ input[type="radio"]:checked::before {
 .ul_tick2 {
   list-style-image: url("./assets/images/png/ul-img2.png") !important;
 }
+.gradient_after::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(99.02deg, #febf11 -15.78%, #fe5e00 108.25%);
+  box-shadow: 3.30459px 4.13074px 10.7399px rgba(254, 119, 4, 0.25);
+  height: 60%;
+  width: 100%;
+  z-index: -1;
+}
 
 /* ********3. SSC PAGE END********** */
 
 /* *********FOOTER START********* */
 .footer_logo {
-  height: 80px;
+  height: 65px;
 }
 .footer_icon {
   transition: all 0.3s ease-in-out;
@@ -690,7 +707,7 @@ input::-webkit-inner-spin-button {
 @media (max-width: 576px) {
   :root {
     --fs-md: 7px;
-    --fs-lg: 11px;
+    --fs-lg: 10px;
     --fs-xl: 9px;
     --fs-xxl: 17px;
     --fs-3xl: 11px;
@@ -773,7 +790,11 @@ input::-webkit-inner-spin-button {
     max-width: 180px;
   }
   .accordion-button {
-    padding: 5px 10px !important;
+    padding: 5px 0px !important;
+  }
+  .accordion-button::after {
+    background-size: 12px !important;
+    margin-top: 14px !important;
   }
   .our_student {
     width: 75% !important;
@@ -802,6 +823,12 @@ input::-webkit-inner-spin-button {
   .trophy_mw {
     max-width: 220px;
   }
+  .gradient_after::after {
+    height: 100%;
+  }
+  .ps_0 {
+    padding-left: 0px !important;
+  }
 }
 
 @media (min-width: 576px) {
@@ -820,9 +847,6 @@ input::-webkit-inner-spin-button {
     z-index: -1;
   }
 
-  .mt_footer_courses {
-    margin-top: 106px !important;
-  }
   .orange_ellipse2 {
     top: 14%;
     left: 10%;
@@ -834,6 +858,9 @@ input::-webkit-inner-spin-button {
   }
   .students_small_polygon {
     right: 10%;
+  }
+  .gradient_after::after {
+    height: 100%;
   }
 }
 
@@ -897,6 +924,9 @@ input::-webkit-inner-spin-button {
   }
   .w_75 {
     width: 75%;
+  }
+  .gradient_after::after {
+    height: 60%;
   }
 }
 @media (min-width: 1200px) {

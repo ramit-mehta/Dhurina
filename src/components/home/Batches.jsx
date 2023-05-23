@@ -128,19 +128,23 @@ const Batches = () => {
                   >
                     {openItems.includes(item.eventKey) ? (
                       <img
-                        className="me-2"
+                        className="me-md-2"
                         src={item.openIcon}
                         alt={item.openIcon}
                       />
                     ) : (
-                      <img className="me-2" src={item.icon} alt={item.icon} />
+                      <img
+                        className="me-md-2"
+                        src={item.icon}
+                        alt={item.icon}
+                      />
                     )}
                     <p className="ff_inter fw-semibold fs_lg mb-0">
                       {item.name}
                     </p>
                   </Accordion.Header>
                   <Accordion.Body>
-                    <ul>
+                    <ul className="ps_0">
                       <li className="ff_inter fw-semibold fs_lg">Banking</li>
                       <li className="ff_inter fw-semibold fs_lg">SSC</li>
                       <li className="ff_inter fw-semibold fs_lg">Railway</li>
