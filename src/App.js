@@ -12,7 +12,7 @@ import Bihar from "./components/Bihar";
 import AllCourses from "./components/bihar/AllCourses";
 import Shorts from "./components/Shorts";
 import Ssc from "./components/Ssc";
-import Course from "./components/common/Course";
+import Course from "./components/bihar/Course";
 import AllEbooks from "./components/bihar/AllEbooks";
 import Allbooks from "./components/bihar/Allbooks";
 import SingleBook from "./components/bihar/SingleBook";

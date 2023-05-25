@@ -60,7 +60,6 @@ const Hero = () => {
 
   const home_data = useCallback((response) => {
     if (response.data.status === 200) {
-      console.log(response.data.books);
       setCartCount(response.data.cart_count);
       setFaculty(response.data.faculty);
       setTestSeries(response.data.test_series);
