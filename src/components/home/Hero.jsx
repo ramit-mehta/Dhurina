@@ -1,78 +1,15 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import HeroImg from "../../assets/images/png/hero-img.png";
 import Ellipse1 from "../../assets/images/png/hero-ellipse-1.png";
 import Ellipse2 from "../../assets/images/png/hero-ellipse-2.png";
-import ApiCall from "../../api/callApi";
 import { Button, FormControl } from "react-bootstrap";
 
 const Image_URL = process.env.REACT_APP_Bucket_URL;
 
 const Hero = () => {
-  console.log(Image_URL);
-  const [data, setData] = useState(null);
-
-  const [loading, setLoading] = useState(true);
-  const [cartcount, setCartCount] = useState(0);
-  const [testSeriesData, setTestSeries] = useState([]);
-  const [bookItemData, setBookItem] = useState([]);
-  const [allCourseData, setAllCourse] = useState([]);
-  const [newCourseData, setNewCourse] = useState([]);
-  const [mainloading, setMainLoading] = useState(true);
-  const [show_succ, setShowSucc] = useState(false);
-  const [show_fail, setShowFail] = useState(false);
-  const [message, setMessage] = useState("");
-  const [searchInput, setSearchInput] = useState("");
-  const [faculty, setFaculty] = useState([]);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    if (localStorage.getItem("selectpre")) {
-      var prepval = localStorage.getItem("selectpre");
-
-      if (prepval === "School") {
-        return navigate("/school");
-      }
-
-      if (prepval === "Skill") {
-        return navigate("/skill");
-      }
-    }
-    getData();
-  }, []);
-
-  function getData(params) {
-    var body = {
-      user_id: "",
-    };
-
-    if (
-      localStorage.getItem("id") !== null &&
-      localStorage.getItem("id") !== ""
-    ) {
-      body = {
-        user_id: localStorage.getItem("id"),
-      };
-    }
-    ApiCall(body, "post", "home_data", home_data);
-  }
-
-  const home_data = useCallback((response) => {
-    if (response.data.status === 200) {
-      setCartCount(response.data.cart_count);
-      setFaculty(response.data.faculty);
-      setTestSeries(response.data.test_series);
-      setNewCourse(response.data.new_course);
-      setAllCourse(response.data.all_course);
-      setBookItem(response.data.books);
-
-      setLoading(false);
-      setMainLoading(false);
-    } else {
-      console.log("error");
-    }
-  });
+  const [searchInput, setSearchInput] = useState("");
 
   const RouteChange = (e) => {
     navigate("/search-result?keyword=" + searchInput, {

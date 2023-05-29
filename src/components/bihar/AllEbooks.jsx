@@ -43,7 +43,7 @@ const AllEbooks = () => {
                     </p>
                     <div className="mt-3 d-flex align-items-center justify-content-between px-2 pb-3">
                       <div>
-                        <span className="mb-0 text_gradient fw-bold fs_3xl mb-0">
+                        <span className="mb-0 text_gradient fw-bold fs_desc mb-0">
                           ₹{item.price}{" "}
                         </span>
                         <span className="fs_desc text_grey ff_inter text-decoration-line-through mb-0">

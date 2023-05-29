@@ -37,7 +37,7 @@ export const ExploreProducts = [
   },
   {
     image: P2,
-    title: "Intrective",
+    title: "Interactive",
     description: "Live Video Lectures",
   },
   {

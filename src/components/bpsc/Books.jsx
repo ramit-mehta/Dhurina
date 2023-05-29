@@ -2,8 +2,6 @@ import React, { useState, useCallback, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ApiCall from "../../api/callApi";
 
-const BOOK_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "hardcopy/image/";
-
 const Books = () => {
   const [mainloading, setMainLoading] = useState(true);
   const [bookItemData, setBookItem] = useState([]);
@@ -13,7 +11,6 @@ const Books = () => {
     booksData: [],
     notesData: [],
   });
-  console.log(bookItemData);
   useEffect(() => {
     getData();
 
@@ -73,7 +70,7 @@ const Books = () => {
                     </p>
                     <img
                       className="img-fluid h-50"
-                      src={`${BOOK_IMAGE_URL}${item.image}`}
+                      src={item.image}
                       alt={item.image}
                     />
                   </div>
@@ -82,7 +79,7 @@ const Books = () => {
                   </p>
                   <div className="mt-3 d-flex align-items-center justify-content-between px-3 pb-3">
                     <div>
-                      <span className="mb-0 text_gradient fw-bold ff_inter fs_desc mb-0">
+                      <span className="mb-0 text_gradient fw-bold ff_inter mb-0">
                         ₹{item.price}{" "}
                       </span>
                       <span className="fs_desc text_grey ff_inter text-decoration-line-through mb-0">

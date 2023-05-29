@@ -295,6 +295,9 @@ input:focus {
   border-radius: 20px 6px 6px 6px !important;
   color: #fe8d23 !important;
 }
+.accordion-button {
+  padding: 8px 10px !important;
+}
 .collapsed {
   background: linear-gradient(
     105.64deg,
@@ -343,7 +346,9 @@ input:focus {
   background-image: url("./assets/images/svg/accordion_up_arrow.svg") !important;
   transform: rotate(360deg) !important;
 }
-
+.exam_category_logo {
+  max-width: 30px;
+}
 .batches_icon {
   max-width: 50px;
 }
