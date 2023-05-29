@@ -1,18 +1,24 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useCallback, useState, useEffect } from "react";
 import Accordion from "react-bootstrap/Accordion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ApiCall from "../../api/callApi";
 
 const COURSE_AREA_IMAGE_URL =
   process.env.REACT_APP_Bucket_URL + "course/areas/";
 const EXAM_CATEGORY_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "exam/";
 
-const Batches = () => {
+const Batches = ({ setCourse }) => {
   const [courseAreas, setCourseAreas] = useState([]);
   const [examCategories, setExamCategories] = useState([]);
   const [examSubCategories, setExamSubCategories] = useState([]);
 
+  // store clicked course details
+  const navigate = useNavigate();
+  const handleCourseClick = (item) => {
+    setCourse(item);
+    navigate("/bpsc");
+  };
   useEffect(() => {
     getData();
   }, []);
@@ -80,7 +86,7 @@ const Batches = () => {
                         )
                         .map((subcategory) => (
                           <Link key={subcategory.id}>
-                            <li className="ff_inter fw-semibold fs_desc text-black">
+                            <li className="ff_inter fw-semibold fs_desc text-black sub_category_link mt-1">
                               {subcategory.name}
                             </li>
                           </Link>
@@ -94,15 +100,21 @@ const Batches = () => {
           <div className="col-6 col-lg-9">
             <div className="row mt-3">
               {courseAreas.map((item, index) => (
-                <div className="w-20 text-center" key={index}>
-                  <img
-                    className="batches_icon"
-                    src={`${COURSE_AREA_IMAGE_URL}${item.image}`}
-                    alt={item.image}
-                  />
-                  <p className="ff_inter fs_desc color_light_black fw-semibold lh-sm mt-1">
-                    {item.name}
-                  </p>
+                <div
+                  className="w-20 text-center"
+                  key={index}
+                  onClick={() => handleCourseClick(item)}
+                >
+                  <Link>
+                    <img
+                      className="batches_icon"
+                      src={`${COURSE_AREA_IMAGE_URL}${item.image}`}
+                      alt={item.image}
+                    />
+                    <p className="ff_inter fs_desc color_light_black fw-semibold lh-sm mt-1">
+                      {item.name}
+                    </p>
+                  </Link>
                 </div>
               ))}
             </div>

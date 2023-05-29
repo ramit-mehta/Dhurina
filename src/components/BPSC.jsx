@@ -13,13 +13,13 @@ import { BpscTest } from "./common/Helper";
 import { BpscEbooks } from "./common/Helper";
 import { BpscBooks } from "./common/Helper";
 
-const BPSC = () => {
+const BPSC = ({ course }) => {
   return (
     <>
       <div className="custom_container container py-5">
         <div className="row mt-5 justify-content-between">
           <div className="col-lg-8 border-end">
-            <Hero display={true} Hero={HeroBpsc} />
+            <Hero display={true} Hero={HeroBpsc} course={course} />
             <LiveClasses display={true} Classes={BpscClass} />
             <RecordedVideos Recorded={BpscRecorded} />
             <Test Test={BpscTest} />

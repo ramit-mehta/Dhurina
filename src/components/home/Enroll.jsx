@@ -52,8 +52,8 @@ const Enroll = () => {
       </div>
       <div className="row flex-column-reverse flex-lg-row mt-5 py-4 justify-content-between align-items-center">
         <div className="col-lg-6 mt-5 mt-lg-0 text-center text-lg-start">
-          <div class="timeline">
-            <div class="py-0 px-4 ms-3 position-relative">
+          <div className="timeline">
+            <div className="py-0 px-4 ms-3 position-relative">
               <h2 className="ff_inter fw-bold text_dark_grey fs-4 ">
                 Choose your exam
               </h2>
@@ -63,7 +63,7 @@ const Enroll = () => {
                 alt="icon"
               />
             </div>
-            <div class="py-0 px-4 mt-5 ms-3 position-relative">
+            <div className="py-0 px-4 mt-5 ms-3 position-relative">
               <h2 className="ff_inter fw-bold text_gradient fs-4 position-relative">
                 Select your desired course
               </h2>
@@ -77,7 +77,7 @@ const Enroll = () => {
                 alt="icon"
               />
             </div>
-            <div class="py-0 px-4 mt-5 ms-3 position-relative">
+            <div className="py-0 px-4 mt-5 ms-3 position-relative">
               <h2 className="ff_inter fw-bold text_dark_grey fs-4 ">
                 Make the purchase
               </h2>
@@ -87,7 +87,7 @@ const Enroll = () => {
                 alt="icon"
               />
             </div>
-            <div class="py-0 px-4 mt-5 ms-3 position-relative">
+            <div className="py-0 px-4 mt-5 ms-3 position-relative">
               <h2 className="ff_inter fw-bold text_dark_grey fs-4 ">
                 Navigate to My Purchased Courses
               </h2>
@@ -97,7 +97,7 @@ const Enroll = () => {
                 alt="icon"
               />
             </div>
-            <div class="py-0 px-4 mt-5 ms-3 position-relative">
+            <div className="py-0 px-4 mt-5 ms-3 position-relative">
               <h2 className="ff_inter fw-bold text_dark_grey fs-4 ">
                 Choose your exam
               </h2>

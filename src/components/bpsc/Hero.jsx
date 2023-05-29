@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 
-const Hero = ({ Hero, display }) => {
+const Hero = ({ Hero, display, course }) => {
   const [goal, setGoal] = useState();
 
   return (
     <>
       <h2 className="ff_inter fw-semibold fs_8xl mb-0 heading_text">
-        {Hero[0].heading}
+        {course.name} Study Material
       </h2>
-      <p className="mb-0 ff_inter fs_lg text_grey mt-3">{Hero[0].para}</p>
+      <p className="mb-0 ff_inter fs_lg text_grey mt-3">
+        Buy {course.name} Study Material 2023 at Dhurina to get Comprehensive{" "}
+        {course.name} Study notes, Exam Tips, Study Plan at low price
+      </p>
       {display ? (
         <div className="d-flex flex-wrap mt-3">
           {Hero[0].Study.map((item, index) => {

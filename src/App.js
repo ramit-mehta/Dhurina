@@ -17,13 +17,15 @@ import AllEbooks from "./components/bihar/AllEbooks";
 import Allbooks from "./components/bihar/Allbooks";
 import SingleBook from "./components/bihar/SingleBook";
 import SingleEbook from "./components/bihar/SingleEbook";
+import { useState } from "react";
 function App() {
+  const [course, setCourse] = useState([]);
   return (
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/bpsc" element={<BPSC />} />
+        <Route path="/" element={<Home setCourse={setCourse} />} />
+        <Route path="/bpsc" element={<BPSC course={course} />} />
         <Route path="/bihar" element={<Bihar />} />
         <Route path="/ssc" element={<Ssc />} />
 

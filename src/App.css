@@ -352,6 +352,9 @@ input:focus {
 .batches_icon {
   max-width: 50px;
 }
+.sub_category_link:hover {
+  color: #fe831b !important;
+}
 /* *********BATCHES END********* */
 
 /* *********EXPLORE PRODUCTS START********* */

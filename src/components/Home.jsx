@@ -8,12 +8,12 @@ import Students from "./home/Students";
 import Enroll from "./home/Enroll";
 import Welcome from "./Welcome";
 
-const Home = () => {
+const Home = ({ setCourse }) => {
   return (
     <>
       <Hero />
       <LearnEnglish />
-      <Batches />
+      <Batches setCourse={setCourse} />
       <Products />
       <Resources />
       <Enroll />
