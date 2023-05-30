@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const EnglishQuiz = () => {
   return (
-    <div className="bg_eng_quiz">
+    <div className="bg_eng_quiz mt-4">
       <div className="custom_container container py-5">
         <div className="row d-flex flex-column-reverse flex-md-row mt-lg-3">
           <div className="col-md-6 col-lg-8">

@@ -11,7 +11,7 @@ const Hero = ({ Hero, display, course }) => {
     } else {
       setCourseName(course.name);
     }
-  }, [course.name]);
+  }, [course]);
 
   return (
     <>

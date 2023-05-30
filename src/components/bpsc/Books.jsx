@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useCallback, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ApiCall from "../../api/callApi";
@@ -27,8 +28,6 @@ const Books = () => {
   const book_data = useCallback((response) => {
     if (response.data.status === 200) {
       setBookItem(response.data.books);
-
-      console.log(response.data.books);
       setState({
         ...state,
         notesData: response.data.pdf,

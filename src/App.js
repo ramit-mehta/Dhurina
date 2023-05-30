@@ -1,6 +1,7 @@
 import "./App.css";
 // ***bootstrap.min.css
 import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router } from "react-router-dom";
 
 // ***components
 import Home from "./components/Home";
@@ -17,6 +18,7 @@ import Allbooks from "./components/bihar/Allbooks";
 import SingleBook from "./components/bihar/SingleBook";
 import SingleEbook from "./components/bihar/SingleEbook";
 import { useState } from "react";
+import Bihar from "./components/Bihar";
 function App() {
   const [course, setCourse] = useState([]);
 
@@ -27,25 +29,33 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={<Home setCourse={setCourse} onCourseClick={onCourseClick} />}
-        />
-        <Route path="/bpsc" element={<BPSC course={course} />} />
-        <Route path="/ssc" element={<Ssc />} />
+      <Router>
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home setCourse={setCourse} onCourseClick={onCourseClick} />
+            }
+          />
+          <Route path="/bpsc" element={<BPSC course={course} />} />
+          <Route path="/ssc" element={<Ssc />} />
+          <Route path="/bihar" element={<Bihar />} />
 
-        <Route path="/shorts" element={<Shorts />} />
-        <Route path="/all-live-course" element={<AllCourses />} />
-        <Route path="/all-ebooks" element={<AllEbooks />} />
-        <Route path="/all-books" element={<Allbooks />} />
-        <Route path="/course" element={<Course />} />
-        <Route path="/book" element={<SingleBook />} />
-        <Route path="/ebook" element={<SingleEbook />} />
-      </Routes>
+          <Route path="/shorts" element={<Shorts />} />
+          <Route
+            path="/all-live-course"
+            element={<AllCourses course={course} />}
+          />
+          <Route path="/all-ebooks" element={<AllEbooks />} />
+          <Route path="/all-books" element={<Allbooks />} />
+          <Route path="/course" element={<Course />} />
+          <Route path="/book" element={<SingleBook />} />
+          <Route path="/ebook" element={<SingleEbook />} />
+        </Routes>
 
-      <Footer />
+        <Footer />
+      </Router>
     </>
   );
 }

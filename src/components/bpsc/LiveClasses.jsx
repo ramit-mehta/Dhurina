@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-const LiveClasses = ({ Classes, display }) => {
+const LiveClasses = ({ Classes, display, course }) => {
   const navigate = useNavigate();
   return (
     <div id="liveclass" className="custom_container container py-5">

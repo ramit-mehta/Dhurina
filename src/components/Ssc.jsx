@@ -9,10 +9,10 @@ import EnglishQuiz from "./ssc/EnglishQuiz";
 const Ssc = () => {
   return (
     <>
+      <EnglishQuiz />
       <HeroSsc />
       <FreeMock />
       <PreviousYear />
-      <EnglishQuiz />
       <PreviousYear12 />
       <PremiumTest />
     </>

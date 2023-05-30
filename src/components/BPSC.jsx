@@ -20,7 +20,7 @@ const BPSC = ({ course }) => {
         <div className="row mt-5 justify-content-between">
           <div className="col-lg-8 border-end">
             <Hero display={true} Hero={HeroBpsc} course={course} />
-            <LiveClasses display={true} Classes={BpscClass} />
+            <LiveClasses display={true} course={course} Classes={BpscClass} />
             <RecordedVideos Recorded={BpscRecorded} />
             <Test Test={BpscTest} />
             <Ebooks Ebook={BpscEbooks} />

@@ -7,17 +7,46 @@ import ApiCall from "../../api/callApi";
 const COURSE_AREA_IMAGE_URL =
   process.env.REACT_APP_Bucket_URL + "course/areas/";
 const EXAM_CATEGORY_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "exam/";
+var page = 1;
 
 const Batches = ({ setCourse, onCourseClick }) => {
   const [courseAreas, setCourseAreas] = useState([]);
   const [examCategories, setExamCategories] = useState([]);
   const [examSubCategories, setExamSubCategories] = useState([]);
+  const [allCourse, setAllCourse] = useState([]);
+  const [_state, setStateName] = useState("");
+  const [sorting, setSorting] = useState("");
 
   // store clicked course details
   const handleCourseClick = (item) => {
     setCourse(item);
     onCourseClick(item.name);
+    window.scrollTo(0, 0);
   };
+  const setCourseData = (event, type) => {
+    if (type === "state") {
+      setStateName(event);
+      page = 1;
+      filterCourse([], "", event, type);
+    } else {
+      setSorting(event);
+      filterCourse([], "", event, type);
+    }
+  };
+
+  function filterCourse(arr, type, event, filtertype) {
+    const body = {
+      state: filtertype === "state" ? String(event) : String(_state),
+      sorting: filtertype === "sorting" ? event : sorting,
+      course: type === "course" ? arr : [],
+      teachers: type === "teacher" ? arr : [],
+      page: page,
+      random: "false",
+    };
+
+    ApiCall(body, "post", "all_course", filtercoursecallback);
+  }
+
   useEffect(() => {
     getData();
   }, []);
@@ -36,6 +65,19 @@ const Batches = ({ setCourse, onCourseClick }) => {
       console.log("error");
     }
   });
+
+  // courses
+  const filtercoursecallback = useCallback((response) => {
+    if (response.data.status === 200) {
+      if (response.data.total_page !== page && response.data.total_page !== 0) {
+        page = page + 1;
+      }
+      setAllCourse(response.data.all_course);
+      console.log(response.data.all_course);
+    } else {
+      console.log("error");
+    }
+  }, []);
 
   // exam category
   const examCategory = useCallback((response) => {
@@ -102,7 +144,10 @@ const Batches = ({ setCourse, onCourseClick }) => {
                 <div
                   className="w-20 text-center"
                   key={index}
-                  onClick={() => handleCourseClick(item)}
+                  onClick={() => {
+                    handleCourseClick(item);
+                    setCourseData(item.id, "state");
+                  }}
                 >
                   <Link to="/bpsc">
                     <img
