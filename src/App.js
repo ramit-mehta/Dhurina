@@ -8,7 +8,6 @@ import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
 import { Route, Routes } from "react-router-dom";
 import BPSC from "./components/BPSC";
-import Bihar from "./components/Bihar";
 import AllCourses from "./components/bihar/AllCourses";
 import Shorts from "./components/Shorts";
 import Ssc from "./components/Ssc";
@@ -35,13 +34,12 @@ function App() {
           element={<Home setCourse={setCourse} onCourseClick={onCourseClick} />}
         />
         <Route path="/bpsc" element={<BPSC course={course} />} />
-        <Route path="/bihar" element={<Bihar />} />
         <Route path="/ssc" element={<Ssc />} />
 
+        <Route path="/shorts" element={<Shorts />} />
         <Route path="/all-live-course" element={<AllCourses />} />
         <Route path="/all-ebooks" element={<AllEbooks />} />
         <Route path="/all-books" element={<Allbooks />} />
-        <Route path="/shorts" element={<Shorts />} />
         <Route path="/course" element={<Course />} />
         <Route path="/book" element={<SingleBook />} />
         <Route path="/ebook" element={<SingleEbook />} />
