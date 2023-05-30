@@ -20,11 +20,20 @@ import SingleEbook from "./components/bihar/SingleEbook";
 import { useState } from "react";
 function App() {
   const [course, setCourse] = useState([]);
+
+  // Callback function to save the course name in local storage
+  const onCourseClick = (courseName) => {
+    localStorage.setItem("courseName", courseName);
+  };
+
   return (
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home setCourse={setCourse} />} />
+        <Route
+          path="/"
+          element={<Home setCourse={setCourse} onCourseClick={onCourseClick} />}
+        />
         <Route path="/bpsc" element={<BPSC course={course} />} />
         <Route path="/bihar" element={<Bihar />} />
         <Route path="/ssc" element={<Ssc />} />

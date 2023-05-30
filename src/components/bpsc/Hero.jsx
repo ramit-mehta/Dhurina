@@ -1,16 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Hero = ({ Hero, display, course }) => {
   const [goal, setGoal] = useState();
+  const [courseName, setCourseName] = useState("");
+
+  useEffect(() => {
+    const storedCourseName = localStorage.getItem("courseName");
+    if (storedCourseName) {
+      setCourseName(storedCourseName);
+    } else {
+      setCourseName(course.name);
+    }
+  }, [course.name]);
 
   return (
     <>
       <h2 className="ff_inter fw-semibold fs_8xl mb-0 heading_text">
-        {course.name} Study Material
+        {courseName} Study Material
       </h2>
       <p className="mb-0 ff_inter fs_lg text_grey mt-3">
-        Buy {course.name} Study Material 2023 at Dhurina to get Comprehensive{" "}
-        {course.name} Study notes, Exam Tips, Study Plan at low price
+        Buy {courseName} Study Material 2023 at Dhurina to get Comprehensive{" "}
+        {courseName} Study notes, Exam Tips, Study Plan at low price
       </p>
       {display ? (
         <div className="d-flex flex-wrap mt-3">

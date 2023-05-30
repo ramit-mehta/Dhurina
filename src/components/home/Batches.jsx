@@ -1,23 +1,22 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useCallback, useState, useEffect } from "react";
 import Accordion from "react-bootstrap/Accordion";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ApiCall from "../../api/callApi";
 
 const COURSE_AREA_IMAGE_URL =
   process.env.REACT_APP_Bucket_URL + "course/areas/";
 const EXAM_CATEGORY_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "exam/";
 
-const Batches = ({ setCourse }) => {
+const Batches = ({ setCourse, onCourseClick }) => {
   const [courseAreas, setCourseAreas] = useState([]);
   const [examCategories, setExamCategories] = useState([]);
   const [examSubCategories, setExamSubCategories] = useState([]);
 
   // store clicked course details
-  const navigate = useNavigate();
   const handleCourseClick = (item) => {
     setCourse(item);
-    navigate("/bpsc");
+    onCourseClick(item.name);
   };
   useEffect(() => {
     getData();
@@ -105,7 +104,7 @@ const Batches = ({ setCourse }) => {
                   key={index}
                   onClick={() => handleCourseClick(item)}
                 >
-                  <Link>
+                  <Link to="/bpsc">
                     <img
                       className="batches_icon"
                       src={`${COURSE_AREA_IMAGE_URL}${item.image}`}
