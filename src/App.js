@@ -10,6 +10,7 @@ import Header from "./components/common/Header";
 import { Route, Routes } from "react-router-dom";
 import BPSC from "./components/BPSC";
 import AllCourses from "./components/bihar/AllCourses";
+import AllRecorded from "./components/bihar/AllRecorded";
 import Shorts from "./components/Shorts";
 import Ssc from "./components/Ssc";
 import Course from "./components/bihar/Course";
@@ -21,7 +22,6 @@ import { useState } from "react";
 import Bihar from "./components/Bihar";
 function App() {
   const [course, setCourse] = useState([]);
-
   // Callback function to save the course name in local storage
   const onCourseClick = (courseName) => {
     localStorage.setItem("courseName", courseName);
@@ -38,14 +38,18 @@ function App() {
               <Home setCourse={setCourse} onCourseClick={onCourseClick} />
             }
           />
-          <Route path="/bpsc" element={<BPSC course={course} />} />
+          <Route path="/:stateName" element={<BPSC course={course} />} />
           <Route path="/ssc" element={<Ssc />} />
           <Route path="/bihar" element={<Bihar />} />
 
           <Route path="/shorts" element={<Shorts />} />
           <Route
-            path="/all-live-course"
+            path="/:stateName/all-live-course"
             element={<AllCourses course={course} />}
+          />
+          <Route
+            path="/:stateName/all-recorded-course"
+            element={<AllRecorded course={course} />}
           />
           <Route path="/all-ebooks" element={<AllEbooks />} />
           <Route path="/all-books" element={<Allbooks />} />

@@ -21,7 +21,11 @@ const BPSC = ({ course }) => {
           <div className="col-lg-8 border-end">
             <Hero display={true} Hero={HeroBpsc} course={course} />
             <LiveClasses display={true} course={course} Classes={BpscClass} />
-            <RecordedVideos Recorded={BpscRecorded} />
+            <RecordedVideos
+              display={true}
+              course={course}
+              Recorded={BpscRecorded}
+            />
             <Test Test={BpscTest} />
             <Ebooks Ebook={BpscEbooks} />
             <Books Books={BpscBooks} />

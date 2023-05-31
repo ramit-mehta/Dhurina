@@ -41,8 +41,7 @@ const Register = () => {
             />
             <label
               className="ff_inter fw-semibold fs_desc text_dark_grey ms-2"
-              for="
-              "
+              htmlFor=""
             >
               {item.type}
             </label>

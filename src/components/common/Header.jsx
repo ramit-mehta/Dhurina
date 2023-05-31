@@ -64,7 +64,7 @@ const Header = () => {
                     BPSC
                   </Link>
                 </Dropdown.Item>
-                <Dropdown.Item className="ff_inter">
+                {/* <Dropdown.Item className="ff_inter">
                   <Link
                     className="color_dark_blue d-block"
                     to="/bihar"
@@ -72,7 +72,7 @@ const Header = () => {
                   >
                     Bihar
                   </Link>
-                </Dropdown.Item>
+                </Dropdown.Item> */}
                 <Dropdown.Item className="ff_inter">
                   <Link
                     className="color_dark_blue d-block"
@@ -154,11 +154,11 @@ const Header = () => {
                       SSC
                     </li>
                   </Link>
-                  <Link to="/bihar" onClick={handleClick}>
+                  {/* <Link to="/bihar" onClick={handleClick}>
                     <li className="ff_inter fw-semibold color_dark_blue">
                       Bihar
                     </li>
-                  </Link>
+                  </Link> */}
                   <Link to="/bpsc" onClick={handleClick}>
                     <li className="ff_inter fw-semibold color_dark_blue">
                       BPSC

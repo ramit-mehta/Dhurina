@@ -7,6 +7,8 @@ import Play from "../../assets/images/png/orange-play.png";
 import { Link } from "react-router-dom";
 import Poster from "../../assets/images/png/bpsc-crack-img.png";
 
+const COURSE_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "course/";
+
 const Course = () => {
   const [validity, setValidity] = useState();
   const validityPeriods = [{ time: 12 }, { time: 6 }];

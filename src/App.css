@@ -148,6 +148,10 @@ select:focus {
 input:focus {
   box-shadow: none !important;
 }
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 
 /* ********HEADER START********** */
 .border_oval {

@@ -1,7 +1,7 @@
-import LiveClasses from "../bpsc/LiveClasses";
 import { HeroBihar } from "../common/Helper";
 import Hero from "../bpsc/Hero";
 import Register from "../bpsc/Register";
+import RecordedVideos from "../bpsc/RecordedVideos";
 
 const AllCourses = ({ course }) => {
   return (
@@ -10,7 +10,7 @@ const AllCourses = ({ course }) => {
         <div className="row mt-5 justify-content-between">
           <div className="col-lg-8 border-end">
             <Hero display={false} Hero={HeroBihar} />
-            <LiveClasses display={false} course={course} />
+            <RecordedVideos display={false} course={course} />
           </div>
           <div className="col-lg-4">
             <Register />

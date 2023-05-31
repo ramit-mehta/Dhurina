@@ -26,7 +26,7 @@ const Hero = ({ Hero, display, course }) => {
         <div className="d-flex flex-wrap mt-3">
           {Hero[0].Study.map((item, index) => {
             return (
-              <a href={item.path}>
+              <a key={index} href={item.path}>
                 <button
                   onClick={() => setGoal(item.name)}
                   key={index}

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useCallback, useState, useEffect } from "react";
 import Accordion from "react-bootstrap/Accordion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ApiCall from "../../api/callApi";
 
 const COURSE_AREA_IMAGE_URL =
@@ -10,6 +10,7 @@ const EXAM_CATEGORY_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "exam/";
 var page = 1;
 
 const Batches = ({ setCourse, onCourseClick }) => {
+  const navigate = useNavigate();
   const [courseAreas, setCourseAreas] = useState([]);
   const [examCategories, setExamCategories] = useState([]);
   const [examSubCategories, setExamSubCategories] = useState([]);
@@ -19,7 +20,6 @@ const Batches = ({ setCourse, onCourseClick }) => {
 
   // store clicked course details
   const handleCourseClick = (item) => {
-    setCourse(item);
     onCourseClick(item.name);
     window.scrollTo(0, 0);
   };
@@ -73,7 +73,8 @@ const Batches = ({ setCourse, onCourseClick }) => {
         page = page + 1;
       }
       setAllCourse(response.data.all_course);
-      console.log(response.data.all_course);
+      // console.log(response.data.all_course);
+      setCourse(response.data.all_course);
     } else {
       console.log("error");
     }
@@ -95,6 +96,13 @@ const Batches = ({ setCourse, onCourseClick }) => {
       console.log("error");
     }
   });
+  const getCourseData = (item) => {
+    const url = item.name;
+    const stateName = url.replace(/\s/g, "-");
+    console.log(stateName);
+
+    navigate(`/${stateName}`);
+  };
 
   return (
     <div className="px-3">
@@ -149,16 +157,18 @@ const Batches = ({ setCourse, onCourseClick }) => {
                     setCourseData(item.id, "state");
                   }}
                 >
-                  <Link to="/bpsc">
-                    <img
-                      className="batches_icon"
-                      src={`${COURSE_AREA_IMAGE_URL}${item.image}`}
-                      alt={item.image}
-                    />
-                    <p className="ff_inter fs_desc color_light_black fw-semibold lh-sm mt-1">
-                      {item.name}
-                    </p>
-                  </Link>
+                  <div onClick={() => getCourseData(item)}>
+                    <Link>
+                      <img
+                        className="batches_icon"
+                        src={`${COURSE_AREA_IMAGE_URL}${item.image}`}
+                        alt={item.image}
+                      />
+                      <p className="ff_inter fs_desc color_light_black fw-semibold lh-sm mt-1">
+                        {item.name}
+                      </p>
+                    </Link>
+                  </div>
                 </div>
               ))}
             </div>
