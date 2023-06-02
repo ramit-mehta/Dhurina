@@ -64,7 +64,7 @@ const Hero = () => {
                 href="https://play.google.com/store/apps/details?id=com.dhurina"
                 target="_blank"
                 rel="noreferrer"
-                className="mb-3 d-inline-block me-sm-3"
+                className="mb-3 d-inline-block me-3"
               >
                 <img
                   className="store_icon"

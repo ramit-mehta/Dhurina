@@ -18,7 +18,7 @@ const Hero = ({ Hero, display, course }) => {
       <h2 className="ff_inter fw-semibold fs_8xl mb-0 heading_text">
         {courseName} Study Material
       </h2>
-      <p className="mb-0 ff_inter fs_lg text_grey mt-3">
+      <p className="mb-0 ff_inter fs-6 text_grey mt-3">
         Buy {courseName} Study Material 2023 at Dhurina to get Comprehensive{" "}
         {courseName} Study notes, Exam Tips, Study Plan at low price
       </p>
