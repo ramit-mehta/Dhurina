@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const COURSE_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "course/";
 
-const LiveClasses = ({ display, course }) => {
+const LiveClasses = ({ display, course, setSelectedItem }) => {
   const navigate = useNavigate();
 
   // course display
@@ -35,7 +35,9 @@ const LiveClasses = ({ display, course }) => {
             onClick={() => {
               viewAllCourse();
             }}
-            className="ff_inter fw-semibold text_gradient mb-0 cursor_pointer"
+            className={`ff_inter fw-semibold text_gradient mb-0 cursor_pointer ${
+              liveCourse.length > 0 ? "" : "disabled"
+            }`}
           >
             View All <span>&rarr;</span>{" "}
           </span>
@@ -52,12 +54,14 @@ const LiveClasses = ({ display, course }) => {
             return item.live_status === 1 && index <= showLiveCourse ? (
               <div
                 onClick={() => {
+                  setSelectedItem(item);
                   navigate("/course");
+                  window.scrollTo(0, 0);
                 }}
                 key={index}
                 className="col-md-6 mt-4"
               >
-                <Link to={`/course/${item.name.replace(/ /g, "-")}`}>
+                <Link>
                   <div className="border_light_brown h-100">
                     <div className="bg_classe">
                       <div className="d-flex align-items-center justify-content-center">

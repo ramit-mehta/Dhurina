@@ -73,7 +73,6 @@ const Batches = ({ setCourse, onCourseClick }) => {
         page = page + 1;
       }
       setAllCourse(response.data.all_course);
-      // console.log(response.data.all_course);
       setCourse(response.data.all_course);
     } else {
       console.log("error");

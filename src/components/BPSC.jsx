@@ -13,17 +13,23 @@ import { BpscTest } from "./common/Helper";
 import { BpscEbooks } from "./common/Helper";
 import { BpscBooks } from "./common/Helper";
 
-const BPSC = ({ course }) => {
+const BPSC = ({ course, setSelectedItem }) => {
   return (
     <>
       <div className="custom_container container py-5">
         <div className="row mt-5 justify-content-between">
           <div className="col-lg-8 border-end">
             <Hero display={true} Hero={HeroBpsc} course={course} />
-            <LiveClasses display={true} course={course} Classes={BpscClass} />
+            <LiveClasses
+              display={true}
+              course={course}
+              setSelectedItem={setSelectedItem}
+              Classes={BpscClass}
+            />
             <RecordedVideos
               display={true}
               course={course}
+              setSelectedItem={setSelectedItem}
               Recorded={BpscRecorded}
             />
             <Test Test={BpscTest} />

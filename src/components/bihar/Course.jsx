@@ -1,25 +1,31 @@
-import React, { useState } from "react";
-import Icon from "../../assets/images/svg/bpsc-icon.svg";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useCallback, useState } from "react";
 import LiveIcon from "../../assets/images/svg/live-icon.svg";
 import RecordIcon from "../../assets/images/svg/record-icon.svg";
 import TestIcon from "../../assets/images/svg/test-icon.svg";
 import Play from "../../assets/images/png/orange-play.png";
 import { Link } from "react-router-dom";
 import Poster from "../../assets/images/png/bpsc-crack-img.png";
+import { Parser } from "html-to-react";
 
 const COURSE_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "course/";
 
-const Course = () => {
+const Course = ({ selectedItem }) => {
   const [validity, setValidity] = useState();
+
   const validityPeriods = [{ time: 12 }, { time: 6 }];
+
+  const htmlParser = new Parser();
+  const htmlString = `<p className="ff_inter fw-normal text_grey fs_lg pe-lg-5">${selectedItem.web_description}</p>`;
+  const parsedDesc = htmlParser.parse(htmlString);
+
   return (
     <div className="custom_container container">
       <div className="py-5">
         <div className="row">
           <div className="col-lg-8">
             <h2 className="ff_inter fw-semibold fs_8xl mb-0 pe-lg-5 course_heading">
-              Patna High Court Assistant Written Test (Descriptive Type) 2023
-              Final Selection Batch 2.0
+              {selectedItem.name}
             </h2>
             <span className="me-3 text_gradient fs_lg ff_inter fw-bold">
               Select Validity
@@ -40,20 +46,20 @@ const Course = () => {
                 </button>
               );
             })}
-            <h3 className="ff_inter fw-semibold fs_8xl mb-0 mt-3">
-              Course Descipition
-            </h3>
-            <p className="ff_inter fw-normal text_grey fs_lg pe-lg-5 mt-3">
-              Patna High Court Recruitment 2023 Notification for 550 assistant
-              posts has been released on employment news. The official pdf will
-              be available to download from the official website by 6th February
-              2023. The online registration process for Patna High Court
-              Recruitment 2023 assistant posts will begin on 6th February 2023.
-            </p>
             <div className="course_highlight pb-5 mt-5">
               <div className="bg_light_orange course_des">
                 <h3 className="ff_inter text_gradient fw-semibold fs_8xl mb-0 py-3 text-center ">
-                  Course Descipition
+                  Course Description
+                </h3>
+              </div>
+              <p className="ff_inter fw-normal text_grey fs_lg px-4 ms-0">
+                {parsedDesc}
+              </p>
+            </div>
+            {/* <div className="course_highlight pb-5 mt-5">
+              <div className="bg_light_orange course_des">
+                <h3 className="ff_inter text_gradient fw-semibold fs_8xl mb-0 py-3 text-center ">
+                  Course Description
                 </h3>
               </div>
               <ul>
@@ -93,21 +99,25 @@ const Course = () => {
                   Aspirants Mentored
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 mt-5 mt-lg-0">
             <div className="border_light_brown">
-              <div className="bg_classes px-2 py-4">
+              <div className="">
                 <div className="d-flex align-items-center justify-content-center">
-                  <img src={Icon} alt="bpsc_logo" />
-                  <div className="ms-2 mb-0">
+                  <img
+                    className="w-100"
+                    src={`${COURSE_IMAGE_URL}${selectedItem.image}`}
+                    alt={selectedItem.name}
+                  />
+                  {/* <div className="ms-2 mb-0">
                     <h2 className="ff_inter fw-bolder fs-5 text_gradient mb-0">
                       BIHAR
                     </h2>
                     <p className="ff_inter fw-semibold text_gradient mb-0">
                       Patna High Court
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="d-flex align-items-center mt-4">
@@ -140,10 +150,10 @@ const Course = () => {
                 </p>
                 <div className="p-3">
                   <span className="mb-0 text_gradient fw-bold fs_3xl mb-0">
-                    ₹1299
+                    {selectedItem.price}
                   </span>
                   <span className="fs_desc ms-1 text_grey ff_inter text-decoration-line-through mb-0">
-                    ₹6777
+                    {selectedItem.discount}
                   </span>
                   <div className="d-flex justify-content-between mb-3">
                     <div className="d-flex mt-2 align-items-center">

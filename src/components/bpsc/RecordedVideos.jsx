@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const COURSE_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "course/";
 
-const RecordedVideos = ({ Recorded, display, course }) => {
+const RecordedVideos = ({ display, course, setSelectedItem }) => {
   const navigate = useNavigate();
 
   // course display
@@ -56,7 +56,9 @@ const RecordedVideos = ({ Recorded, display, course }) => {
             return item.live_status === 0 && index <= showRecordCourse ? (
               <div
                 onClick={() => {
+                  setSelectedItem(item);
                   navigate("/course");
+                  window.scrollTo(0, 0);
                 }}
                 key={index}
                 className="col-md-6 mt-4"

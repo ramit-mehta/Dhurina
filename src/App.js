@@ -26,6 +26,7 @@ function App() {
   const onCourseClick = (courseName) => {
     localStorage.setItem("courseName", courseName);
   };
+  const [selectedItem, setSelectedItem] = useState([]);
 
   return (
     <>
@@ -38,22 +39,32 @@ function App() {
               <Home setCourse={setCourse} onCourseClick={onCourseClick} />
             }
           />
-          <Route path="/:stateName" element={<BPSC course={course} />} />
+          <Route
+            path="/:stateName"
+            element={<BPSC course={course} setSelectedItem={setSelectedItem} />}
+          />
           <Route path="/ssc" element={<Ssc />} />
           <Route path="/bihar" element={<Bihar />} />
 
           <Route path="/shorts" element={<Shorts />} />
           <Route
             path="/:stateName/all-live-course"
-            element={<AllCourses course={course} />}
+            element={
+              <AllCourses setSelectedItem={setSelectedItem} course={course} />
+            }
           />
           <Route
             path="/:stateName/all-recorded-course"
-            element={<AllRecorded course={course} />}
+            element={
+              <AllRecorded setSelectedItem={setSelectedItem} course={course} />
+            }
           />
           <Route path="/all-ebooks" element={<AllEbooks />} />
           <Route path="/all-books" element={<Allbooks />} />
-          <Route path="/course" element={<Course />} />
+          <Route
+            path="/course"
+            element={<Course selectedItem={selectedItem} />}
+          />
           <Route path="/book" element={<SingleBook />} />
           <Route path="/ebook" element={<SingleEbook />} />
         </Routes>
