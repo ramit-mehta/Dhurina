@@ -95,13 +95,14 @@ const Batches = () => {
     const id = item.id;
     const stateName = url.replace(/\s/g, "-");
     navigate(`/${stateName}/${id}`);
+    window.scrollTo(0, 0);
   };
 
   return (
     <div className="px-3">
       <div className="container custom_container py-5 my-5 batches">
         <div className="row accordion_scroll_bar">
-          <div className="col-6 col-lg-3 vh_70 overflow-auto position-relative">
+          <div className="col-md-4 col-lg-3 vh_70 overflow-auto position-relative">
             <Accordion className="w-75 mx-auto" defaultActiveKey="0">
               {examCategories.map((item, index) => (
                 <Accordion.Item
@@ -111,11 +112,11 @@ const Batches = () => {
                 >
                   <Accordion.Header>
                     <img
-                      className="me-md-2 exam_category_logo"
+                      className="mx-2 mx-md-0 mx-lg-1 exam_category_logo"
                       src={`${EXAM_CATEGORY_IMAGE_URL}${item.image}`}
                       alt={item.image}
                     />
-                    <p className="ff_inter fw-semibold fs_md mb-0 me-2">
+                    <p className="ff_inter fw-semibold fs_desc mb-0 me-2">
                       {item.name}
                     </p>
                   </Accordion.Header>
@@ -139,7 +140,7 @@ const Batches = () => {
               ))}
             </Accordion>
           </div>
-          <div className="col-6 col-lg-9">
+          <div className="col-md-8 col-lg-9 mt-4">
             <div className="row mt-3">
               {courseAreas.map((item, index) => (
                 <div

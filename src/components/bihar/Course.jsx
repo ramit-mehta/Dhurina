@@ -4,7 +4,7 @@ import LiveIcon from "../../assets/images/svg/live-icon.svg";
 import RecordIcon from "../../assets/images/svg/record-icon.svg";
 import TestIcon from "../../assets/images/svg/test-icon.svg";
 import Play from "../../assets/images/png/orange-play.png";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Poster from "../../assets/images/png/bpsc-crack-img.png";
 import { Parser } from "html-to-react";
 import ApiCall from "../../api/callApi";
@@ -112,7 +112,7 @@ const Course = () => {
                 </button>
               );
             })}
-            <div className="course_highlight pb-5 mt-5">
+            <div className="course_highlight mt-5">
               <div className="bg_light_orange course_des">
                 <h3 className="ff_inter text_gradient fw-semibold fs_8xl mb-0 py-3 text-center ">
                   Course Description
@@ -169,19 +169,19 @@ const Course = () => {
                   <span className="fs_desc ms-1 text_grey ff_inter text-decoration-line-through mb-0">
                     {Course.discount}
                   </span>
-                  <div className="d-flex justify-content-between mb-3">
-                    <div className="d-flex mt-2 align-items-center">
-                      <p className="mb-0 ff_inter text_gradient fw-semibold fs_desc">
-                        "MAY"
-                      </p>
-                      <p className="text_grey fw-semibold fs_desc mb-0">
-                        coupon available
-                      </p>
-                    </div>
-                    <button className="bg_classes apply_btn fw-semibold px-3 fs_desc ff_inter">
-                      Apply
-                    </button>
-                  </div>
+                  {/* <div className="d-flex justify-content-between mb-3">
+                      <div className="d-flex mt-2 align-items-center">
+                        <p className="mb-0 ff_inter text_gradient fw-semibold fs_desc">
+                          "MAY"
+                        </p>
+                        <p className="text_grey fw-semibold fs_desc mb-0">
+                          coupon available
+                        </p>
+                      </div>
+                      <button className="bg_classes apply_btn fw-semibold px-3 fs_desc ff_inter">
+                        Apply
+                      </button>
+                    </div> */}
                   <Link className="bg_gradient text-white ff_inter fs-6 d-block text-center px-3 py-2">
                     BUY NOW
                   </Link>

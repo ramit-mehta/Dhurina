@@ -1,26 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 
-const Hero = ({ Hero, display, course }) => {
+const Hero = ({ Hero, display }) => {
   const [goal, setGoal] = useState();
-  const [courseName, setCourseName] = useState("");
-
-  useEffect(() => {
-    const storedCourseName = localStorage.getItem("courseName");
-    if (storedCourseName) {
-      setCourseName(storedCourseName);
-    } else {
-      setCourseName(course.name);
-    }
-  }, [course]);
-
+  const { stateName } = useParams();
+  const formattedStateName = stateName.replace("-", " ");
   return (
     <>
       <h2 className="ff_inter fw-semibold fs_8xl mb-0 heading_text">
-        {courseName} Study Material
+        {formattedStateName} Study Material
       </h2>
-      <p className="mb-0 ff_inter fs-6 text_grey mt-3">
-        Buy {courseName} Study Material 2023 at Dhurina to get Comprehensive{" "}
-        {courseName} Study notes, Exam Tips, Study Plan at low price
+      <p className="mb-0 ff_inter fs_lg text_grey mt-3">
+        Buy {formattedStateName} Study Material 2023 at Dhurina to get
+        Comprehensive {formattedStateName} Study notes, Exam Tips, Study Plan at
+        low price
       </p>
       {display ? (
         <div className="d-flex flex-wrap mt-3">
