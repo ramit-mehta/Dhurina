@@ -23,7 +23,6 @@ const Course = () => {
   const [_state, setStateName] = useState("");
   const [sorting, setSorting] = useState("");
   const [allCourse, setAllCourse] = useState([]);
-  const navigate = useNavigate();
 
   const setCourseData = (event, type) => {
     if (type === "state") {
