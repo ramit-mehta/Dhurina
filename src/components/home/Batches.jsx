@@ -9,7 +9,7 @@ const COURSE_AREA_IMAGE_URL =
 const EXAM_CATEGORY_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "exam/";
 var page = 1;
 
-const Batches = ({ setCourse, onCourseClick }) => {
+const Batches = () => {
   const navigate = useNavigate();
   const [courseAreas, setCourseAreas] = useState([]);
   const [examCategories, setExamCategories] = useState([]);
@@ -17,12 +17,8 @@ const Batches = ({ setCourse, onCourseClick }) => {
   const [allCourse, setAllCourse] = useState([]);
   const [_state, setStateName] = useState("");
   const [sorting, setSorting] = useState("");
-
   // store clicked course details
-  const handleCourseClick = (item) => {
-    onCourseClick(item.name);
-    window.scrollTo(0, 0);
-  };
+
   const setCourseData = (event, type) => {
     if (type === "state") {
       setStateName(event);
@@ -73,7 +69,6 @@ const Batches = ({ setCourse, onCourseClick }) => {
         page = page + 1;
       }
       setAllCourse(response.data.all_course);
-      setCourse(response.data.all_course);
     } else {
       console.log("error");
     }
@@ -97,10 +92,9 @@ const Batches = ({ setCourse, onCourseClick }) => {
   });
   const getCourseData = (item) => {
     const url = item.name;
+    const id = item.id;
     const stateName = url.replace(/\s/g, "-");
-    console.log(stateName);
-
-    navigate(`/${stateName}`);
+    navigate(`/${stateName}/${id}`);
   };
 
   return (
@@ -152,7 +146,6 @@ const Batches = ({ setCourse, onCourseClick }) => {
                   className="w-20 text-center"
                   key={index}
                   onClick={() => {
-                    handleCourseClick(item);
                     setCourseData(item.id, "state");
                   }}
                 >

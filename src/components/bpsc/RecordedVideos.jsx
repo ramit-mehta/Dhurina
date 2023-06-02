@@ -1,15 +1,75 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import ApiCall from "../../api/callApi";
+import { useCallback } from "react";
 
 const COURSE_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "course/";
+var page = 1;
 
-const RecordedVideos = ({ display, course, setSelectedItem }) => {
+const RecordedVideos = ({ display }) => {
+  const { id } = useParams();
+  const [courseAreas, setCourseAreas] = useState([]);
+
+  const [_state, setStateName] = useState("");
+  const [sorting, setSorting] = useState("");
+  const [allCourse, setAllCourse] = useState([]);
   const navigate = useNavigate();
 
+  const setCourseData = (event, type) => {
+    if (type === "state") {
+      setStateName(event);
+      page = 1;
+      filterCourse([], "", event, type);
+    } else {
+      setSorting(event);
+      filterCourse([], "", event, type);
+    }
+  };
+
+  function filterCourse(arr, type, event, filtertype) {
+    const body = {
+      state: filtertype === "state" ? String(event) : String(_state),
+      sorting: filtertype === "sorting" ? event : sorting,
+      course: type === "course" ? arr : [],
+      teachers: type === "teacher" ? arr : [],
+      page: page,
+      random: "false",
+    };
+    ApiCall(body, "post", "all_course", filtercoursecallback);
+  }
+
+  useEffect(() => {
+    getData();
+    setCourseData(id, "state");
+  }, []);
+  function getData(params) {
+    ApiCall("", "get", "course_area", course_area);
+  }
+  // course area
+  const course_area = useCallback((response) => {
+    if (response.data.status === 200) {
+      setCourseAreas(response.data.data);
+    } else {
+      console.log("error");
+    }
+  });
+  // courses
+  const filtercoursecallback = useCallback((response) => {
+    if (response.data.status === 200) {
+      if (response.data.total_page !== page && response.data.total_page !== 0) {
+        page = page + 1;
+      }
+      setAllCourse(response.data.all_course);
+    } else {
+      console.log("error");
+    }
+  }, []);
+
   // course display
+
   const recordCourse = [];
-  course.forEach((element) => {
+  allCourse.forEach((element) => {
     if (element.live_status === 0) {
       recordCourse.push(element);
     }
@@ -23,7 +83,7 @@ const RecordedVideos = ({ display, course, setSelectedItem }) => {
 
   const { stateName } = useParams();
   const viewAllCourse = () => {
-    navigate(`/${stateName}/all-recorded-course`);
+    navigate(`/${stateName}/${id}/all-recorded-course`);
     window.scrollTo(0, 0);
   };
 
@@ -56,8 +116,9 @@ const RecordedVideos = ({ display, course, setSelectedItem }) => {
             return item.live_status === 0 && index <= showRecordCourse ? (
               <div
                 onClick={() => {
-                  setSelectedItem(item);
-                  navigate("/course");
+                  navigate(
+                    `/course-detail/${id}/${item.course_url}/${item.id}`
+                  );
                   window.scrollTo(0, 0);
                 }}
                 key={index}
