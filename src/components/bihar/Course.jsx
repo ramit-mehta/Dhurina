@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import LiveIcon from "../../assets/images/svg/live-icon.svg";
 import RecordIcon from "../../assets/images/svg/record-icon.svg";
 import TestIcon from "../../assets/images/svg/test-icon.svg";
