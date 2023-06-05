@@ -48,6 +48,7 @@ const LiveClasses = ({ display }) => {
     getData();
     setCourseData(id, "state");
   }, []);
+
   function getData(params) {
     ApiCall("", "get", "course_area", course_area);
   }
@@ -59,6 +60,7 @@ const LiveClasses = ({ display }) => {
       console.log("error");
     }
   });
+
   // courses
   const filtercoursecallback = useCallback((response) => {
     if (response.data.status === 200) {

@@ -18,6 +18,7 @@ import Allbooks from "./components/bihar/Allbooks";
 import SingleBook from "./components/bihar/SingleBook";
 import SingleEbook from "./components/bihar/SingleEbook";
 import Bihar from "./components/Bihar";
+import SearchResult from "./components/SearchResult";
 function App() {
   return (
     <>
@@ -38,14 +39,15 @@ function App() {
             path="/:stateName/:id/all-recorded-course"
             element={<AllRecorded />}
           />
+          <Route path="/:stateName/:id/all-books" element={<Allbooks />} />
           <Route path="/all-ebooks" element={<AllEbooks />} />
-          <Route path="/all-books" element={<Allbooks />} />
           <Route
             path="/course-detail/:id/:course_url/:courseId"
             element={<Course />}
           />
           <Route path="/book" element={<SingleBook />} />
           <Route path="/ebook" element={<SingleEbook />} />
+          <Route path="/search-result" element={<SearchResult />} />
         </Routes>
 
         <Footer />

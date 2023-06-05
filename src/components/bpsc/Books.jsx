@@ -1,104 +1,132 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useCallback, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useEffect, useState, useCallback } from "react";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import ApiCall from "../../api/callApi";
 
-const Books = () => {
-  const [mainloading, setMainLoading] = useState(true);
-  const [bookItemData, setBookItem] = useState([]);
-  const [user_id, setUserId] = useState("");
-  const [state, setState] = useState({
-    loading: true,
-    booksData: [],
-    notesData: [],
-  });
+const BOOK_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "ebook/image/";
+
+var page = 1;
+const Books = ({ display }) => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  const [courseAreas, setCourseAreas] = useState([]);
+  const [_state, setStateName] = useState("");
+  const [sorting, setSorting] = useState("");
+  const [allBooks, setAllBooks] = useState([]);
+
+  const setBooksData = (event, type) => {
+    if (type === "state") {
+      setStateName(event);
+      page = 1;
+      filterBooks([], "", event, type);
+    } else {
+      setSorting(event);
+      filterBooks([], "", event, type);
+    }
+  };
+
+  function filterBooks(arr, type, event, filtertype) {
+    const body = {
+      state: filtertype === "state" ? String(event) : String(_state),
+      sorting: filtertype === "sorting" ? event : sorting,
+      book: type === "book" ? arr : [],
+      teachers: type === "teacher" ? arr : [],
+      page: page,
+      random: "false",
+    };
+    ApiCall(body, "get", "fetchBooks", filterbookcallback);
+  }
+
   useEffect(() => {
     getData();
-
-    if (localStorage.getItem("id") === null) {
-    } else {
-      setUserId(localStorage.getItem("id"));
-    }
+    setBooksData(id, "state");
   }, []);
 
   function getData(params) {
-    ApiCall("", "get", "books", book_data);
+    ApiCall("", "get", "course_area", course_area);
   }
-
-  const book_data = useCallback((response) => {
+  // course area
+  const course_area = useCallback((response) => {
     if (response.data.status === 200) {
-      setBookItem(response.data.books);
-      setState({
-        ...state,
-        notesData: response.data.pdf,
-        booksData: response.data.free_book,
-        loading: false,
-      });
-      setMainLoading(false);
+      setCourseAreas(response.data.data);
     } else {
       console.log("error");
     }
   });
-  const navigate = useNavigate();
+
+  // courses
+  const filterbookcallback = useCallback((response) => {
+    if (response.data.status === 200) {
+      if (response.data.total_page !== page && response.data.total_page !== 0) {
+        page = page + 1;
+      }
+      setAllBooks(response.data.data);
+    } else {
+      console.log("error");
+    }
+  }, []);
+
+  const { stateName } = useParams();
+  const viewAllBooks = () => {
+    navigate(`/${stateName}/${id}/all-books`);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div id="books" className="custom_container container py-5">
-      <div className="d-flex justify-content-between align-content-center">
-        <h2 className="text_gradient ff_inter fw-bold fs_4xl">Books</h2>
-        <Link
-          to="/all-books"
-          className="ff_inter fw-semibold text_gradient mb-0"
-        >
-          View All <span>&rarr;</span>{" "}
-        </Link>
-      </div>
+      {display ? (
+        <div className="d-flex justify-content-between align-content-center">
+          <h2 className="text_gradient ff_inter fw-bold fs_4xl">Books</h2>
+          <span
+            onClick={() => {
+              viewAllBooks();
+            }}
+            className={`ff_inter fw-semibold text_gradient mb-0 cursor_pointer ${
+              allBooks.length > 0 ? "" : "disabled"
+            }`}
+          >
+            View All <span>&rarr;</span>{" "}
+          </span>
+        </div>
+      ) : (
+        ""
+      )}
       <div className="row">
-        {bookItemData.map((item, index) => {
-          return (
-            <div
-              onClick={() => {
-                navigate("/book");
-              }}
-              key={index}
-              className="col-md-6 mt-4 cursor_pointer"
-            >
-              <Link>
-                <div className="border_light_brown">
-                  <div className="bg_books py-5 text-center position-relative">
-                    <p className="mb-0 text-white bg_gradient ff_inter position-absolute fs_sm px-3 py-1 combo_label">
-                      COMBO
-                    </p>
+        {allBooks.length === 0 ? (
+          <p className="mb-0 ff_inter mt-3">No books available.</p>
+        ) : (
+          allBooks.map((book) => (
+            <div key={book.id} className="col-md-6 mt-4">
+              <Link to={`/book-detail/${id}/${book.id}`}>
+                <div className="border_light_brown h-100">
+                  <div className="d-flex align-items-center justify-content-center">
                     <img
-                      className="img-fluid h-50"
-                      src={item.image}
-                      alt={item.image}
+                      className="w-100 book_fit"
+                      src={`${BOOK_IMAGE_URL}${book.image}`}
+                      alt={book.title}
                     />
                   </div>
-                  <p className="ff_inter text_grey fs_desc pt-3 fw-semibol mb-0 px-3">
-                    {item.title}
-                  </p>
-                  <div className="mt-3 d-flex align-items-center justify-content-between px-3 pb-3">
+                  <h2 className="ff_inter fw-bolder fs-5 text_gradient mb-0 px-4 mt-3">
+                    {book.title}
+                  </h2>
+
+                  <div className="mt-3 d-flex align-items-center justify-content-between px-4 pb-3">
+                    <p className="mb-0 text_gradient fw-bold mb-0">Price :</p>
                     <div>
-                      <span className="mb-0 text_gradient fw-bold ff_inter mb-0">
-                        ₹{item.price}{" "}
+                      <span className="mb-0 text_gradient fw-bold mb-0">
+                        ₹{book.price}{" "}
                       </span>
                       <span className="fs_desc text_grey ff_inter text-decoration-line-through mb-0">
-                        ₹ {item.dup_price}
+                        {book.dup_price}
                       </span>
-                    </div>
-                    <div className="coupon_bg px-2">
-                      <p className="mb-0 ff_inter fw-bold fs_sm text-black">
-                        "<span className=" text_gradient">BPSC</span>"
-                        <span className="fs_xsm fw-semibold ms-1 text-black">
-                          Coupon Applied
-                        </span>
-                      </p>
                     </div>
                   </div>
                 </div>
               </Link>
             </div>
-          );
-        })}
+          ))
+        )}
       </div>
     </div>
   );

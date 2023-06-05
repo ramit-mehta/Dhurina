@@ -10,8 +10,13 @@ const Image_URL = process.env.REACT_APP_Bucket_URL;
 const Hero = () => {
   const navigate = useNavigate();
   const [searchInput, setSearchInput] = useState("");
+  const [error, setError] = useState("");
 
   const RouteChange = (e) => {
+    if (searchInput.trim() === "") {
+      setError("Search field cannot be empty");
+      return;
+    }
     navigate("/search-result?keyword=" + searchInput, {
       state: { course: searchInput },
     });
@@ -59,6 +64,7 @@ const Hero = () => {
                 Search
               </Button>
             </div>
+            <p className="text-danger mb-0 ff_inter ms-4 mt-1">{error}</p>
             <div className="mt-4 pt-sm-2">
               <a
                 href="https://play.google.com/store/apps/details?id=com.dhurina"

@@ -518,6 +518,9 @@ input:focus {
   background-color: #fff9ea;
   border-radius: 100px;
 }
+.book_fit {
+  height: 320px;
+}
 .bg_ebooks {
   background: linear-gradient(180deg, #fe8605 0%, #fea905 100%);
   border: 0.2px solid #fe8605;

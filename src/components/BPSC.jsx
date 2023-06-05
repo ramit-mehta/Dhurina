@@ -34,7 +34,12 @@ const BPSC = ({ course, setSelectedItem }) => {
             />
             <Test Test={BpscTest} />
             <Ebooks Ebook={BpscEbooks} />
-            <Books Books={BpscBooks} />
+            <Books
+              display={true}
+              course={course}
+              setSelectedItem={setSelectedItem}
+              Books={BpscBooks}
+            />
           </div>
           <div className="col-lg-4">
             <Register />
