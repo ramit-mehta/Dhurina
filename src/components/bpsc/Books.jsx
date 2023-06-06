@@ -14,7 +14,7 @@ const Books = ({ display }) => {
   const [_state, setStateName] = useState("");
   const [sorting, setSorting] = useState("");
   const [allBooks, setAllBooks] = useState([]);
-
+  console.log();
   const setBooksData = (event, type) => {
     if (type === "state") {
       setStateName(event);
@@ -72,7 +72,12 @@ const Books = ({ display }) => {
     navigate(`/${stateName}/${id}/all-books`);
     window.scrollTo(0, 0);
   };
-
+  let booksLength = 0;
+  allBooks.forEach((element) => {
+    if (element.area_id === `["${id}"]`) {
+      booksLength++;
+    }
+  });
   return (
     <div id="books" className="custom_container container py-5">
       {display ? (
@@ -83,7 +88,7 @@ const Books = ({ display }) => {
               viewAllBooks();
             }}
             className={`ff_inter fw-semibold text_gradient mb-0 cursor_pointer ${
-              allBooks.length > 0 ? "" : "disabled"
+              booksLength === 0 ? "disabled" : ""
             }`}
           >
             View All <span>&rarr;</span>{" "}
@@ -93,39 +98,43 @@ const Books = ({ display }) => {
         ""
       )}
       <div className="row">
-        {allBooks.length === 0 ? (
+        {booksLength === 0 ? (
           <p className="mb-0 ff_inter mt-3">No books available.</p>
         ) : (
-          allBooks.map((book) => (
-            <div key={book.id} className="col-md-6 mt-4">
-              <Link to={`/book-detail/${id}/${book.id}`}>
-                <div className="border_light_brown h-100">
-                  <div className="d-flex align-items-center justify-content-center">
-                    <img
-                      className="w-100 book_fit"
-                      src={`${BOOK_IMAGE_URL}${book.image}`}
-                      alt={book.title}
-                    />
-                  </div>
-                  <h2 className="ff_inter fw-bolder fs-5 text_gradient mb-0 px-4 mt-3">
-                    {book.title}
-                  </h2>
+          allBooks.map((book) =>
+            book.area_id === `["${id}"]` ? (
+              <div key={book.id} className="col-md-6 mt-4">
+                <Link to={`/book-detail/${id}/${book.id}`}>
+                  <div className="border_light_brown h-100">
+                    <div className="d-flex align-items-center justify-content-center">
+                      <img
+                        className="w-100 book_fit"
+                        src={`${BOOK_IMAGE_URL}${book.image}`}
+                        alt={book.title}
+                      />
+                    </div>
+                    <h2 className="ff_inter fw-bolder fs-5 text_gradient mb-0 px-4 mt-3">
+                      {book.title}
+                    </h2>
 
-                  <div className="mt-3 d-flex align-items-center justify-content-between px-4 pb-3">
-                    <p className="mb-0 text_gradient fw-bold mb-0">Price :</p>
-                    <div>
-                      <span className="mb-0 text_gradient fw-bold mb-0">
-                        ₹{book.price}{" "}
-                      </span>
-                      <span className="fs_desc text_grey ff_inter text-decoration-line-through mb-0">
-                        {book.dup_price}
-                      </span>
+                    <div className="mt-3 d-flex align-items-center justify-content-between px-4 pb-3">
+                      <p className="mb-0 text_gradient fw-bold mb-0">Price :</p>
+                      <div>
+                        <span className="mb-0 text_gradient fw-bold mb-0">
+                          ₹{book.price}{" "}
+                        </span>
+                        <span className="fs_desc text_grey ff_inter text-decoration-line-through mb-0">
+                          {book.dup_price}
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Link>
-            </div>
-          ))
+                </Link>
+              </div>
+            ) : (
+              ""
+            )
+          )
         )}
       </div>
     </div>

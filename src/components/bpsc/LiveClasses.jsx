@@ -120,9 +120,7 @@ const LiveClasses = ({ display }) => {
             return item.live_status === 1 && index <= showLiveCourse ? (
               <div
                 onClick={() => {
-                  navigate(
-                    `/course-detail/${id}/${item.course_url}/${item.id}`
-                  );
+                  navigate(`/course-detail/${item.course_url}/${item.id}`);
 
                   window.scrollTo(0, 0);
                 }}

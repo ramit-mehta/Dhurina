@@ -4,7 +4,7 @@ import LiveIcon from "../../assets/images/svg/live-icon.svg";
 import RecordIcon from "../../assets/images/svg/record-icon.svg";
 import TestIcon from "../../assets/images/svg/test-icon.svg";
 import Play from "../../assets/images/png/orange-play.png";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Poster from "../../assets/images/png/bpsc-crack-img.png";
 import { Parser } from "html-to-react";
 import ApiCall from "../../api/callApi";
@@ -15,74 +15,170 @@ const Course = () => {
   const [validity, setValidity] = useState();
 
   const validityPeriods = [{ time: 12 }, { time: 6 }];
-  const { id } = useParams();
-  const { courseId } = useParams();
+  // const { id } = useParams();
+  // const { courseId } = useParams();
 
-  const [courseAreas, setCourseAreas] = useState([]);
+  // const [courseAreas, setCourseAreas] = useState([]);
 
-  const [_state, setStateName] = useState("");
-  const [sorting, setSorting] = useState("");
-  const [allCourse, setAllCourse] = useState([]);
+  // const [_state, setStateName] = useState("");
+  // const [sorting, setSorting] = useState("");
+  // const [allCourse, setAllCourse] = useState([]);
 
-  const setCourseData = (event, type) => {
-    if (type === "state") {
-      setStateName(event);
-      page = 1;
-      filterCourse([], "", event, type);
-    } else {
-      setSorting(event);
-      filterCourse([], "", event, type);
-    }
+  // const setCourseData = (event, type) => {
+  //   if (type === "state") {
+  //     setStateName(event);
+  //     page = 1;
+  //     filterCourse([], "", event, type);
+  //   } else {
+  //     setSorting(event);
+  //     filterCourse([], "", event, type);
+  //   }
+  // };
+
+  // function filterCourse(arr, type, event, filtertype) {
+  //   const body = {
+  //     state: filtertype === "state" ? String(event) : String(_state),
+  //     sorting: filtertype === "sorting" ? event : sorting,
+  //     course: type === "course" ? arr : [],
+  //     teachers: type === "teacher" ? arr : [],
+  //     page: page,
+  //     random: "false",
+  //   };
+  //   ApiCall(body, "post", "all_course", filtercoursecallback);
+  // }
+
+  // useEffect(() => {
+  //   getData();
+  //   setCourseData(id, "state");
+  // }, []);
+  // function getData(params) {
+  //   ApiCall("", "get", "course_area", course_area);
+  // }
+  // // course area
+  // const course_area = useCallback((response) => {
+  //   if (response.data.status === 200) {
+  //     setCourseAreas(response.data.data);
+  //   } else {
+  //     console.log("error");
+  //   }
+  // });
+  // // courses
+  // const filtercoursecallback = useCallback((response) => {
+  //   if (response.data.status === 200) {
+  //     if (response.data.total_page !== page && response.data.total_page !== 0) {
+  //       page = page + 1;
+  //     }
+  //     setAllCourse(response.data.all_course);
+  //   } else {
+  //     console.log("error");
+  //   }
+  // }, []);
+
+  // let Course = {};
+  // allCourse.forEach((element) => {
+  //   if (element.id == courseId) {
+  //     Course = element;
+  //   }
+  // });
+  const [description, setDescription] = useState("");
+  const [seoDescription, setSeoDescription] = useState("");
+  const [isViewPolicy, setIsViewPolicy] = useState(true);
+  const [show, setShow] = useState(false);
+  const togglePolicy = () => {
+    setIsViewPolicy(!isViewPolicy);
   };
-
-  function filterCourse(arr, type, event, filtertype) {
-    const body = {
-      state: filtertype === "state" ? String(event) : String(_state),
-      sorting: filtertype === "sorting" ? event : sorting,
-      course: type === "course" ? arr : [],
-      teachers: type === "teacher" ? arr : [],
-      page: page,
-      random: "false",
-    };
-    ApiCall(body, "post", "all_course", filtercoursecallback);
-  }
+  const [mainloading, setMainLoading] = useState(true);
+  const [courseDetail, setCourseDetail] = useState("");
+  const [course_tags, setTags] = useState([]);
+  console.log(courseDetail);
+  const [teacher, setTeacher] = useState([]);
+  const [purchase_status, setPurchaseStatus] = useState(0);
+  var { course_url, courseId } = useParams();
+  const navigate = useNavigate();
+  let url = "course_detail/" + course_url + "/" + courseId;
 
   useEffect(() => {
     getData();
-    setCourseData(id, "state");
-  }, []);
-  function getData(params) {
-    ApiCall("", "get", "course_area", course_area);
-  }
-  // course area
-  const course_area = useCallback((response) => {
-    if (response.data.status === 200) {
-      setCourseAreas(response.data.data);
-    } else {
-      console.log("error");
-    }
-  });
-  // courses
-  const filtercoursecallback = useCallback((response) => {
-    if (response.data.status === 200) {
-      if (response.data.total_page !== page && response.data.total_page !== 0) {
-        page = page + 1;
-      }
-      setAllCourse(response.data.all_course);
-    } else {
-      console.log("error");
-    }
+    window.scrollTo(0, 0);
   }, []);
 
-  let Course = {};
-  allCourse.forEach((element) => {
-    if (element.id == courseId) {
-      Course = element;
+  //----------Course Detail Data------------//
+  function getData() {
+    ApiCall("", "get", url, courseCallback);
+  }
+
+  const courseCallback = useCallback((response) => {
+    // console.log(response.data);
+
+    if (response.data.status === 200 || response.data.status === 301) {
+      if (response.data.status === 301) {
+        navigate("/course-detail/" + response.data.new_url + "/" + courseId);
+      }
+
+      setTeacher(JSON.parse(response.data.course.faculity));
+      let course = response.data.course;
+
+      setCourseDetail(course);
+      setTags(response.data.subcatname);
+      setDescription(response.data.course.web_description);
+      if (
+        response.data.course.sub_heading != "" ||
+        response.data.course.sub_heading != null ||
+        response.data.course.sub_heading != "null"
+      ) {
+        setSeoDescription(response.data.course.sub_heading);
+      } else {
+        setSeoDescription(response.data.course.description);
+      }
+      setPurchaseStatus(response.data.purchase_status);
+      setMainLoading(false);
+
+      setTimeout(() => {
+        var offerModelStatus = "false";
+        if (
+          localStorage.getItem("offer_model_time") != "" &&
+          localStorage.getItem("offer_model_time") != null &&
+          localStorage.getItem("offer_model_time") != "null"
+        ) {
+          var expiretime = new Date(
+            localStorage.getItem("offer_model_time")
+          ).getTime();
+          var currentTime = new Date().getTime();
+          var remainingDayTime = expiretime - currentTime;
+          if (remainingDayTime < 1) {
+            offerModelStatus = "true";
+          }
+        } else {
+          offerModelStatus = "true";
+        }
+
+        if (offerModelStatus == "true" && response.data.orders_count < 1) {
+          setShow(true);
+        }
+      }, 5000);
+
+      // set datalayer google tags
+      window.dataLayer.push({
+        event: "page_view",
+        send_to: "AW-11012643170",
+        value: response.data.course.price,
+        items: [
+          {
+            id: response.data.course.id,
+            // 'location_id': 'replace with value',
+            google_business_vertical: "education",
+          },
+        ],
+      });
+    } else if (response.data.status === 404) {
+      navigate("/page-not-found");
+    } else {
+      console.log("error");
     }
   });
 
   const htmlParser = new Parser();
-  const htmlString = `<p className="ff_inter fw-normal text_grey fs_lg pe-lg-5">${Course.web_description}</p>`;
+  const htmlString = `<p className="ff_inter fw-normal text_grey fs_lg pe-lg-5">${courseDetail.web_description}</p>`;
   const parsedDesc = htmlParser.parse(htmlString);
 
   return (
@@ -91,7 +187,7 @@ const Course = () => {
         <div className="row">
           <div className="col-lg-8">
             <h2 className="ff_inter fw-semibold fs_8xl mb-0 pe-lg-5 course_heading">
-              {Course.name}
+              {courseDetail.name}
             </h2>
             <span className="me-3 text_gradient fs_lg ff_inter fw-bold">
               Select Validity
@@ -129,8 +225,8 @@ const Course = () => {
                 <div className="d-flex align-items-center justify-content-center">
                   <img
                     className="w-100"
-                    src={`${COURSE_IMAGE_URL}${Course.image}`}
-                    alt={Course.name}
+                    src={`${COURSE_IMAGE_URL}${courseDetail.image}`}
+                    alt={courseDetail.name}
                   />
                 </div>
               </div>
@@ -164,10 +260,10 @@ const Course = () => {
                 </p>
                 <div className="p-3">
                   <span className="mb-0 text_gradient fw-bold fs_3xl mb-0">
-                    {Course.price}
+                    {courseDetail.price}
                   </span>
                   <span className="fs_desc ms-1 text_grey ff_inter text-decoration-line-through mb-0">
-                    {Course.discount}
+                    {courseDetail.discount}
                   </span>
                   {/* <div className="d-flex justify-content-between mb-3">
                       <div className="d-flex mt-2 align-items-center">

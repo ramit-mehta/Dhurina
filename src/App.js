@@ -42,7 +42,7 @@ function App() {
           <Route path="/:stateName/:id/all-books" element={<Allbooks />} />
           <Route path="/all-ebooks" element={<AllEbooks />} />
           <Route
-            path="/course-detail/:id/:course_url/:courseId"
+            path="/course-detail/:course_url/:courseId"
             element={<Course />}
           />
           <Route path="/book" element={<SingleBook />} />
