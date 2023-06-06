@@ -33,7 +33,7 @@ const Batches = () => {
       filterBooks([], "", event, type);
     }
   };
-  
+
   function filterCourse(arr, type, event, filtertype) {
     const body = {
       state: filtertype === "state" ? String(event) : String(_state),
@@ -56,6 +56,10 @@ const Batches = () => {
       page: page,
       random: "false",
     };
+
+    if (filtertype === "state") {
+      body.state = event; // Set the selected course area ID
+    }
 
     ApiCall(body, "get", "fetchBooks", filterbookcallback);
   }
@@ -173,6 +177,7 @@ const Batches = () => {
                   key={index}
                   onClick={() => {
                     setCourseData(item.id, "state");
+                    filterBooks([], "", item.id, "state");
                   }}
                 >
                   <div className="mt-1" onClick={() => getCourseData(item)}>

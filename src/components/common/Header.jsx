@@ -55,15 +55,6 @@ const Header = () => {
               </Dropdown.Toggle>
 
               <Dropdown.Menu className="bg_light_orange color_dark_blue">
-                <Dropdown.Item className="ff_inter">
-                  <Link
-                    className="color_dark_blue d-block"
-                    to="/bpsc"
-                    onClick={handleOptionSelect}
-                  >
-                    BPSC
-                  </Link>
-                </Dropdown.Item>
                 {/* <Dropdown.Item className="ff_inter">
                   <Link
                     className="color_dark_blue d-block"
@@ -79,7 +70,7 @@ const Header = () => {
                     to="/ssc"
                     onClick={handleOptionSelect}
                   >
-                    SSC
+                    Test Series
                   </Link>
                 </Dropdown.Item>
               </Dropdown.Menu>
@@ -154,11 +145,7 @@ const Header = () => {
                       SSC
                     </li>
                   </Link>
-                  {/* <Link to="/bihar" onClick={handleClick}>
-                    <li className="ff_inter fw-semibold color_dark_blue">
-                      Bihar
-                    </li>
-                  </Link> */}
+
                   <Link to="/bpsc" onClick={handleClick}>
                     <li className="ff_inter fw-semibold color_dark_blue">
                       BPSC

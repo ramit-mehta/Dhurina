@@ -21,6 +21,10 @@ const Hero = () => {
       state: { course: searchInput },
     });
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    RouteChange();
+  };
 
   return (
     <>
@@ -49,21 +53,23 @@ const Hero = () => {
             <p className="ff_inter color_dark_blue fs_7xl">
               Watch anywhere, anytime.
             </p>
-            <div className="d-flex bg-white mx-auto mx-lg-0 px-3 py-2 hero_input mt-2 align-items-center">
-              <FormControl
-                className=" border-0 bg-transparent w-100 ff_inter fs_md"
-                type="text"
-                placeholder="Search your Best Courses, Tests & Books... "
-                onChange={(e) => setSearchInput(e.target.value)}
-              />
-              <Button
-                variant="home-search"
-                className="mt-0 bg_gradient text-white border-0 rounded-pill px-3 py-1 px-lg-4 fs_xl"
-                onClick={(e) => RouteChange(e)}
-              >
-                Search
-              </Button>
-            </div>
+            <form onSubmit={handleSubmit}>
+              <div className="d-flex bg-white mx-auto mx-lg-0 px-3 py-2 hero_input mt-2 align-items-center">
+                <input
+                  className="border-0 bg-transparent w-100 ff_inter fs_md"
+                  type="text"
+                  placeholder="Search your Best Courses, Tests & Books..."
+                  value={searchInput}
+                  onChange={(e) => setSearchInput(e.target.value)}
+                />
+                <button
+                  type="submit"
+                  className="mt-0 bg_gradient text-white border-0 rounded-pill px-3 py-1 px-lg-4 fs_xl"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
             <p className="text-danger mb-0 ff_inter ms-4 mt-1">{error}</p>
             <div className="mt-4 pt-sm-2">
               <a
