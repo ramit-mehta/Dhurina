@@ -519,7 +519,8 @@ input:focus {
   border-radius: 100px;
 }
 .book_fit {
-  height: 320px;
+  height: 250px;
+  max-width: 300px;
 }
 .bg_ebooks {
   background: linear-gradient(180deg, #fe8605 0%, #fea905 100%);

@@ -14,7 +14,7 @@ const Books = ({ display }) => {
   const [_state, setStateName] = useState("");
   const [sorting, setSorting] = useState("");
   const [allBooks, setAllBooks] = useState([]);
-  console.log();
+
   const setBooksData = (event, type) => {
     if (type === "state") {
       setStateName(event);
@@ -55,7 +55,6 @@ const Books = ({ display }) => {
     }
   });
 
-  // courses
   const filterbookcallback = useCallback((response) => {
     if (response.data.status === 200) {
       if (response.data.total_page !== page && response.data.total_page !== 0) {
@@ -76,6 +75,25 @@ const Books = ({ display }) => {
   allBooks.forEach((element) => {
     if (element.area_id === `["${id}"]`) {
       booksLength++;
+    }
+  });
+
+  const bookId = [];
+  allBooks.forEach((element) => {
+    if (element.area_id === `["${id}"]`) {
+      bookId.push(element);
+    }
+  });
+  const stateBooks = [];
+  const filteredBooks = bookId.filter((book, index) => {
+    if (
+      book.area_id === `["${id}"]` &&
+      display &&
+      (index === 0 || index === 1)
+    ) {
+      stateBooks.push(book);
+    } else if (book.area_id === `["${id}"]` && !display) {
+      stateBooks.push(book);
     }
   });
   return (
@@ -101,40 +119,37 @@ const Books = ({ display }) => {
         {booksLength === 0 ? (
           <p className="mb-0 ff_inter mt-3">No books available.</p>
         ) : (
-          allBooks.map((book) =>
-            book.area_id === `["${id}"]` ? (
-              <div key={book.id} className="col-md-6 mt-4">
-                <Link to={`/book-detail/${id}/${book.id}`}>
-                  <div className="border_light_brown h-100">
-                    <div className="d-flex align-items-center justify-content-center">
-                      <img
-                        className="w-100 book_fit"
-                        src={`${BOOK_IMAGE_URL}${book.image}`}
-                        alt={book.title}
-                      />
-                    </div>
-                    <h2 className="ff_inter fw-bolder fs-5 text_gradient mb-0 px-4 mt-3">
-                      {book.title}
-                    </h2>
+          stateBooks &&
+          stateBooks.map((book, index) => (
+            <div key={index} className="col-md-6 mt-4">
+              <Link to={`/book-detail/${book.title}/${book.id}`}>
+                <div className="border_light_brown h-100">
+                  <div className="d-flex align-items-center justify-content-center">
+                    <img
+                      className="w-100 book_fit"
+                      src={`${BOOK_IMAGE_URL}${book.image}`}
+                      alt={book.title}
+                    />
+                  </div>
+                  <h2 className="ff_inter fw-bolder fs-5 text_gradient mb-0 px-4 mt-3">
+                    {book.title}
+                  </h2>
 
-                    <div className="mt-3 d-flex align-items-center justify-content-between px-4 pb-3">
-                      <p className="mb-0 text_gradient fw-bold mb-0">Price :</p>
-                      <div>
-                        <span className="mb-0 text_gradient fw-bold mb-0">
-                          ₹{book.price}{" "}
-                        </span>
-                        <span className="fs_desc text_grey ff_inter text-decoration-line-through mb-0">
-                          {book.dup_price}
-                        </span>
-                      </div>
+                  <div className="mt-3 d-flex align-items-center justify-content-between px-4 pb-3">
+                    <p className="mb-0 text_gradient fw-bold mb-0">Price :</p>
+                    <div>
+                      <span className="mb-0 text_gradient fw-bold mb-0">
+                        ₹{book.price}{" "}
+                      </span>
+                      <span className="fs_desc text_grey ff_inter text-decoration-line-through mb-0">
+                        {book.dup_price}
+                      </span>
                     </div>
                   </div>
-                </Link>
-              </div>
-            ) : (
-              ""
-            )
-          )
+                </div>
+              </Link>
+            </div>
+          ))
         )}
       </div>
     </div>

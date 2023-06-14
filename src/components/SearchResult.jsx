@@ -5,6 +5,7 @@ import ApiCall from "../api/callApi";
 
 const BOOK_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "ebook/image/";
 const COURSE_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "course/";
+const TEST_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "combo/";
 
 const SearchResult = () => {
   const navigate = useNavigate();
@@ -127,6 +128,11 @@ const SearchResult = () => {
                           }
                         >
                           <div className="border_gradient p-2 h-100">
+                            <img
+                              className="w-100"
+                              src={`${TEST_IMAGE_URL}${item.image}`}
+                              alt={item.name}
+                            />
                             <h2 className="ff_inter fw-bolder fs-6 text_gradient mb-0 mt-2">
                               {item.title}
                             </h2>
@@ -166,7 +172,7 @@ const SearchResult = () => {
                         <div className="item" key={item.id}>
                           <Link to={"/book-detail/" + item.id}>
                             <Image
-                              className="w-100"
+                              className="w-100 book_fit"
                               alt={item.title}
                               src={`${BOOK_IMAGE_URL}${item.image}`}
                             />

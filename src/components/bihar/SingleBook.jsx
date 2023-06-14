@@ -1,14 +1,43 @@
-import React from "react";
-import Register from "../bpsc/Register";
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
+import React, { useState, useEffect, useCallback } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import ApiCall from "../../api/callApi";
+import Poster from "../../assets/images/png/bpsc-crack-img.png";
 
 const SingleBook = () => {
+  const [allBooks, setAllBooks] = useState([]);
+
+  var { title, id } = useParams();
+  let url = "book-detail/" + title + "/" + id;
+
+  useEffect(() => {
+    getData();
+    window.scrollTo(0, 0);
+  }, []);
+
+  function getData() {
+    ApiCall("", "get", url, filterbookcallback);
+  }
+
+  const filterbookcallback = useCallback((response) => {
+    if (response.data.status === 200) {
+      setAllBooks(response.data.data);
+    } else {
+      console.log("error");
+    }
+  }, []);
+
+  // const htmlParser = new Parser();
+  // const htmlString = `<p className="ff_inter fw-normal text_grey fs_lg pe-lg-5">${courseDetail.web_description}</p>`;
+  // const parsedDesc = htmlParser.parse(htmlString);
   return (
     <div className="custom_container container">
       <div className="py-5">
         <div className="row">
           <div className="col-lg-8">
             <h2 className="ff_inter fw-semibold fs_8xl mb-0 pe-lg-5 course_heading">
-              BPSC Practice Workbook 67th Prelim Exam
+              {title}
             </h2>
 
             <h3 className="ff_inter text_gradient fw-semibold fs_8xl mb-0 py-3 mt-4">
@@ -66,8 +95,62 @@ const SingleBook = () => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-4">
-            <Register />
+          <div className="col-lg-4 mt-5 mt-lg-0">
+            <div className="border_light_brown">
+              <div className="">
+                <div className="d-flex align-items-center justify-content-center">
+                  <img
+                    className="w-100"
+                    // src={`${COURSE_IMAGE_URL}${courseDetail.image}`}
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div className="border_light_brown mx-4 mb-3">
+                <p className="ff_inter fw-semibold text_grey fs_sm mt-2">
+                  General English:- The questions will be designed to test ....
+                </p>
+                <div className="p-3">
+                  <span className="mb-0 text_gradient fw-bold fs_3xl mb-0">
+                    {/* {courseDetail.price} */}
+                  </span>
+                  <span className="fs_desc ms-1 text_grey ff_inter text-decoration-line-through mb-0">
+                    {/* {courseDetail.discount} */}
+                  </span>
+                  {/* <div className="d-flex justify-content-between mb-3">
+                      <div className="d-flex mt-2 align-items-center">
+                        <p className="mb-0 ff_inter text_gradient fw-semibold fs_desc">
+                          "MAY"
+                        </p>
+                        <p className="text_grey fw-semibold fs_desc mb-0">
+                          coupon available
+                        </p>
+                      </div>
+                      <button className="bg_classes apply_btn fw-semibold px-3 fs_desc ff_inter">
+                        Apply
+                      </button>
+                    </div> */}
+                  <Link className="bg_gradient text-white ff_inter fs-6 d-block text-center px-3 py-2">
+                    BUY NOW
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="bg_crack_bpsc mt-4 p-3 position-relative col-md-6 col-lg-12">
+              <h2 className="text-white ff_inter fw-bold fs_8xl">BPSC CRACK</h2>
+              <p className="mb-0 text-white ff_inter fs_8xl crack_bpsc_para">
+                krna Hua Bahut Aasan..
+              </p>
+              <button className="fw-semibold ff_inter fs_sm mt-2 register_btn position-relative border-0 py-1 px-3">
+                REGISTER
+              </button>
+              <img
+                className="position-absolute bottom-0 end-0 poster"
+                src={Poster}
+                alt="bpsc_crack"
+              />
+            </div>
           </div>
         </div>
       </div>

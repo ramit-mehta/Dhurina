@@ -45,7 +45,7 @@ function App() {
             path="/course-detail/:course_url/:courseId"
             element={<Course />}
           />
-          <Route path="/book" element={<SingleBook />} />
+          <Route path="/book-detail/:title/:id" element={<SingleBook />} />
           <Route path="/ebook" element={<SingleEbook />} />
           <Route path="/search-result" element={<SearchResult />} />
         </Routes>

@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import HeroImg from "../../assets/images/png/hero-img.png";
 import Ellipse1 from "../../assets/images/png/hero-ellipse-1.png";
 import Ellipse2 from "../../assets/images/png/hero-ellipse-2.png";
-import { Button, FormControl } from "react-bootstrap";
 
 const Image_URL = process.env.REACT_APP_Bucket_URL;
 

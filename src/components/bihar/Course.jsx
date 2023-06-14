@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import LiveIcon from "../../assets/images/svg/live-icon.svg";
 import RecordIcon from "../../assets/images/svg/record-icon.svg";
 import TestIcon from "../../assets/images/svg/test-icon.svg";
@@ -8,78 +9,13 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import Poster from "../../assets/images/png/bpsc-crack-img.png";
 import { Parser } from "html-to-react";
 import ApiCall from "../../api/callApi";
-import { useCallback } from "react";
 const COURSE_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "course/";
 var page = 1;
 const Course = () => {
   const [validity, setValidity] = useState();
 
   const validityPeriods = [{ time: 12 }, { time: 6 }];
-  // const { id } = useParams();
-  // const { courseId } = useParams();
 
-  // const [courseAreas, setCourseAreas] = useState([]);
-
-  // const [_state, setStateName] = useState("");
-  // const [sorting, setSorting] = useState("");
-  // const [allCourse, setAllCourse] = useState([]);
-
-  // const setCourseData = (event, type) => {
-  //   if (type === "state") {
-  //     setStateName(event);
-  //     page = 1;
-  //     filterCourse([], "", event, type);
-  //   } else {
-  //     setSorting(event);
-  //     filterCourse([], "", event, type);
-  //   }
-  // };
-
-  // function filterCourse(arr, type, event, filtertype) {
-  //   const body = {
-  //     state: filtertype === "state" ? String(event) : String(_state),
-  //     sorting: filtertype === "sorting" ? event : sorting,
-  //     course: type === "course" ? arr : [],
-  //     teachers: type === "teacher" ? arr : [],
-  //     page: page,
-  //     random: "false",
-  //   };
-  //   ApiCall(body, "post", "all_course", filtercoursecallback);
-  // }
-
-  // useEffect(() => {
-  //   getData();
-  //   setCourseData(id, "state");
-  // }, []);
-  // function getData(params) {
-  //   ApiCall("", "get", "course_area", course_area);
-  // }
-  // // course area
-  // const course_area = useCallback((response) => {
-  //   if (response.data.status === 200) {
-  //     setCourseAreas(response.data.data);
-  //   } else {
-  //     console.log("error");
-  //   }
-  // });
-  // // courses
-  // const filtercoursecallback = useCallback((response) => {
-  //   if (response.data.status === 200) {
-  //     if (response.data.total_page !== page && response.data.total_page !== 0) {
-  //       page = page + 1;
-  //     }
-  //     setAllCourse(response.data.all_course);
-  //   } else {
-  //     console.log("error");
-  //   }
-  // }, []);
-
-  // let Course = {};
-  // allCourse.forEach((element) => {
-  //   if (element.id == courseId) {
-  //     Course = element;
-  //   }
-  // });
   const [description, setDescription] = useState("");
   const [seoDescription, setSeoDescription] = useState("");
   const [isViewPolicy, setIsViewPolicy] = useState(true);
@@ -90,7 +26,6 @@ const Course = () => {
   const [mainloading, setMainLoading] = useState(true);
   const [courseDetail, setCourseDetail] = useState("");
   const [course_tags, setTags] = useState([]);
-  console.log(courseDetail);
   const [teacher, setTeacher] = useState([]);
   const [purchase_status, setPurchaseStatus] = useState(0);
   var { course_url, courseId } = useParams();
@@ -108,8 +43,6 @@ const Course = () => {
   }
 
   const courseCallback = useCallback((response) => {
-    // console.log(response.data);
-
     if (response.data.status === 200 || response.data.status === 301) {
       if (response.data.status === 301) {
         navigate("/course-detail/" + response.data.new_url + "/" + courseId);
@@ -122,9 +55,9 @@ const Course = () => {
       setTags(response.data.subcatname);
       setDescription(response.data.course.web_description);
       if (
-        response.data.course.sub_heading != "" ||
+        response.data.course.sub_heading !== "" ||
         response.data.course.sub_heading != null ||
-        response.data.course.sub_heading != "null"
+        response.data.course.sub_heading !== "null"
       ) {
         setSeoDescription(response.data.course.sub_heading);
       } else {
@@ -132,30 +65,6 @@ const Course = () => {
       }
       setPurchaseStatus(response.data.purchase_status);
       setMainLoading(false);
-
-      setTimeout(() => {
-        var offerModelStatus = "false";
-        if (
-          localStorage.getItem("offer_model_time") != "" &&
-          localStorage.getItem("offer_model_time") != null &&
-          localStorage.getItem("offer_model_time") != "null"
-        ) {
-          var expiretime = new Date(
-            localStorage.getItem("offer_model_time")
-          ).getTime();
-          var currentTime = new Date().getTime();
-          var remainingDayTime = expiretime - currentTime;
-          if (remainingDayTime < 1) {
-            offerModelStatus = "true";
-          }
-        } else {
-          offerModelStatus = "true";
-        }
-
-        if (offerModelStatus == "true" && response.data.orders_count < 1) {
-          setShow(true);
-        }
-      }, 5000);
 
       // set datalayer google tags
       window.dataLayer.push({

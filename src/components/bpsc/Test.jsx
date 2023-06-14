@@ -1,8 +1,64 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState, useCallback } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import ApiCall from "../../api/callApi";
 
 const RecordedVideos = ({ Test }) => {
   const navigate = useNavigate();
+  const { id } = useParams();
+
+  const [courseAreas, setCourseAreas] = useState([]);
+  const [filterTestSeries, setFilterTestSeries] = useState([]);
+  const [_state, setStateName] = useState("");
+  const [sorting, setSorting] = useState("");
+
+  function filterTests(arr, type, event, filtertype) {
+    const body = {
+      state: filtertype === "state" ? String(event) : String(_state),
+      sorting: filtertype === "sorting" ? event : sorting,
+      book: type === "book" ? arr : [],
+      teachers: type === "teacher" ? arr : [],
+      random: "false",
+    };
+    ApiCall(body, "get", "test_series", filterTestCallback);
+  }
+
+  const setTestData = (event, type) => {
+    if (type === "state") {
+      setStateName(event);
+      filterTests([], "", event, type);
+    } else {
+      setSorting(event);
+      filterTests([], "", event, type);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+    setTestData(id, "state");
+  }, []);
+
+  function getData(params) {
+    ApiCall("", "get", "course_area", course_area);
+  }
+
+  // course area
+  const course_area = useCallback((response) => {
+    if (response.data.status === 200) {
+      setCourseAreas(response.data.data);
+    } else {
+      console.log("error");
+    }
+  });
+
+  const filterTestCallback = useCallback((response) => {
+    if (response.data.status === 200) {
+      setFilterTestSeries(response.data.test_series);
+      console.log(response.data.test_series);
+    } else {
+      console.log("error");
+    }
+  }, []);
 
   return (
     <div id="tests" className="custom_container container py-5">

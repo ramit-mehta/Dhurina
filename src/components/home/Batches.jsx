@@ -16,7 +16,6 @@ const Batches = () => {
   const [examCategories, setExamCategories] = useState([]);
   const [examSubCategories, setExamSubCategories] = useState([]);
   const [allCourse, setAllCourse] = useState([]);
-  const [allBooks, setAllBooks] = useState([]);
   const [_state, setStateName] = useState("");
   const [sorting, setSorting] = useState("");
 
@@ -26,11 +25,9 @@ const Batches = () => {
       setStateName(event);
       page = 1;
       filterCourse([], "", event, type);
-      filterBooks([], "", event, type);
     } else {
       setSorting(event);
       filterCourse([], "", event, type);
-      filterBooks([], "", event, type);
     }
   };
 
@@ -47,23 +44,6 @@ const Batches = () => {
     ApiCall(body, "post", "all_course", filtercoursecallback);
   }
 
-  function filterBooks(arr, type, event, filtertype) {
-    const body = {
-      state: filtertype === "state" ? String(event) : String(_state),
-      sorting: filtertype === "sorting" ? event : sorting,
-      book: type === "book" ? arr : [],
-      teachers: type === "teacher" ? arr : [],
-      page: page,
-      random: "false",
-    };
-
-    if (filtertype === "state") {
-      body.state = event; // Set the selected course area ID
-    }
-
-    ApiCall(body, "get", "fetchBooks", filterbookcallback);
-  }
-
   useEffect(() => {
     getData();
   }, []);
@@ -78,6 +58,7 @@ const Batches = () => {
   const course_area = useCallback((response) => {
     if (response.data.status === 200) {
       setCourseAreas(response.data.data);
+      console.log(response.data.data);
     } else {
       console.log("error");
     }
@@ -87,15 +68,6 @@ const Batches = () => {
   const filtercoursecallback = useCallback((response) => {
     if (response.data.status === 200) {
       setAllCourse(response.data.all_course);
-    } else {
-      console.log("error");
-    }
-  }, []);
-
-  // books
-  const filterbookcallback = useCallback((response) => {
-    if (response.data.status === 200) {
-      setAllBooks(response.data.data);
     } else {
       console.log("error");
     }
@@ -177,7 +149,6 @@ const Batches = () => {
                   key={index}
                   onClick={() => {
                     setCourseData(item.id, "state");
-                    filterBooks([], "", item.id, "state");
                   }}
                 >
                   <div className="mt-1" onClick={() => getCourseData(item)}>
