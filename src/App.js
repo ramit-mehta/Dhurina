@@ -15,9 +15,9 @@ import Ssc from "./components/Ssc";
 import Course from "./components/bihar/Course";
 import AllEbooks from "./components/bihar/AllEbooks";
 import Allbooks from "./components/bihar/Allbooks";
+import Alltests from "./components/bihar/Alltests";
 import SingleBook from "./components/bihar/SingleBook";
 import SingleEbook from "./components/bihar/SingleEbook";
-import Bihar from "./components/Bihar";
 import SearchResult from "./components/SearchResult";
 function App() {
   return (
@@ -25,12 +25,13 @@ function App() {
       <Router>
         <Header />
         <Routes>
+          {/* Pages  */}
           <Route path="/" element={<Home />} />
           <Route path="/:stateName/:id" element={<BPSC />} />
           <Route path="/ssc" element={<Ssc />} />
-          <Route path="/bihar" element={<Bihar />} />
-
           <Route path="/shorts" element={<Shorts />} />
+
+          {/* All Courses and Books  */}
           <Route
             path="/:stateName/:id/all-live-course"
             element={<AllCourses />}
@@ -40,13 +41,18 @@ function App() {
             element={<AllRecorded />}
           />
           <Route path="/:stateName/:id/all-books" element={<Allbooks />} />
+          <Route path="/:stateName/:id/all-tests" element={<Alltests />} />
           <Route path="/all-ebooks" element={<AllEbooks />} />
+
+          {/* Detail Page  */}
           <Route
             path="/course-detail/:course_url/:courseId"
             element={<Course />}
           />
           <Route path="/book-detail/:title/:id" element={<SingleBook />} />
           <Route path="/ebook" element={<SingleEbook />} />
+
+          {/* Search Result  */}
           <Route path="/search-result" element={<SearchResult />} />
         </Routes>
 

@@ -32,7 +32,7 @@ const BPSC = ({ course, setSelectedItem }) => {
               setSelectedItem={setSelectedItem}
               Recorded={BpscRecorded}
             />
-            <Test Test={BpscTest} />
+            <Test display={true} Test={BpscTest} />
             <Ebooks Ebook={BpscEbooks} />
             <Books
               display={true}

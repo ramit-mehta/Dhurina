@@ -128,11 +128,13 @@ const SearchResult = () => {
                           }
                         >
                           <div className="border_gradient p-2 h-100">
-                            <img
-                              className="w-100"
-                              src={`${TEST_IMAGE_URL}${item.image}`}
-                              alt={item.name}
-                            />
+                            <div className="bg_classes">
+                              <img
+                                className="w-100"
+                                src={`${TEST_IMAGE_URL}${item.image}`}
+                                alt={item.name}
+                              />
+                            </div>
                             <h2 className="ff_inter fw-bolder fs-6 text_gradient mb-0 mt-2">
                               {item.title}
                             </h2>

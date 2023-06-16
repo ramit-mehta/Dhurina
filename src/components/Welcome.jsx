@@ -99,10 +99,10 @@ const Welcome = () => {
   ];
   const [goal, setGoal] = useState();
   return (
-    <div className="container">
+    <div className="container custom_container py-5">
       <div className="text-end">
         <img className="cursor_pointer" src={Close} alt="popup_close" />
-        <div className=" row align-items-end flex-column-reverse flex-lg-row py-3">
+        <div className=" row align-items-center flex-column-reverse flex-lg-row">
           <div className="col-lg-6 text-center mt-4 mt-lg-0">
             <p className="text_gradient fs_9xl fw-semibold ff_inter pb-4 mb-2">
               Welcome
@@ -111,8 +111,8 @@ const Welcome = () => {
               <input
                 className="w-100 login_input pb-3 fs_3xl color_grey "
                 type="text"
-                name="number"
-                id="number"
+                name="name"
+                id="name"
                 placeholder="Enter Name"
               />
 
@@ -126,8 +126,8 @@ const Welcome = () => {
               <input
                 className="w-100 login_input pb-3 fs_3xl color_grey "
                 type="email"
-                name="number"
-                id="number"
+                name="email"
+                id="email"
                 placeholder="Enter Email"
               />
 
@@ -186,7 +186,7 @@ const Welcome = () => {
                 );
               })}
             </div>
-            <button className="mt-5 w-100 py-3 text-white fs_5xl ff_inter fw-normal border-0 login_btn">
+            <button className="mt-4 w-100 py-2 text-white fs_7xl ff_inter fw-normal border-0 login_btn">
               Submit
             </button>
           </div>
