@@ -64,7 +64,7 @@ const Test = ({ display }) => {
 
   const { stateName } = useParams();
   const viewAllTests = () => {
-    navigate(`/${stateName}/${id}/all-tests`);
+    navigate(`/test-series/${stateName}/${id}`);
     window.scrollTo(0, 0);
   };
   let testLength = 0;

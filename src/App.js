@@ -28,7 +28,7 @@ function App() {
           {/* Pages  */}
           <Route path="/" element={<Home />} />
           <Route path="/:stateName/:id" element={<BPSC />} />
-          <Route path="/ssc" element={<Ssc />} />
+          <Route path="/test-series/:stateName/:id" element={<Ssc />} />
           <Route path="/shorts" element={<Shorts />} />
 
           {/* All Courses and Books  */}
