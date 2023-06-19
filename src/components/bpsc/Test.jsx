@@ -1,7 +1,7 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState, useCallback } from "react";
-import { Link, json, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import ApiCall from "../../api/callApi";
 
 const TEST_IMAGE_URL = process.env.REACT_APP_Bucket_URL + "combo/";
@@ -71,7 +71,6 @@ const Test = ({ display }) => {
 
   const testId = [];
   allTests.forEach((element) => {
-    // console.log(element.area_id.length );
     const elementParse = JSON.parse(element.area_id);
 
     elementParse.forEach((area) => {

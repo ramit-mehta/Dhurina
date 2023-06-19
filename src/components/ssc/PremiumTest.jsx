@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Premium } from "../common/Helper";
 import Unlock from "../../assets/images/svg/lock-ssc.svg";
 import { useParams } from "react-router-dom";
 import ApiCall from "../../api/callApi";
